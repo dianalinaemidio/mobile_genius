@@ -21,4 +21,32 @@
 
 *Protipação de Baixo Nível:*
 
-![Prototipação-baixo-nível-Home](documentação/prototipação/Prototipação-baixo-nível-Home.PNG)
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipacao-baixo-nivel.PNG)
+
+*Protipação de Alto Nível:*
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-home-top.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-home-down.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-apresentacao.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-shop-top.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-shop-down.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-carrinho-top.png)
+
+
+
+![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-carrinho-down.png)
