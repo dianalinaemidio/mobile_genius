@@ -19,3 +19,6 @@
 - Adição de produtos ao carrinho.
 - Remoção de produtos do carrinho.
 
+*Protipação de Baixo Nível:*
+
+![Prototipação-baixo-nível-Home](documentação/prototipação/Prototipação-baixo-nível-Home.PNG)
