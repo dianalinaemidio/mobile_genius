@@ -54,7 +54,7 @@
 
 # Modelo de Entidade e Relacionamento
 
-![MER](documentacao/mer/modelo-entidade-relacionamento.jpg)
+![MER](documentacao/mer/Banco.jpg)
 
 # Caso de uso com UML
 
