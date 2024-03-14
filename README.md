@@ -50,3 +50,12 @@
 
 
 ![Prototipação-baixo-nível-Home](documentacao/prototipacao/prototipo-carrinho-down.png)
+
+
+# Modelo de Entidade e Relacionamento
+
+![MER](documentacao/mer/modelo-entidade-relacionamento.jpg)
+
+# Caso de uso com UML
+
+![UML](documentacao/uml/uml.png)
