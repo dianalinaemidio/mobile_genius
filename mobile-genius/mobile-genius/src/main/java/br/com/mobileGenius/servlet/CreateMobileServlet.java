@@ -1,12 +1,17 @@
 
 package br.com.mobileGenius.servlet;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import br.com.mobileGenius.Model.Mobile;
+import br.com.mobileGenius.DAO.MobileDAO;
+
 @WebServlet("/create-mobile")
 
 public class CreateMobileServlet extends HttpServlet {
@@ -15,11 +20,15 @@ public class CreateMobileServlet extends HttpServlet {
 
         String mobileName = request.getParameter("mobile-name");
 
+        Mobile mobile = new Mobile(mobileName);
 
+        MobileDAO mobileDao = new MobileDAO();
+
+        mobileDao.createMobile(mobile);
 
         System.out.println(mobileName);
 
-        request.getRequestDispatcher("index.html").forward(request, response);
+        response.sendRedirect("/find-all-cars");
 
     }
 }
