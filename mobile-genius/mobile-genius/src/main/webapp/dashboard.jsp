@@ -7,16 +7,33 @@
 </head>
 <body>
   <div>
-    <h1>Mobile</h1>
+    <h1>Celular</h1>
+
     <table>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-        </tr>
-        <c:forEach var="mobile" items="${mobiles}">
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Actions</th>
+
+            </tr>
+
+        <c:forEach var="celular" items="${celulares}">
+
             <tr>
-                <td></td>
-                <td>${mobile.nomeCelular}</td>
+
+                <td>${celular.id}</td>
+                <td>${celular.nomeCelular}</td>
+
+
+                 <td>
+                      <form action="/delete-celular" method="post">
+
+                           <input type="hidden" id="id" name="id" value="${celular.id}">
+                           <button type="submit">Deletar</button>
+
+                      </form>
+
+                 </td>
             </tr>
         </c:forEach>
     </table>

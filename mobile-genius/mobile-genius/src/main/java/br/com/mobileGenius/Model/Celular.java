@@ -1,3 +1,4 @@
+
 package br.com.mobileGenius.Model;
 
 public class Celular {

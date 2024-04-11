@@ -1,8 +1,8 @@
 package br.com.mobileGenius.servlet;
 
 
-import br.com.mobileGenius.DAO.MobileDAO;
-import br.com.mobileGenius.Model.Mobile;
+import br.com.mobileGenius.DAO.CelularDAO;
+import br.com.mobileGenius.Model.Celular;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,16 +14,16 @@ import java.util.List;
 
 
 
-@WebServlet("/find-all-cars")
+@WebServlet("/encontre-todos-celulares")
 
-public class ListMobilesServlet extends HttpServlet {
+public class ListCelularServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Mobile> mobiles = new MobileDAO().findMobile();
+        List<Celular> celulares = new CelularDAO().findCelular();
 
-        req.setAttribute("mobiles", mobiles);
+        req.setAttribute("celulares", celulares);
 
         req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
 
