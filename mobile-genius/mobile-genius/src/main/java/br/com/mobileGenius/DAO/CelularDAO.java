@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CelularDAO {
 
-
+    // Gravar o celular no banco de dados
     public void createCelular(Celular celular) {
 
         String SQL = "INSERT INTO CELULAR (marca) VALUES (?)";
@@ -40,6 +40,7 @@ public class CelularDAO {
 
     }
 
+    // Listar todos os celulares do banco de dados
     public List<Celular> findCelular() {
 
         String SQL = "SELECT * FROM CELULAR";
@@ -84,10 +85,10 @@ public class CelularDAO {
 
     }
 
+    // Deletando os celulares do banco de dados
     public void deleteCelularId(String celularId) {
 
         String SQL = "DELETE CELULAR WHERE ID = ?";
-
 
         try {
 
@@ -111,6 +112,34 @@ public class CelularDAO {
 
     }
 
+    // Atualizando as informações do celular no banco de dados
+    public void updateCelular(Celular celular) {
+
+        String SQL = "UPDATE CELULAR SET marca = ? WHERE ID = ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("Sucesso ao conectar no banco de dados e fazer o update");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, celular.getMarca());
+            preparedStatement.setString(2, celular.getId());
+            preparedStatement.execute();
+
+            System.out.println("Sucesso em atualizar o celular");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("Falha na conexao do banco de dados");
+            System.out.println("Error: " + e.getMessage());
+
+        }
+    }
 }
 
 

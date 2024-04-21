@@ -18,12 +18,16 @@
 
                 <c:forEach var="celular" items="${celulares}">
                     <tr>
-                        <td>${celular.getId()}</td>
-                        <td>${celular.getMarca()}</td>
+                        <td>${celular.id}</td>
+                        <td>${celular.marca}</td>
                         <td>
                             <form action="/delete-celular" method="post">
                                 <input type="hidden" id="id" name="id" value="${celular.id}">
                                 <button type="submit">Deletar</button>
+
+                                <span> | </span>
+                                    <a href="index.jsp?id=${celular.id}&name=${celular.marca}">Update</a>
+
                             </form>
                         </td>
                     </tr>
