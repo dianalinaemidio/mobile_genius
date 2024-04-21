@@ -29,7 +29,7 @@ public class CreateCelularServlet extends HttpServlet {
         // Inicializando a Classe DAO para gravar no banco
         CelularDAO celularDao = new CelularDAO();
 
-        /* Validando se o valor da variavel cId e vazio
+        /* Validando se o valor da variavel Id e vazio
          * Se o valor da variavel Id não for um valor vazio (contem um ID) significa que se trata de uma requisiçao de atualizaçao.
          */
         if (id.isBlank()) {
