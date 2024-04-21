@@ -15,17 +15,17 @@ public class CelularDAO {
 
     public void createCelular(Celular celular) {
 
-        String SQL = "INSERT INTO CELULAR (NAME) VALUES (?)";
+        String SQL = "INSERT INTO CELULAR (marca) VALUES (?)";
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
             System.out.println("Sucesso ao entrar no banco de dados");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1, celular.getNomeCelular());
+            preparedStatement.setString(1, celular.getMarca());
             preparedStatement.execute();
 
             System.out.println("Sucesso ao criar no banco");
@@ -58,10 +58,10 @@ public class CelularDAO {
 
             while (resultSet.next()) {
 
-                String nomeCelular = resultSet.getString("NAME");
+                String marca = resultSet.getString("marca");
                 String id = resultSet.getString("ID");
 
-                Celular celular = new Celular(nomeCelular, id);
+                Celular celular = new Celular(marca, id);
 
                 celulares.add(celular);
 
@@ -80,7 +80,6 @@ public class CelularDAO {
             return Collections.emptyList();
 
         }
-
 
 
     }
@@ -112,6 +111,6 @@ public class CelularDAO {
 
     }
 
-    }
+}
 
 

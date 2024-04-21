@@ -3,32 +3,33 @@ package br.com.mobileGenius.Model;
 
 public class Celular {
 
-    protected String nomeCelular;
-    protected String id;
+    private String marca;
+    private String id;
 
-    public Celular(String nomeCelular , String id) {
+    // Construtores
+    public Celular() {
+    }
 
-        this.nomeCelular = nomeCelular;
+
+    public Celular(String marca, String id) {
+        this.marca = marca;
         this.id = id;
-
     }
 
-
-    public Celular(String nomeCelular) {
-
-        this.nomeCelular = nomeCelular;
+    // Metodos
+    public String getMarca() {
+        return marca;
     }
 
-    public String getNomeCelular() {
-
-
-        return nomeCelular;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getId() {
-
-        return this.id;
-
+        return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 }

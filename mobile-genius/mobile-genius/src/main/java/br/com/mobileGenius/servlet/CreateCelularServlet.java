@@ -18,15 +18,17 @@ public class CreateCelularServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String celularNome = request.getParameter("celular-nome");
+        String marca = request.getParameter("marca");
 
-        Celular celular = new Celular(celularNome);
+        // Inicializando a Classe Celular e setando a marca
+        Celular celular = new Celular();
+        celular.setMarca(marca);
 
+        // Inicializando a Classe DAO para gravar no banco
         CelularDAO celularDao = new CelularDAO();
-
         celularDao.createCelular(celular);
 
-        System.out.println(celularNome);
+        System.out.println("celular gravado no banco");
 
         response.sendRedirect("/encontre-todos-celulares");
 

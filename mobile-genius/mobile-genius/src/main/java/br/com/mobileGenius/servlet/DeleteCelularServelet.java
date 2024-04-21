@@ -1,7 +1,5 @@
 package br.com.mobileGenius.servlet;
 
-
-
 import br.com.mobileGenius.DAO.CelularDAO;
 
 import javax.servlet.annotation.WebServlet;
@@ -25,7 +23,6 @@ public class DeleteCelularServelet extends HttpServlet {
         resp.sendRedirect("/encontre-todos-celulares");
 
     }
-
 
 
 }
