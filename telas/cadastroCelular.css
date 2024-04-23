@@ -43,9 +43,16 @@ nav {
     text-decoration: none;
 }
 
+.icones {
+    width: 20%;
+    height: 100vh;
+    padding: 20px;
+}
+
 .icones img {
-    height: 20px; 
-    margin-right: 10px; 
+    height: 20px;
+    margin-right: 10px;
+    color: white;
 }
 
 .banner {
@@ -53,7 +60,7 @@ nav {
     background-size: cover;
     background-position: center;
     height: 300px;
-    margin-bottom: 10%; 
+    margin-bottom: 10%;
     position: relative;
 }
 
@@ -84,7 +91,7 @@ nav {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 10%; 
+    margin-bottom: 10%;
 }
 
 .container-form h2 {
@@ -138,6 +145,10 @@ footer {
     margin-bottom: 20px;
 }
 
+.logo-footer {
+    width: 6rem;
+}
+
 .footer-logo img {
     width: 150px;
 }
@@ -163,29 +174,28 @@ footer {
     text-decoration: none;
 }
 
-
 @media screen and (max-width: 768px) {
     .container {
-        width: 90%; 
+        width: 90%;
     }
 
     .menu ul li {
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 
     .container-form {
-        padding: 10px; 
+        padding: 10px;
     }
 
     .container-form button {
-        width: 100%; 
+        width: 100%;
     }
 
     .footer-logo img {
-        width: 100px; 
+        width: 100px;
     }
 
     .footer-links ul li {
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 }
