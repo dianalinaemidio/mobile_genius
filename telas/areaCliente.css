@@ -49,11 +49,11 @@ nav {
 }
 
 .banner {
-    background-image: url('../img/banner.png');
+    background-image: url('../img/banner3.png');
     background-size: cover;
     background-position: center;
     height: 300px;
-    margin-bottom: 10%; 
+    margin-bottom: 50px; 
     position: relative;
 }
 
@@ -76,51 +76,42 @@ nav {
     margin-top: 10px;
 }
 
-
-.container-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 10%; 
-}
-
-.container-form h2 {
+.cliente-info {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.container-form .form-group {
+.cliente-info .info {
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cliente-info .info h3 {
+    color: #1D2837;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.container-form label {
-    display: block;
-    margin-bottom: 5px;
+.cliente-info .info p {
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.container-form input[type="text"],
-.container-form textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.container-form button {
-    width: 50%;
-    padding: 15px;
+.cliente-info .info .excluir-btn {
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    transition: background-color 0.3s ease;
 }
 
-.container-form button:hover {
+.cliente-info .info .excluir-btn:hover {
     background-color: #1D2837;
     color: #fff;
 }
@@ -163,6 +154,9 @@ footer {
     text-decoration: none;
 }
 
+.footer-info {
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     .container {
@@ -189,3 +183,5 @@ footer {
         margin-right: 10px; 
     }
 }
+
+

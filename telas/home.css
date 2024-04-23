@@ -49,10 +49,10 @@ nav {
 }
 
 .banner {
-    background-image: url('../img/banner.png');
+    background-image: url('../img/banner-home.png');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 400px; 
     margin-bottom: 10%; 
     position: relative;
 }
@@ -60,70 +60,82 @@ nav {
 .banner-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.banner-content img {
-    height: 100px;
-}
-
-.home-link {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
+    left: 10%; 
+    transform: translateY(-50%); 
+    text-align: left; 
+    color: #1D2837; 
 }
 
 
-.container-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 10%; 
-}
 
-.container-form h2 {
-    text-align: center;
-}
-
-.container-form .form-group {
+.banner-content h1 {
+    font-size: 36px; 
     margin-bottom: 20px;
 }
 
-.container-form label {
-    display: block;
-    margin-bottom: 5px;
+.banner-content p {
+    font-size: 20px; 
+    margin-bottom: 30px;
 }
 
-.container-form input[type="text"],
-.container-form textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.container-form button {
-    width: 50%;
-    padding: 15px;
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.container-form button:hover {
+.banner-content .btn {
     background-color: #1D2837;
     color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
+
+.banner-content .btn:hover {
+    background-color: #fff;
+    color: #1D2837;
+}
+
+
+
+
+.container-produtos {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.produto {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.produto img {
+    width: 250px;
+    height: 250px;
+}
+
+.produto h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #000;
+}
+
+.btn {
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: underline; /* Adicionando sublinhado */
+    font-weight: bold; 
+    transition: background-color 0.3s ease;
+}
+
+
+.btn:hover {
+    color: #1D2837;
+}
+
+
+
 
 
 

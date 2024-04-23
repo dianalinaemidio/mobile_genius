@@ -49,11 +49,11 @@ nav {
 }
 
 .banner {
-    background-image: url('../img/banner.png');
+    background-image: url('../img/banner2.png');
     background-size: cover;
     background-position: center;
     height: 300px;
-    margin-bottom: 10%; 
+    margin-bottom: 50px; 
     position: relative;
 }
 
@@ -76,6 +76,10 @@ nav {
     margin-top: 10px;
 }
 
+.form {
+    background-color: #fff;
+    padding: 50px 0;
+}
 
 .container-form {
     max-width: 600px;
@@ -84,7 +88,7 @@ nav {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 10%; 
+    margin-bottom: 50px;
 }
 
 .container-form h2 {
@@ -92,21 +96,26 @@ nav {
 }
 
 .container-form .form-group {
+    margin-bottom: 30px; 
+}
+
+
+.container-form input[type="text"],
+.container-form input[type="email"],
+.container-form input[type="password"],
+.container-form input[type="tel"],
+.container-form textarea {
+    width: calc(100% - 40px); 
+    padding: 15px; 
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .container-form label {
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px; 
 }
 
-.container-form input[type="text"],
-.container-form textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
 .container-form button {
     width: 50%;
@@ -124,8 +133,6 @@ nav {
     background-color: #1D2837;
     color: #fff;
 }
-
-
 
 footer {
     background-color: #1D2837;
@@ -163,6 +170,9 @@ footer {
     text-decoration: none;
 }
 
+.footer-info {
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     .container {
