@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobile Genius</title>
-  <link rel="stylesheet" type="text/css" href="./vejaMais.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="style/vejaMais.css" media="screen" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -48,7 +48,7 @@
         </p>
       </div>
       <div class="intro-img">
-        <img src="./image 1.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
+        <img src="img/image%201.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
       </div>
     </div>
   </section>
@@ -66,7 +66,7 @@
         </p>
       </div>
       <div class="intro-img">
-        <img src="./image 2.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
+        <img src="img/image%202.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
       </div>
     </div>
   </section>
@@ -84,7 +84,7 @@
         </p>
       </div>
       <div class="intro-img">
-        <img src="./image 2.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
+        <img src="img/image%202.png" alt="Imagem que contém o logo do HTML5, CSS3 e JS">
       </div>
     </div>
   </section>
