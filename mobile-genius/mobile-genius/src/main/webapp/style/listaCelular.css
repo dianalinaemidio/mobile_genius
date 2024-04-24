@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1D2837;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icones img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.icones img {
+    height: 20px;
+    margin-right: 10px;
+    color: white;
+}
+
+.modal-content {
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.808) 0px 5px 15px;
+}
+
+.modal-content h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.Editar{
+    background-color: cornflowerblue;
+}
+
+.Excluir{
+    background-color: darkred;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+footer {
+    background-color: #1D2837;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-footer {
+    width: 6rem;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu ul li {
+        margin-right: 10px;
+    }
+
+    .container-form {
+        padding: 10px;
+    }
+
+    .container-form button {
+        width: 100%;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-links ul li {
+        margin-right: 10px;
+    }
+}

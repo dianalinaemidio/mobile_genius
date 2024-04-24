@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Genius</title>
-    <link rel="stylesheet" href="css/cadastroCelular.css">
+    <link rel="stylesheet" href="./style/cadastroCelular.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="img/logo.png" alt="Mobile Genius">
+                    <img src="./img/logo.png" alt="Mobile Genius">
                 </div>
                 <div class="menu">
                     <ul>
@@ -23,8 +24,8 @@
                     </ul>
                 </div>
                 <div class="icones">
-                    <a href="#"><img src="img/user.png" alt="user"></a>
-                    <a href="#"><img src="img/carrinho.png" alt="carrinho"></a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"></a><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </nav>
         </div>
@@ -32,38 +33,38 @@
 
     <section class="banner">
         <div class="container">
-            <div class="banner-content">
-                <img src="img/logo.png" alt="Mobile Genius">
-                <a href="#" class="home-link">Home</a>
-            </div>
+            <div class="banner-content"></div>
         </div>
     </section>
     
 
     <form action="/create-celular" method="post">
         <div class="container-form">
-            <h2>Detalhes do Celular</h2>
+            <h2>Cadastro de Celular</h2>
             <form>
               <div class="form-group">
                 <label for="marca">Marca</label>
-                <input type="text" id="marca" name="marca" required value="${param.id}">
+                <input type="text" id="marca" name="marca">
               </div>
               <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo" required value="${param.id}">
+                <input type="text" id="modelo" name="modelo">
               </div>
               <div class="form-group">
                 <label for="preco">Preço</label>
-                <input type="text" id="preco" name="preco" required value="${param.id}">
+                <input type="text" id="preco" name="preco">
               </div>
               <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao" required value="${param.id}"></textarea>
+                <textarea id="descricao" name="descricao"></textarea>
               </div>
-              <button type="submit">Confirmar</button>
+              <div class="buttons">
+                <button type="submit">Confirmar</button>
+                  <a href="listaCelular.jsp" class="btn">Detalhes</a>
+              </div>
             </form>
           </div>
-    </form>
+        </form>
 
     <footer>
         <div class="container">

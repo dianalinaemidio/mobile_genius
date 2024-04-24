@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Genius</title>
-    <link rel="stylesheet" href="css/minhaConta.css">
+    <link rel="stylesheet" href="./style/minhaConta.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="img/logo.png" alt="Mobile Genius">
+                    <img src="./img/logo.png" alt="Mobile Genius">
                 </div>
                 <div class="menu">
                     <ul>
@@ -65,7 +65,7 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="img/logo.png" alt="Mobile Genius">
+                <img src="./img/logo.png" alt="Mobile Genius">
             </div>
             <div class="footer-links">
                 <ul>

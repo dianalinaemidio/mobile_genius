@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Genius</title>
-    <link rel="stylesheet" href="../mobile-genius/mobile-genius/src/main/webapp/style/areaCliente.css">
+    <link rel="stylesheet" href="./style/areaCliente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="../img/logo.png" alt="Mobile Genius">
+                    <img src="./img/logo.png" alt="Mobile Genius">
                 </div>
                 <div class="menu">
                     <ul>
@@ -34,7 +34,7 @@
     <section class="banner">
         <div class="container">
             <div class="banner-content">
-                <img src="../img/logo.png" alt="Mobile Genius">
+                <img src="./img/logo.png" alt="Mobile Genius">
                 <a href="#" class="home-link">Home</a>
             </div>
         </div>
@@ -55,7 +55,7 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="../img/logo.png" class="logo-footer" alt="Logo da Mobile Genius">
+                <img src="./img/logo.png" class="logo-footer" alt="Logo da Mobile Genius">
             </div>
             <div class="footer-links">
                 <ul>

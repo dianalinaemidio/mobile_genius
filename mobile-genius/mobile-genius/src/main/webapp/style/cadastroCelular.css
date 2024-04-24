@@ -43,10 +43,9 @@ nav {
     text-decoration: none;
 }
 
-.icones {
-    width: 20%;
-    height: 100vh;
-    padding: 20px;
+.icones img {
+    height: 20px; 
+    margin-right: 10px; 
 }
 
 .icones img {
@@ -90,6 +89,7 @@ nav {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.808) 0px 5px 15px;
     border-radius: 8px;
     margin-bottom: 10%;
 }
@@ -115,15 +115,39 @@ nav {
     border-radius: 5px;
 }
 
-.container-form button {
-    width: 50%;
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 40%;
     padding: 15px;
     background-color: #fff;
     color: #000;
     border: 2px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
+    display: flex;
+    margin: 0 auto;
+    text-decoration:none;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #1D2837;
+    color: #fff;
+}
+
+.container-form button {
+    width: 40%;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display:inline-block;
     margin: 0 auto;
 }
 
