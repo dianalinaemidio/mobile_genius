@@ -25,7 +25,7 @@ public class ListCelularServlet extends HttpServlet {
 
         req.setAttribute("celulares", celulares);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("listaCelular.jsp").forward(req, resp);
 
     }
 

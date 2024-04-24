@@ -39,23 +39,29 @@
             <form>
               <div class="form-group">
                 <label for="marca">Marca</label>
-                <input type="text" id="marca" name="marca">
+                <input type="text" id="marca" name="marca" value="${param.marca}">
               </div>
               <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo">
+                <input type="text" id="modelo" name="modelo" value="${param.modelo}">
               </div>
               <div class="form-group">
                 <label for="preco">Preço</label>
-                <input type="text" id="preco" name="preco">
+                <input type="text" id="preco" name="preco" value="${param.preco}">
+              </div>
+              <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type = "text" id="quantidade" name="quantidade" value="${param.quantidade}">
               </div>
               <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao"></textarea>
+                <input type = text id="descricao" name="descricao" value="${param.descricao}">
               </div>
+              <div class ="form-group">
+                 <input type="hidden" id="id" name="id" value= "${param.id}">
               <div class="buttons">
                 <button type="submit">Confirmar</button>
-                  <a href="listaCelular.jsp" class="btn">Detalhes</a>
+                  <a href="/encontre-todos-celulares" class="btn">Celulares Cadastrados</a>
               </div>
             </form>
           </div>
