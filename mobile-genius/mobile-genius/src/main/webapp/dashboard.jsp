@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <head>
+        <%@ page contentType="text/html; charset=UTF-8" %>
         <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Dashboard</title>
     </head>
     <body>

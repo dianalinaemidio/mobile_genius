@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Genius</title>
@@ -14,13 +15,7 @@
                     <img src="./img/logo.png" alt="Mobile Genius">
                 </div>
                 <div class="menu">
-                    <ul>
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Motorola</a></li>
-                        <li><a href="#">Xiaomi</a></li>
-                        <li><a href="#">Asus</a></li>
-                    </ul>
+
                 </div>
                 <div class="icones">
                     <a href="#"><img src="img/user.png" alt="user"></a>
@@ -69,7 +64,7 @@
             </div>
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="#">Loja</a></li>
                     <li><a href="#">Opções de Pagamentos</a></li>
                 </ul>

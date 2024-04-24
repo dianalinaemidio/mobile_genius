@@ -1,6 +1,9 @@
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Title</title>
+    <title>Celulares</title>
+    <%@ page contentType="text/html; charset=UTF-8" %>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="./style/listaCelular.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,13 +15,7 @@
                 <img src="./img/logo.png" alt="Mobile Genius">
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">Motorola</a></li>
-                    <li><a href="#">Xiaomi</a></li>
-                    <li><a href="#">Asus</a></li>
-                </ul>
+
             </div>
             <div class="icones">
                 <a href="#"><i class="fa-solid fa-user"></i></a>
@@ -126,7 +123,7 @@
         </div>
         <div class="footer-links">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.jsp">Home</a></li>
                 <li><a href="#">Loja</a></li>
                 <li><a href="#">Opções de Pagamentos</a></li>
             </ul>
