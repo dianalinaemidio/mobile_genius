@@ -67,7 +67,7 @@
             <ul>
                 <li><a href="index.jsp">Home</a></li>
                 <li><a href="#">Loja</a></li>
-                <li><a href="#">Opções de Pagamentos</a></li>
+                <li><a href="paginaManutencao.jsp">Opções de Pagamentos</a></li>
             </ul>
         </div>
     </div>
