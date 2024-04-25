@@ -15,14 +15,16 @@
     <div class="container">
         <nav>
             <div class="logo">
-                <img src="./img/logo.png" alt="Mobile Genius">
+                <a href="index.jsp">
+                    <img src="./img/logo.png" alt="Mobile Genius">
+                </a>
             </div>
             <div class="menu">
 
             </div>
             <div class="icones">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-                <a href="#"></a><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="paginaManutencao.jsp"><i class="fa-solid fa-user"></i></a>
+                <a href="paginaManutencao.jsp"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </div>
@@ -57,7 +59,9 @@
 <footer>
     <div class="container">
         <div class="footer-logo">
-            <img src="./img/logo.png" alt="Mobile Genius">
+            <a href="index.jsp">
+                <img src="./img/logo.png" alt="Mobile Genius">
+            </a>
         </div>
         <div class="footer-links">
             <ul>
