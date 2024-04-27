@@ -52,27 +52,27 @@ nav {
     background-image: url('../img/banner-home.png');
     background-size: cover;
     background-position: center;
-    height: 400px; 
-    margin-bottom: 10%; 
+    height: 400px;
+    margin-bottom: 10%;
     position: relative;
 }
 
 .banner-content {
     position: absolute;
     top: 50%;
-    left: 10%; 
-    transform: translateY(-50%); 
-    text-align: left; 
-    color: #1D2837; 
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #1D2837;
 }
 
 .banner-content h1 {
-    font-size: 36px; 
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .banner-content p {
-    font-size: 20px; 
+    font-size: 20px;
     margin-bottom: 30px;
 }
 

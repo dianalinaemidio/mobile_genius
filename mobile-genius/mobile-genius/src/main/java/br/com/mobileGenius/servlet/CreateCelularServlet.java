@@ -19,14 +19,22 @@ public class CreateCelularServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Pegando as informações da requisicao do metodo post
+
         String id = request.getParameter("id");
         String marca = request.getParameter("marca");
+        String descricao = request.getParameter("descricao");
+        String modelo = request.getParameter("modelo");
+        double preco = Double.parseDouble(request.getParameter("preco"));
+        int quantidade = Integer.parseInt(request.getParameter("quantidade"));
+
 
 
         // Inicializando a Classe Celular e setando os valores
-        Celular celular = new Celular(marca, id);
+
+        Celular celular = new Celular(marca, id, preco,quantidade, descricao, modelo);
 
         // Inicializando a Classe DAO para gravar no banco
+
         CelularDAO celularDao = new CelularDAO();
 
         /* Validando se o valor da variavel Id e vazio
