@@ -157,7 +157,7 @@ Reset
   }
   
   .nav__list .nav__link:hover {
-    color: var(--blue);
+    color: var(--orange);
   }
   
   .nav__icons {

@@ -41,7 +41,9 @@
             <div class="menu__top">
               <span class="nav__category">PHONE</span>
               <a href="#" class="close__toggle">
-                <img src="/images/sprite.svg" alt="Ícone de fechar menu">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                </svg>
               </a>
             </div>
             <ul class="nav__list">
@@ -62,15 +64,21 @@
 
           <div class="nav__icons">
             <a href="#" class="icon__item" id="login-btn">
-              <img src="/images/sprite.svg#icon-user" class="icon__user" alt="Ícone de usuário">
+              <svg class="icon__user">
+                <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg>
             </a>
 
             <a href="#" class="icon__item" id="search-btn">
-              <img src="/images/sprite.svg#icon-search" class="icon__search" alt="Ícone de busca">
+              <svg class="icon__search">
+                <use xlink:href="./images/sprite.svg#icon-search"></use>
+              </svg>
             </a>
 
             <a href="#" class="icon__item" id="cart-btn">
-              <img src="/images/sprite.svg#icon-shopping-basket" class="icon__cart" alt="Ícone de carrinho de compras">
+              <svg class="icon__cart">
+                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
+              </svg>
               <span id="cart__total">3</span>
             </a>
           </div>
@@ -107,7 +115,7 @@
                   <a href="#"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
-                  <img class="banner_02" src="/images/celular-preto" alt="banner2" />
+                  <images class="banner_02" src="./images/" alt="banner2" />
                 </div>
               </div>
             </li>
@@ -120,10 +128,14 @@
 
         <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <img src="/images/sprite.svg#icon-arrow-left2" alt="Ícone de seta para esquerda">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
+            </svg>
           </button>
           <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <img src="/images/sprite.svg#icon-arrow-right2" alt="Ícone de seta para direita">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -148,7 +160,7 @@
     <div class="shopping-cart">
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/images/products/iPhone/iphone1.jpeg" alt="Imagem do iPhone">
+            <images src="images/products/iPhone/iphone1.jpeg">
             <div class="content">
                 <h3>iPhone</h3>
                 <span class="price">$800.99/-</span>
@@ -157,7 +169,7 @@
         </div>
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/images/products/sumsung/samsung3.jpeg" alt="Imagem do Samsung A22">
+            <images src="images/products/sumsung/samsung3.jpeg">
             <div class="content">
                 <h3>Samsung A22</h3>
                 <span class="price">$350.99/-</span>
@@ -166,7 +178,7 @@
         </div>
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/images/products/headphone/headphone3.jpeg" alt="Imagem do fone de ouvido Boat">
+            <images src="images/products/headphone/headphone3.jpeg">
             <div class="content">
                 <h3>Boat</h3>
                 <span class="price">$54.99/-</span>
@@ -178,15 +190,9 @@
     </div>
 
   </header>
-
-  <div class="container">
-    <div class="hero__left">
-        <h1>TESTE</h1>
-        <img src="/images/celular-preto.png" alt="Imagem de um celular preto">
-        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae temporibus porro pariatur numquam? In hic delectus cupiditate. 
-            Perspiciatis totam blanditiis expedita! Quod eveniet nulla beatae, consequuntur labore accusamus nisi illo.</p>
-    </div>
-  </div>
   <!-- End Header -->
+
+
+
 </body>
 </html>
