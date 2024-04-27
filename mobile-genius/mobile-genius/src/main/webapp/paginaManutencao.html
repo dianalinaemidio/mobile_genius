@@ -16,6 +16,7 @@
         <h1>Estamos em Manutenção</h1>
         <p>Lamentamos o transtorno, mas estamos trabalhando para melhorar nossos serviços.</p>
         <p>Voltaremos em breve!</p>
+        <a href="index.jsp" class="btn-home">Voltar para Home</a>
     </div>
 </body>
 </html>

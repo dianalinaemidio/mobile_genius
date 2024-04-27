@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+  
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  
+    <!-- Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Mobile Genius</title>
+</head>
+
+<body>
+ <!-- Header -->
+ <header id="header" class="header">
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__hamburger">
+              <img src="/images/celular-vermelho.png" alt="Imagem de um Iphone bege">
+          </div>
+
+          <div class="nav__logo">
+            <a href="/" class="scroll-link">
+              MOBILE GENIUS
+            </a>
+          </div>
+
+          <div class="nav__menu">
+            <div class="menu__top">
+              <span class="nav__category">PHONE</span>
+              <a href="#" class="close__toggle">
+                <img src="/images/sprite.svg" alt="Ícone de fechar menu">
+              </a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#header" class="nav__link scroll-link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#category" class="nav__link scroll-link">Category</a>
+              </li>
+              <li class="nav__item">
+                <a href="#news" class="nav__link scroll-link">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link scroll-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__icons">
+            <a href="#" class="icon__item" id="login-btn">
+              <img src="/images/sprite.svg#icon-user" class="icon__user" alt="Ícone de usuário">
+            </a>
+
+            <a href="#" class="icon__item" id="search-btn">
+              <img src="/images/sprite.svg#icon-search" class="icon__search" alt="Ícone de busca">
+            </a>
+
+            <a href="#" class="icon__item" id="cart-btn">
+              <img src="/images/sprite.svg#icon-shopping-basket" class="icon__cart" alt="Ícone de carrinho de compras">
+              <span id="cart__total">3</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Hero -->
+    <div class="hero">
+      <div class="glide" id="glide_1">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2020</span>
+                  <h1 class="">PHONES MADE FOR YOU!</h1>
+                  <p>Trending from mobile and headphone style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                    <div class="hero__images-container">
+                        <img class="banner_01" src="/images/celular-vermelho.png" alt="banner2" />
+                    </div>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span>New Inspiration 2020</span>
+                  <h1>PHONES MADE FOR YOU!</h1>
+                  <p>Trending from mobile and headphone style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src="/images/celular-preto" alt="banner2" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <img src="/images/sprite.svg#icon-arrow-left2" alt="Ícone de seta para esquerda">
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <img src="/images/sprite.svg#icon-arrow-right2" alt="Ícone de seta para direita">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="auth">
+      <form action="" class="login-form">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">
+        <p>forget your password <a href="#">Click Here</a></p>
+        <p>don't have an account <a href="#">Create now</a></p>
+        <input type="submit" value="Login now" class="btn">
+      </form>
+      </div>
+      <div class="searchF">
+      <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Search here..">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+  </div>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="/images/products/iPhone/iphone1.jpeg" alt="Imagem do iPhone">
+            <div class="content">
+                <h3>iPhone</h3>
+                <span class="price">$800.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="/images/products/sumsung/samsung3.jpeg" alt="Imagem do Samsung A22">
+            <div class="content">
+                <h3>Samsung A22</h3>
+                <span class="price">$350.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="/images/products/headphone/headphone3.jpeg" alt="Imagem do fone de ouvido Boat">
+            <div class="content">
+                <h3>Boat</h3>
+                <span class="price">$54.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+        <div class="total">Total : $1354.69/-</div>
+        <a href="#" class="btn">Check out</a>
+    </div>
+
+  </header>
+
+  <div class="container">
+    <div class="hero__left">
+        <h1>TESTE</h1>
+        <img src="/images/celular-preto.png" alt="Imagem de um celular preto">
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae temporibus porro pariatur numquam? In hic delectus cupiditate. 
+            Perspiciatis totam blanditiis expedita! Quod eveniet nulla beatae, consequuntur labore accusamus nisi illo.</p>
+    </div>
+  </div>
+  <!-- End Header -->
+</body>
+</html>
