@@ -122,6 +122,8 @@ footer {
     background-color: #1D2837;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
 }
 
 .footer-logo {
