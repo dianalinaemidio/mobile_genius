@@ -1,6 +1,7 @@
 
 :root {
     --primaryColor: #f1f1f1;
+    --footerColor: #1D2837;
     --black: #222;
     --black2: #555;
     --black3: #252525;
@@ -75,6 +76,13 @@
     padding: 0 1.6rem;
   }
   
+  .container-teste {
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    margin-top: 50px;
+    margin-bottom: 50rem;
+  }
   /*
   ======================
   Navigation
@@ -550,16 +558,16 @@
     max-height: 100%;
   }
   
-  .product__footer {
-    padding: 1rem 0;
-  }
-  
   .rating svg {
     width: 1.6rem;
     height: 1.6rem;
     fill: var(--yellow);
   }
   
+  .product__footer {
+    padding: 1rem 0;
+  }
+
   .product__footer h3 {
     padding: 1rem 0;
   }
@@ -625,7 +633,7 @@
   */
   
   .footer {
-    background-color: var(--black3);
+    background-color: var(--footerColor);
     padding: 6rem 1rem;
     line-height: 3rem;
   }

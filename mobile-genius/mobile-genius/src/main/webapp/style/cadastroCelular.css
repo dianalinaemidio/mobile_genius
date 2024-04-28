@@ -11,10 +11,11 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 100px; 
 }
 
 header {
-    background-color: #1D2837;
+    background-color: #fff;
     color: #fff;
     padding: 20px 0;
 }
@@ -82,6 +83,13 @@ nav {
     margin-top: 10px;
 }
 
+body {
+    padding-bottom: 100px;
+}
+
+form {
+    margin-bottom: 100px; 
+}
 
 .container-form {
     max-width: 600px;
@@ -91,7 +99,8 @@ nav {
     border: 1px solid #ccc;
     box-shadow: rgba(0, 0, 0, 0.808) 0px 5px 15px;
     border-radius: 8px;
-    margin-bottom: 10%;
+    margin-top: 50px;
+    margin-bottom: 100px; 
 }
 
 .container-form h2 {
@@ -156,70 +165,16 @@ nav {
     color: #fff;
 }
 
-
-
-footer {
-    background-color: #1D2837;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer-logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo-footer {
-    width: 6rem;
-}
-
-.footer-logo img {
-    width: 150px;
-}
-
-.footer-links ul {
-    list-style: none;
-    text-align: center;
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
     margin: 0;
-    padding: 0;
-}
-
-.footer-links ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-links ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .menu ul li {
-        margin-right: 10px;
-    }
-
-    .container-form {
-        padding: 10px;
-    }
-
-    .container-form button {
-        width: 100%;
-    }
-
-    .footer-logo img {
-        width: 100px;
-    }
-
-    .footer-links ul li {
-        margin-right: 10px;
-    }
+    padding-bottom: 100px; /* Altura do footer */
+  }
+section footer {
+    position: relative;
+    top: 10rem;
 }

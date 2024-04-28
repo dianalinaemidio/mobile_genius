@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    position: relative;
+  }
+  
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -14,7 +24,7 @@ body {
 }
 
 header {
-    background-color: #1D2837;
+    background-color: #fff;
     color: #fff;
     padding: 20px 0;
 }
@@ -107,69 +117,7 @@ button {
 button:hover {
     background-color: #000;
 }
-
-footer {
-    background-color: #1D2837;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer-logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo-footer {
-    width: 6rem;
-}
-
-.footer-logo img {
-    width: 150px;
-}
-
-.footer-links ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-links ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-links ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .menu ul li {
-        margin-right: 10px;
-    }
-
-    .container-form {
-        padding: 10px;
-    }
-
-    .container-form button {
-        width: 100%;
-    }
-
-    .footer-logo img {
-        width: 100px;
-    }
-
-    .footer-links ul li {
-        margin-right: 10px;
-    }
+ 
+.footer {
+    margin-top: auto;
 }
