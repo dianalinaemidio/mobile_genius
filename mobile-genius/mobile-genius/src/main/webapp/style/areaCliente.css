@@ -25,56 +25,6 @@ nav {
     align-items: center;
 }
 
-.logo img {
-    height: 50px;
-}
-
-.menu ul {
-    list-style: none;
-}
-
-.menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.menu ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.icones img {
-    height: 20px; 
-    margin-right: 10px; 
-}
-
-.banner {
-    background-image: url('../img/banner3.png');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    margin-bottom: 50px; 
-    position: relative;
-}
-
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.banner-content img {
-    height: 100px;
-}
-
-.home-link {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-}
 
 .cliente-info {
     text-align: center;
@@ -117,48 +67,6 @@ nav {
 }
 
 
-
-footer {
-    background-color: #1D2837;
-    color: #fff;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-}
-
-.footer-logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.footer-logo img {
-    width: 150px;
-}
-
-.footer-links ul {
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-links ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-links ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-info {
-    text-align: center;
-}
 
 @media screen and (max-width: 768px) {
     .container {

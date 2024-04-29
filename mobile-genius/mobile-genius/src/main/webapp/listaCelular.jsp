@@ -1,72 +1,66 @@
-    <html lang="pt-BR">
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    <head>
-        <title>Celulares</title>
-        <%@ page contentType="text/html; charset=UTF-8" %>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="./style/listaCelular.css">
-        <link rel="stylesheet" href="style/styles.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
+<head>
+  <%@ page contentType="text/html; charset=UTF-8" %>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-REPLACE_WITH_YOUR_SHA384" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- Carrossel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="style/listaCelular.css" />
+  <link rel="stylesheet" href="style/styles.css" />
+
+  <title>Mobile Genius</title>
+</head>
+
+<body>
+
   <!-- Header -->
   <header id="header" class="header">
     <div class="navigation">
       <div class="container">
         <nav class="nav">
           <div class="nav__hamburger">
-            <img src="/images/menu-icon.png" alt="Menu">
+            <img src="/img/menu-icon.png" alt="Menu">
           </div>
-  
+
           <div class="nav__logo">
-            <a href="/" class="scroll-link">
-              MOBILE GENIUS
-            </a>
+            <a href="/" class="scroll-link"> Mobile Genius </a>
           </div>
-  
+
           <div class="nav__menu">
             <div class="menu__top">
               <span class="nav__category">PHONE</span>
               <a href="#" class="close__toggle">
-                <img src="/images/user-solid.svg" alt="Close">
+                <img src="/img/user-solid.svg" alt="Close">
               </a>
             </div>
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#header" class="nav__link scroll-link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="#category" class="nav__link scroll-link">Category</a>
-              </li>
-              <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link">Blog</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contact" class="nav__link scroll-link">Contact</a>
-              </li>
-            </ul>
           </div>
-  
+
           <div class="nav__icons">
             <a href="#" class="icon__item" id="login-btn">
-              <img src="/images/icone-user.png" alt="User">
+              <img src="/img/icone-user.png" alt="User">
             </a>
-  
-            <a href="#" class="icon__item" id="search-btn">
-              <img src="/images/search-icon.png" alt="Search">
-            </a>
-  
+
             <a href="#" class="icon__item" id="cart-btn">
-              <img src="/images/cart-icon.png" alt="Cart">
+              <img src="/img/cart-icon.png" alt="Cart">
               <span id="cart__total">3</span>
             </a>
           </div>
         </nav>
       </div>
     </div>
-  </header>
+    </header>
   <!-- End Header -->
   
     <div class="modal-content">
@@ -115,49 +109,15 @@
 
 
     
-  <!-- Footer -->
+<!-- Footer -->
   <footer id="footer" class="section footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer-top__box">
-          <h3>EXTRAS</h3>
-          <a href="#">Brands</a>
-          <a href="#">Gift Certificates</a>
-          <a href="#">Affiliate</a>
-          <a href="#">Specials</a>
-          <a href="#">Site Map</a>
-        </div>
-        <div class="footer-top__box">
-          <h3>INFORMATION</h3>
-          <a href="#">About Us</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Site Map</a>
-        </div>
-        <div class="footer-top__box">
-          <h3>MY ACCOUNT</h3>
-          <a href="#">My Account</a>
-          <a href="#">Order History</a>
-          <a href="#">Wish List</a>
-          <a href="#">Newsletter</a>
-          <a href="#">Returns</a>
-        </div>
-        <div class="footer-top__box">
-          <h3>CONTACT US</h3>
-          <div>
-            Senac, Nações Unidas, 2000 São Paulo
-          </div>
-          <div>
-            teste@teste.com
-          </div>
-          <div>
-            11 99999-9999
-          </div>
-          <div>
-            São Paulo, BR
-          </div>
-        </div>
+        <ul>
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="#">Loja</a></li>
+          <li><a href="#">Opções de Pagamento</a></li>
+        </ul>
       </div>
     </div>
   </footer>

@@ -35,34 +35,7 @@ nav {
     align-items: center;
 }
 
-.logo img {
-    height: 50px;
-}
 
-.menu ul {
-    list-style: none;
-}
-
-.menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.menu ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.icones img {
-    height: 20px;
-    margin-right: 10px;
-}
-
-.icones img {
-    height: 20px;
-    margin-right: 10px;
-    color: white;
-}
 
 .modal-content {
     max-width: 75%;

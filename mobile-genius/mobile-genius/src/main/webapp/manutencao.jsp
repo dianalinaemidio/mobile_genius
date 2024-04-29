@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/minhaConta.css" />
+  <link rel="stylesheet" href="style/manutencao.css" />
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -62,45 +62,29 @@
     </div>
     </header>
   <!-- End Header -->
-
   
 
-
-
-    <section class="form">
-        <div class="container-form">
-            <h2>Minha conta</h2>
-            <div class="form-container">
-                <form class="login-form">
-                    <h3>Log In</h3>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button type="submit">Log In</button>
-                </form>
-                <form class="register-form">
-                    <h3>Registrar</h3>
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="password" placeholder="Senha" required>
-                    <input type="tel" placeholder="Telefone">
-                    <button type="submit">Registrar</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
- <!-- Footer -->
-   <footer id="footer" class="section footer">
-     <div class="container">
-       <div class="footer__top">
-         <ul>
-           <li><a href="index.jsp">Home</a></li>
-           <li><a href="#">Loja</a></li>
-           <li><a href="#">Opções de Pagamento</a></li>
-         </ul>
-       </div>
-     </div>
-   </footer>
-   <!-- End Footer -->
+<body>
+    <div class="container">
+        <h1>Estamos em Manutenção</h1>
+        <p>Lamentamos o transtorno, mas estamos trabalhando para melhorar nossos serviços.</p>
+        <p>Voltaremos em breve!</p>
+        <a href="index.jsp" class="btn-home">Voltar para Home</a>
+    </div>
 </body>
+
+  <!-- Footer -->
+    <footer id="footer" class="section footer">
+      <div class="container">
+        <div class="footer__top">
+          <ul>
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="#">Loja</a></li>
+            <li><a href="#">Opções de Pagamento</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 </html>
+

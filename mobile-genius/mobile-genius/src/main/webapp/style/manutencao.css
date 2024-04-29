@@ -23,7 +23,7 @@ p {
 .btn-home {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Azul */
+    background-color: #1D2837;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -31,5 +31,5 @@ p {
 }
 
 .btn-home:hover {
-    background-color: #0056b3; /* Azul escuro */
+    background-color: #1D2837;
 }

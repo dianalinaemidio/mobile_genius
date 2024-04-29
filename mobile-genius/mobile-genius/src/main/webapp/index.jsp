@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+  <%@ page contentType="text/html; charset=UTF-8" %>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -10,12 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-REPLACE_WITH_YOUR_SHA384" crossorigin="anonymous">
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
-  <!-- Carousel -->
+  <!-- Carrossel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- Folha de Estilos Personalizada -->
+  <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -23,33 +24,40 @@
 
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="header">
+  <!-- Header -->
+  <header id="header" class="header">
     <div class="navigation">
-      <nav class="nav">
-        <div class="nav__hamburger">
-          <img src="/images/menu-icon.png" alt="Menu">
-        </div>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__hamburger">
+            <img src="/img/menu-icon.png" alt="Menu">
+          </div>
 
-        <div class="nav__logo">
-          <a href="/" class="scroll-link">  Mobile Genius </a>
-        </div>
+          <div class="nav__logo">
+            <a href="/" class="scroll-link"> Mobile Genius </a>
+          </div>
 
-        <div class="nav__icons">
-          <a href="#" class="icon__item" id="login-btn">
-            <img src="/images/icone-user.png" alt="User">
-          </a>
+          <div class="nav__menu">
+            <div class="menu__top">
+              <span class="nav__category">PHONE</span>
+              <a href="#" class="close__toggle">
+                <img src="/img/user-solid.svg" alt="Close">
+              </a>
+            </div>
+          </div>
 
-          <a href="#" class="icon__item" id="search-btn">
-            <img src="/images/search-icon.png" alt="Search">
-          </a>
+          <div class="nav__icons">
+            <a href="#" class="icon__item" id="login-btn">
+              <img src="/img/icone-user.png" alt="User">
+            </a>
 
-          <a href="#" class="icon__item" id="cart-btn">
-            <img src="/images/cart-icon.png" alt="Cart">
-            <span id="cart__total">3</span>
-          </a>
-        </div>
-      </nav>
+            <a href="#" class="icon__item" id="cart-btn">
+              <img src="/img/cart-icon.png" alt="Cart">
+              <span id="cart__total">3</span>
+            </a>
+          </div>
+        </nav>
+      </div>
     </div>
 
     <!-- Hero -->
@@ -59,22 +67,17 @@
           <ul class="glide__slides">
             <li class="glide__slide">
               <div class="hero__center">
-                <span class="">Nova Inspiração 2020</span>
-                <h1 class="">SMARTPHONES FEITOS PARA VOCÊ!</h1>
-                <p>Em alta na coleção de estilos para celular e fone de ouvido</p>
-                <a href="#"><button class="hero__btn">COMPRE AGORA</button></a>
-                <div class="hero__img-container">
-                  <img class="banner_01" src="/images/celular-vermelho.png" alt="banner2" />
+                <div class="hero__left">
+                  <span class="">Nova Inspiração 2024</span>
+                  <h1 class="">SMARTPHONES FEITOS PARA VOCÊ!</h1>
+                  <p>Em alta na coleção de estilos para celular e fone de ouvido</p>
+                  <a href="#"><button class="hero__btn">COMPRE AGORA</button></a>
                 </div>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="hero__center">
-                <span>Nova Inspiração 2020</span>
-                <h1>SMARTPHONES FEITOS PARA VOCÊ!</h1>
-                <p>Em alta na coleção de estilos para celular e fone de ouvido</p>
-                <a href="#"><button class="hero__btn">COMPRE AGORA</button></a>
-                <img class="banner_02" src="/images/banner_02.png" alt="banner2" />
+                <div class="hero__right">
+                  <div class="hero__img-container">
+                    <img class="banner_01" src="/img/celular-vermelho.png" alt="banner2" />
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
@@ -86,12 +89,12 @@
       </div>
     </div>
   </header>
-  <!-- Fim do Cabeçalho -->
+  <!-- End Header -->
 
   <main>
     <section class="section latest__products" id="latest">
       <div class="title__container">
-        <div class="section__title active" data-id="Últimos Produtos">
+        <div class="section__title active" data-id="Latest Products">
           <span class="dot"></span>
           <h1 class="primary__title">Novidades</h1>
         </div>
@@ -99,7 +102,199 @@
       <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
         <div class="glide glide--ltr glide--carousel glide--swipeable" id="glide_2">
           <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides latest-center">
+            <ul class="glide__slides latest-center" style="transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 4733px; transform: translate3d(-1116px, 0px, 0px);">
+              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-right: 5px;">
+                <div class="product">
+              </li>
+              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/images/samsung2.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Samsung Galaxy</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$300</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/iphone1.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Sony WH-CH510</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$250</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/products/headphone/headphone1.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Sony WH-CH510</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$250</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/iphone2.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Apple iPhone XR</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$550</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide glide__slide--active" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/iphone5.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Apple iPhone 11</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$750</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/samsung5.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Samsung Galaxy</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$900</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="glide__slide" style="width: 269px; margin-left: 5px; margin-right: 5px;">
+                <div class="product">
+                  <div class="product__header">
+                    <img src="/img/iphone6.jpeg" alt="product">
+                  </div>
+                  <div class="product__footer">
+                    <h3>Apple iPhone 12</h3>
+                    <div class="rating">
+                    </div>
+                    <div class="product__price">
+                      <h4>$950</h4>
+                    </div>
+                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
+                  </div>
+                  <ul>
+                    <li>
+                      <a data-tip="Quick View" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
+                    </li>
+                    <li>
+                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">
@@ -113,28 +308,26 @@
           <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"></button>
             <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Rodapé -->
-  <footer class="section footer">
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer-top__box">
-          <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="#">Loja</a></li>
-            <li><a href="#">Opções de Pagamento</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="#">Loja</a></li>
+          <li><a href="#">Opções de Pagamento</a></li>
+        </ul>
       </div>
     </div>
   </footer>
-
+  <!-- End Footer -->
 
 </body>
 
