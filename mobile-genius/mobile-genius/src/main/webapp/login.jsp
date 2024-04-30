@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/minhaConta.css" />
+  <link rel="stylesheet" href="style/login.css" />
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -69,21 +69,14 @@
 
     <section class="form">
         <div class="container-form">
-            <h2>Minha conta</h2>
+            <h2>LOGIN</h2>
             <div class="form-container">
                 <form class="login-form">
-                    <h3>Log In</h3>
                     <input type="email" placeholder="E-mail" required>
                     <input type="password" placeholder="Senha" required>
-                    <button type="submit">Log In</button>
-                </form>
-                <form class="register-form">
-                    <h3>Registrar</h3>
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="password" placeholder="Senha" required>
-                    <input type="tel" placeholder="Telefone">
-                    <button type="submit">Registrar</button>
+                    <button type="submit">Entrar</button>
+                    <a href="#">Não tem uma conta? Registre-se!</a>
+                    </link>
                 </form>
             </div>
         </div>

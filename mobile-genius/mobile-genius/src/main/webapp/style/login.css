@@ -8,15 +8,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 header {
     background-color: #fff;
     color: #fff;
-    padding: 20px 0;
 }
 
 nav {
@@ -48,27 +42,6 @@ nav {
     margin-right: 10px; 
 }
 
-.banner {
-    background-image: url('../img/banner2.png');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    margin-bottom: 50px; 
-    position: relative;
-}
-
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.banner-content img {
-    height: 100px;
-}
-
 .home-link {
     display: block;
     color: #fff;
@@ -88,11 +61,14 @@ nav {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 50px;
 }
 
 .container-form h2 {
     text-align: center;
+    margin-bottom: 30px;
+    margin-top: 17px;
 }
 
 .container-form .form-group {
@@ -127,6 +103,7 @@ nav {
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .container-form button:hover {
@@ -168,6 +145,7 @@ footer {
 .footer-links ul li a {
     color: #fff;
     text-decoration: none;
+    display: flex;
 }
 
 .footer-info {
