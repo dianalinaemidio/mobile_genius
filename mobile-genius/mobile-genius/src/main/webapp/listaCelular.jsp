@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+    <html lang="pt-BR">
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <head>
+        <title>Celulares</title>
+        <%@ page contentType="text/html; charset=UTF-8" %>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="./style/listaCelular.css">
+        <link rel="stylesheet" href="style/styles.css">
 
-<head>
-  <%@ page contentType="text/html; charset=UTF-8" %>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-REPLACE_WITH_YOUR_SHA384" crossorigin="anonymous">
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-  <!-- Carrossel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/listaCelular.css" />
-  <link rel="stylesheet" href="style/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>Mobile Genius</title>
 </head>
