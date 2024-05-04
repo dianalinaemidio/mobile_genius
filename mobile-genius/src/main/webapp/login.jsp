@@ -75,7 +75,6 @@
                     <input type="email" placeholder="E-mail" required>
                     <input type="password" placeholder="Senha" required>
                     <button type="submit">Entrar</button>
-                    <a href="#">Não tem uma conta? Registre-se!</a>
                     </link>
                 </form>
             </div>
