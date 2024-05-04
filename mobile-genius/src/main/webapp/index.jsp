@@ -47,7 +47,7 @@
           </div>
 
           <div class="nav__icons">
-            <a href="#" class="icon__item" id="login-btn">
+            <a href="/login.jsp" class="icon__item" id="login-btn">
               <img src="/img/icone-user.png" alt="User">
             </a>
 

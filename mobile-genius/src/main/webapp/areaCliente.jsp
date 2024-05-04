@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/listaCelular.css" />
+  <link rel="stylesheet" href="style/areaCliente.css" />
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -61,54 +61,19 @@
       </div>
     </div>
     </header>
-  <!-- End Header -->
-  
-    <div class="modal-content">
-        <h3>LISTA DE CELULARES CADASTRADOS</h3>
 
-        <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Preco</th>
-                            <th>Quantidade</th>
-                            <th>Descricao</th>
-                            <th>Ações</th>
-                        </tr>
+    <section class="cliente-info">
+        <div class="container">
+            <div class="info">
+                <h3>Informações</h3>
+                <p>Nome: Diana Lina Emidio</p>
+                <p>E-mail: dianalinafacul@gmail.com</p>
+                <p>Telefone: (11)99999-9999</p>
+                <button type="button" class="excluir-btn">Deseja excluir sua conta?</button>
+            </div>
+        </div>
+    </section>
 
-                        <c:forEach var="celular" items="${celulares}">
-                            <tr>
-                                <td>${celular.id}</td>
-                                <td>${celular.marca}</td>
-                                <td>${celular.modelo}</td>
-                                <td>${celular.preco}</td>
-                                <td>${celular.quantidade}</td>
-                                <td>${celular.descricao}</td>
-                                <td>
-                                    <form action="/delete-celular" method="post">
-                                        <input type="hidden" id="id" name="id" value="${celular.id}">
-                                        <button type="submit">Deletar</button>
-                                    </form>
-                                        <span> | </span>
-                                    <form action="cadastroCelular.jsp" method="post">
-                                            <input type="hidden" name="id" value="${celular.id}">
-                                            <input type="hidden" name="marca" value="${celular.marca}">
-                                            <input type="hidden" name="modelo" value="${celular.modelo}">
-                                            <input type="hidden" name="preco" value="${celular.preco}">
-                                            <input type="hidden" name="quantidade" value="${celular.quantidade}">
-                                            <input type="hidden" name="descricao" value="${celular.descricao}">
-                                            <button type="submit">Update</button>
-                                        </form>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-
-    </div>
-
-
-    
 <!-- Footer -->
   <footer id="footer" class="section footer">
     <div class="container">
@@ -122,5 +87,5 @@
     </div>
   </footer>
   <!-- End Footer -->
-    </body>
-    </html>
+</body>
+</html>

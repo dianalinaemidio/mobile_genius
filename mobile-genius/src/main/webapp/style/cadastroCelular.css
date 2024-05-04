@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px; 
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+body {
+    padding-bottom: 100px;
+}
+
+form {
+    margin-bottom: 100px; 
+}
+
+.container-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.808) 0px 5px 15px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 100px; 
+}
+
+.container-form h2 {
+    text-align: center;
+}
+
+.container-form .form-group {
+    margin-bottom: 20px;
+}
+
+.container-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container-form input[type="text"],
+.container-form textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 40%;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    text-decoration:none;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #1D2837;
+    color: #fff;
+}
+
+.container-form button {
+    width: 40%;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display:inline-block;
+    margin: 0 auto;
+}
+
+.container-form button:hover {
+    background-color: #1D2837;
+    color: #fff;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding-bottom: 100px; /* Altura do footer */
+  }
+section footer {
+    position: relative;
+    top: 10rem;
+}

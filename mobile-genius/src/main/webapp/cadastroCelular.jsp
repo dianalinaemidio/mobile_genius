@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/listaCelular.css" />
+  <link rel="stylesheet" href="style/cadastroCelular.css" />
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -62,53 +62,41 @@
     </div>
     </header>
   <!-- End Header -->
-  
-    <div class="modal-content">
-        <h3>LISTA DE CELULARES CADASTRADOS</h3>
-
-        <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Preco</th>
-                            <th>Quantidade</th>
-                            <th>Descricao</th>
-                            <th>Ações</th>
-                        </tr>
-
-                        <c:forEach var="celular" items="${celulares}">
-                            <tr>
-                                <td>${celular.id}</td>
-                                <td>${celular.marca}</td>
-                                <td>${celular.modelo}</td>
-                                <td>${celular.preco}</td>
-                                <td>${celular.quantidade}</td>
-                                <td>${celular.descricao}</td>
-                                <td>
-                                    <form action="/delete-celular" method="post">
-                                        <input type="hidden" id="id" name="id" value="${celular.id}">
-                                        <button type="submit">Deletar</button>
-                                    </form>
-                                        <span> | </span>
-                                    <form action="cadastroCelular.jsp" method="post">
-                                            <input type="hidden" name="id" value="${celular.id}">
-                                            <input type="hidden" name="marca" value="${celular.marca}">
-                                            <input type="hidden" name="modelo" value="${celular.modelo}">
-                                            <input type="hidden" name="preco" value="${celular.preco}">
-                                            <input type="hidden" name="quantidade" value="${celular.quantidade}">
-                                            <input type="hidden" name="descricao" value="${celular.descricao}">
-                                            <button type="submit">Update</button>
-                                        </form>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-
-    </div>
 
 
-    
+    <form action="/create-celular" method="post">
+        <div class="container-form">
+            <h2>Cadastro de Celular</h2>
+            <div class="form-group">
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" name="marca" value="${param.marca}">
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" name="modelo" value="${param.modelo}">
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço</label>
+                <input type="text" id="preco" name="preco" value="${param.preco}">
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="text" id="quantidade" name="quantidade" value="${param.quantidade}">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao" value="${param.descricao}">
+            </div>
+            <div class="form-group">
+                <input type="hidden" id="id" name="id" value="${param.id}">
+            </div>
+            <div class="buttons">
+                <button type="submit">Confirmar</button>
+                <a href="/encontre-todos-celulares" class="btn">Celulares Cadastrados</a>
+            </div>
+        </div>
+    </form>
+
 <!-- Footer -->
   <footer id="footer" class="section footer">
     <div class="container">
@@ -122,5 +110,5 @@
     </div>
   </footer>
   <!-- End Footer -->
-    </body>
-    </html>
+</body>
+</html>
