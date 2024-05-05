@@ -54,49 +54,65 @@
     </header>
   <!-- End Header -->
   
-    <div class="modal-content">
-        <h3>LISTA DE CELULARES CADASTRADOS</h3>
+   <c:if test="${sessionScope.loggedUser != null}">
+          <span>${sessionScope.loggedUser}</span>
+          <a href="/logout"> Logout</a>
+      </c:if>
 
-        <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Preco</th>
-                            <th>Quantidade</th>
-                            <th>Descricao</th>
-                            <th>Ações</th>
-                        </tr>
+       <div class="modal-content">
+           <h3>LISTA DE CELULARES CADASTRADOS</h3>
 
-                        <c:forEach var="celular" items="${celulares}">
-                            <tr>
-                                <td>${celular.id}</td>
-                                <td>${celular.marca}</td>
-                                <td>${celular.modelo}</td>
-                                <td>${celular.preco}</td>
-                                <td>${celular.quantidade}</td>
-                                <td>${celular.descricao}</td>
-                                <td>
-                                    <form action="/delete-celular" method="post">
-                                        <input type="hidden" id="id" name="id" value="${celular.id}">
-                                        <button type="submit">Deletar</button>
-                                    </form>
-                                        <span> | </span>
-                                    <form action="cadastroCelular.jsp" method="post">
-                                            <input type="hidden" name="id" value="${celular.id}">
-                                            <input type="hidden" name="marca" value="${celular.marca}">
-                                            <input type="hidden" name="modelo" value="${celular.modelo}">
-                                            <input type="hidden" name="preco" value="${celular.preco}">
-                                            <input type="hidden" name="quantidade" value="${celular.quantidade}">
-                                            <input type="hidden" name="descricao" value="${celular.descricao}">
-                                            <button type="submit">Update</button>
-                                        </form>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
+           <table>
+                           <tr>
+                               <th>ID</th>
+                               <th>Marca</th>
+                               <th>Modelo</th>
+                               <th>Preco</th>
+                               <th>Quantidade</th>
+                               <th>Descricao</th>
 
-    </div>
+                               <c:if test="${sessionScope.loggedUser != null}">
+                                   <th>Ações</th>
+                               </c:if>
+
+                           </tr>
+
+                           <c:forEach var="celular" items="${celulares}">
+                               <tr>
+                                   <td>${celular.id}</td>
+                                   <td>${celular.marca}</td>
+                                   <td>${celular.modelo}</td>
+                                   <td>${celular.preco}</td>
+                                   <td>${celular.quantidade}</td>
+                                   <td>${celular.descricao}</td>
+
+                                   <td>
+
+                                       <c:if test="${sessionScope.loggedUser != null}">
+                                           <form action="/delete-celular" method="post">
+                                               <input type="hidden" id="id" name="id" value="${celular.id}">
+                                               <button type="submit">Deletar</button>
+                                           </form>
+                                           <span> | </span>
+                                           <form action="cadastroCelular.jsp" method="post">
+                                               <input type="hidden" name="id" value="${celular.id}">
+                                               <input type="hidden" name="marca" value="${celular.marca}">
+                                               <input type="hidden" name="modelo" value="${celular.modelo}">
+                                               <input type="hidden" name="preco" value="${celular.preco}">
+                                               <input type="hidden" name="quantidade" value="${celular.quantidade}">
+                                               <input type="hidden" name="descricao" value="${celular.descricao}">
+                                               <button type="submit">Update</button>
+                                           </form>
+                                       </c:if>
+
+
+                                   </td>
+                               </tr>
+                           </c:forEach>
+                       </table>
+
+       </div>
+
 
 
     

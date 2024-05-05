@@ -1,14 +1,14 @@
 package br.com.mobileGenius.DAO;
 
-import br.com.mobileGenius.Model.User;
+import br.com.mobileGenius.model.User;
 
-import javax.sql.ConnectionPoolDataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UserDAO {
+
     public boolean verifyCredentials(User user) {
         String SQL = "SELECT * FROM USERS WHERE USERNAME = ?";
 

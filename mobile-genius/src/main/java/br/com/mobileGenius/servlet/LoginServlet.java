@@ -1,7 +1,7 @@
 package br.com.mobileGenius.servlet;
 
 import br.com.mobileGenius.DAO.UserDAO;
-import br.com.mobileGenius.Model.User;
+import br.com.mobileGenius.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
        boolean isValidUser = new UserDAO().verifyCredentials(user);
 
         if (isValidUser) {
-            req.getSession().setAttribute("loggedUser", username);
+            req.getSession().setAttribute("LoggedUser", username);
 
             resp.sendRedirect("/encontre-todos-celulares");
 

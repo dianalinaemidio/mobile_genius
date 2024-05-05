@@ -1,6 +1,6 @@
 package br.com.mobileGenius.DAO;
 
-import br.com.mobileGenius.Model.Celular;
+import br.com.mobileGenius.model.Celular;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

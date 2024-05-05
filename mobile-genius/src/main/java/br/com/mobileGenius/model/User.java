@@ -1,12 +1,12 @@
-package br.com.mobileGenius.Model;
+package br.com.mobileGenius.model;
 
 public class User {
     private String username;
     private String password;
 
-    public User(String password, String username) {
-        this.password = password;
+    public User(String username, String password) {
         this.username = username;
+        this.password = password;
     }
 
     public String getUsername() {

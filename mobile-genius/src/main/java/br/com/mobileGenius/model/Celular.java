@@ -1,5 +1,5 @@
 
-package br.com.mobileGenius.Model;
+package br.com.mobileGenius.model;
 
 public class Celular {
 

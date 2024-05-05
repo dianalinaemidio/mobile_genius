@@ -2,7 +2,7 @@ package br.com.mobileGenius.servlet;
 
 
 import br.com.mobileGenius.DAO.CelularDAO;
-import br.com.mobileGenius.Model.Celular;
+import br.com.mobileGenius.model.Celular;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,7 @@ import java.util.List;
 
 
 
-@WebServlet("/encontre-todos-celulares")
+@WebServlet({"/encontre-todos-celulares", "/admin/encontre-todos-celulares"})
 
 public class ListCelularServlet extends HttpServlet {
 

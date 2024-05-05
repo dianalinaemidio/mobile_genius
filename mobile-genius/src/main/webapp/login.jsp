@@ -68,18 +68,22 @@
 
 
     <section class="form">
-        <div class="container-form">
-            <h2>LOGIN</h2>
-            <div class="form-container">
-                <form class="login-form">
-                    <input type="email" placeholder="E-mail" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button type="submit">Entrar</button>
-                    </link>
-                </form>
+            <div class="container-form">
+                <h2>LOGIN</h2>
+                <div class="form-container">
+
+                <form action "/login" method="post">
+                <span>${requestScope.message}</span>
+
+                    <form class="login-form">
+                        <input type="text" name="username" placeholder="Usuário">
+                        <input type="password" name="password" placeholder="Senha">
+                       <button type="submit">Entrar</button>
+
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
  <!-- Footer -->
    <footer id="footer" class="section footer">

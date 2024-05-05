@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import br.com.mobileGenius.Model.Celular;
+import br.com.mobileGenius.model.Celular;
 import br.com.mobileGenius.DAO.CelularDAO;
 
 @WebServlet("/create-celular")
