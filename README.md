@@ -8,10 +8,10 @@
 *Produtos:*
 - Adição de novos produtos.
 - Remoção de produtos do catálogo.
+- Atualização dos produtos.
 
 *Compras:*
 - Exibição de produtos com imagens, descrições e preços.
-- Funcionalidade de busca.
 - Visualização detalhada de produtos.
 - Adição de produtos ao carrinho.
 - Remoção de produtos do carrinho.
