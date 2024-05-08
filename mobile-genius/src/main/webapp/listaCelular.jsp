@@ -54,7 +54,7 @@
     </header>
   <!-- End Header -->
   
-   <c:if test="${sessionScope.loggedUser != null}">
+   <c:if test="${sessionScope.LoggedUser != null}">
           <span>${sessionScope.loggedUser}</span>
           <a href="/logout"> Logout</a>
       </c:if>
@@ -71,7 +71,7 @@
                                <th>Quantidade</th>
                                <th>Descricao</th>
 
-                               <c:if test="${sessionScope.loggedUser != null}">
+                               <c:if test="${sessionScope.LoggedUser != null}">
                                    <th>Ações</th>
                                </c:if>
 
@@ -88,7 +88,7 @@
 
                                    <td>
 
-                                       <c:if test="${sessionScope.loggedUser != null}">
+                                       <c:if test="${sessionScope.LoggedUser != null}">
                                            <form action="/delete-celular" method="post">
                                                <input type="hidden" id="id" name="id" value="${celular.id}">
                                                <button type="submit">Deletar</button>

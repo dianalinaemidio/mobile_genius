@@ -72,7 +72,7 @@
                 <h2>LOGIN</h2>
                 <div class="form-container">
 
-                <form action "/login" method="post">
+                <form action = "/login" method="post">
                 <span>${requestScope.message}</span>
 
                     <form class="login-form">
