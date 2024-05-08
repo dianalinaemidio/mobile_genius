@@ -22,20 +22,22 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        boolean type = false;
 
-        User user = new User(username, password);
+        User user = new User(username, password, type);
 
-       boolean isValidUser = new UserDAO().verifyCredentials(user);
+       User isValidUser = new UserDAO().verifyCredentials(user);
 
-        if (isValidUser) {
+        if (isValidUser.isLoggedUser()) {
             req.getSession().setAttribute("LoggedUser", username);
+            req.getSession().setAttribute("Type", isValidUser.isType());
 
             resp.sendRedirect("/encontre-todos-celulares");
 
         } else {
             req.setAttribute("message", "Credenciais inválidas");
 
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
     }
 }

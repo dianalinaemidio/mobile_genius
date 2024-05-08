@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 public class UserDAO {
 
-    public boolean verifyCredentials(User user) {
+    public User verifyCredentials(User user) {
         String SQL = "SELECT * FROM USERS WHERE USERNAME = ?";
 
         try {
@@ -26,20 +26,21 @@ public class UserDAO {
 
             while (resultSet.next()) {
                 String password = resultSet.getString("password");
+                boolean type = resultSet.getBoolean("type");
 
                 if (password.equals(user.getPassword())) {
 
-                    return true;
+                    return new User(type, true);
 
                 }
             }
 
             connection.close();
-            return false;
+            return new User(false, false);
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
-            return false;
+            return new User(false, false);
         }
 
     }

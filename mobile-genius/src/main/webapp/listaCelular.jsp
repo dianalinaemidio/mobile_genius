@@ -89,20 +89,22 @@
                                    <td>
 
                                        <c:if test="${sessionScope.LoggedUser != null}">
-                                           <form action="/delete-celular" method="post">
-                                               <input type="hidden" id="id" name="id" value="${celular.id}">
-                                               <button type="submit">Deletar</button>
-                                           </form>
-                                           <span> | </span>
-                                           <form action="cadastroCelular.jsp" method="post">
-                                               <input type="hidden" name="id" value="${celular.id}">
-                                               <input type="hidden" name="marca" value="${celular.marca}">
-                                               <input type="hidden" name="modelo" value="${celular.modelo}">
-                                               <input type="hidden" name="preco" value="${celular.preco}">
-                                               <input type="hidden" name="quantidade" value="${celular.quantidade}">
-                                               <input type="hidden" name="descricao" value="${celular.descricao}">
-                                               <button type="submit">Update</button>
-                                           </form>
+                                           <c:if test="${sessionScope.Type}">
+                                               <form action="/delete-celular" method="post">
+                                                   <input type="hidden" id="id" name="id" value="${celular.id}">
+                                                   <button type="submit">Deletar</button>
+                                               </form>
+                                               <span> | </span>
+                                               <form action="cadastroCelular.jsp" method="post">
+                                                   <input type="hidden" name="id" value="${celular.id}">
+                                                   <input type="hidden" name="marca" value="${celular.marca}">
+                                                   <input type="hidden" name="modelo" value="${celular.modelo}">
+                                                   <input type="hidden" name="preco" value="${celular.preco}">
+                                                   <input type="hidden" name="quantidade" value="${celular.quantidade}">
+                                                   <input type="hidden" name="descricao" value="${celular.descricao}">
+                                                   <button type="submit">Update</button>
+                                               </form>
+                                           </c:if>
                                        </c:if>
 
 
