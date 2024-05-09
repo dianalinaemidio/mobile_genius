@@ -57,6 +57,7 @@
    <c:if test="${sessionScope.LoggedUser != null}">
           <span>${sessionScope.loggedUser}</span>
           <a href="/logout"> Logout</a>
+           <a href="/cadastroCelular.jsp"> Cadastrar celular</a>
       </c:if>
 
        <div class="modal-content">
