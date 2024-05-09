@@ -649,11 +649,14 @@
   }
 
   .footer__top {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    color: var(--grey3);
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
   }
 
+  .footer__top a {
+    color: #FFF;
+  }
   .footer-top__box a:link,
   .footer-top__box a:visited {
     display: block;

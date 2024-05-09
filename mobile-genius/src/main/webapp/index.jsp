@@ -317,14 +317,12 @@
 
   <!-- Footer -->
   <footer id="footer" class="section footer">
-    <div class="container">
       <div class="footer__top">
-        <ul>
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="#">Loja</a></li>
-          <li><a href="#">Opções de Pagamento</a></li>
+        <tr>
+          <td><a href="index.jsp">Home</a></td>
+          <td><a href="#">Loja</a></td>
+          <td><a href="#">Opções de Pagamento</a></td>
         </ul>
-      </div>
     </div>
   </footer>
   <!-- End Footer -->
