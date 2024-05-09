@@ -29,6 +29,27 @@ header {
     padding: 20px 0;
 }
 
+.logged-user-links {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logged-user-links:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.logged-user-links:last-child {
+    margin-right: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -90,7 +111,7 @@ button {
 button:hover {
     background-color: #000;
 }
- 
+
 .footer {
     margin-top: auto;
 }

@@ -47,16 +47,14 @@
             </div>
           </div>
 
-          <div class="nav__icons">
-            <a href="#" class="icon__item" id="login-btn">
-              <img src="/img/icone-user.png" alt="User">
+        <div class="nav__icons">
+            <a href="/login.jsp" class="icon__item" id="login-btn">
+                <img src="/img/icone-user.png" alt="User">
             </a>
-
             <a href="#" class="icon__item" id="cart-btn">
-              <img src="/img/cart-icon.png" alt="Cart">
-              <span id="cart__total">3</span>
+                <img src="/img/cart-icon.png" alt="Cart">
             </a>
-          </div>
+        </div>
         </nav>
       </div>
     </div>
@@ -104,7 +102,7 @@
         <ul>
           <li><a href="index.jsp">Home</a></li>
           <li><a href="#">Loja</a></li>
-          <li><a href="#">Opções de Pagamento</a></li>
+          <li><a href="login.jsp">Login</a></li>
         </ul>
       </div>
     </div>

@@ -632,49 +632,36 @@
   ======================
   */
 
-  .footer {
-    background-color: var(--footerColor);
-    padding: 6rem 1rem;
-    line-height: 3rem;
-  }
-
-  .footer-top__box span svg {
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: var(--grey3);
-  }
-
-  .footer-top__box span {
-    margin-right: 1rem;
+  #footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
   }
 
   .footer__top {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    color: var(--grey3);
+      display: flex;
+      justify-content: center;
   }
 
-  .footer-top__box a:link,
-  .footer-top__box a:visited {
-    display: block;
-    color: var(--grey);
-    font-size: 1.4rem;
-    transition: 0.6s;
+  .footer__top ul {
+      list-style-type: none;
+      padding: 0;
   }
 
-  .footer-top__box a:hover {
-    color: var(--grey3);
+  .footer__top ul li {
+      display: inline-block;
+      margin: 0 10px;
   }
 
-  .footer-top__box div {
-    color: var(--grey);
-    font-size: 1.4rem;
+  .footer__top ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
   }
 
-  .footer-top__box h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+  .footer__top ul li a:hover {
+      color: #ccc;
   }
   
   

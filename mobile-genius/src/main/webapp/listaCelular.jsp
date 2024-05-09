@@ -6,7 +6,7 @@
         <%@ page contentType="text/html; charset=UTF-8" %>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="./style/listaCelular.css">
+        <link rel="stylesheet" href="style/listaCelular.css">
         <link rel="stylesheet" href="style/styles.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -39,26 +39,24 @@
           </div>
 
           <div class="nav__icons">
-            <a href="#" class="icon__item" id="login-btn">
-              <img src="/img/icone-user.png" alt="User">
-            </a>
-
-            <a href="#" class="icon__item" id="cart-btn">
-              <img src="/img/cart-icon.png" alt="Cart">
-              <span id="cart__total">3</span>
-            </a>
+              <a href="/login.jsp" class="icon__item" id="login-btn">
+                  <img src="/img/icone-user.png" alt="User">
+              </a>
+              <a href="#" class="icon__item" id="cart-btn">
+                  <img src="/img/cart-icon.png" alt="Cart">
+              </a>
           </div>
         </nav>
       </div>
     </div>
     </header>
   <!-- End Header -->
-  
+
    <c:if test="${sessionScope.LoggedUser != null}">
-          <span>${sessionScope.loggedUser}</span>
-          <a href="/logout"> Logout</a>
-           <a href="/cadastroCelular.jsp"> Cadastrar celular</a>
-      </c:if>
+       <span class="logged-user-links">${sessionScope.loggedUser}</span>
+       <a href="/logout" class="logged-user-links">Logout</a>
+       <a href="/cadastroCelular.jsp" class="logged-user-links">Cadastrar celular</a>
+   </c:if>
 
        <div class="modal-content">
            <h3>LISTA DE CELULARES CADASTRADOS</h3>
@@ -126,7 +124,7 @@
         <ul>
           <li><a href="index.jsp">Home</a></li>
           <li><a href="#">Loja</a></li>
-          <li><a href="#">Opções de Pagamento</a></li>
+          <li><a href="login.jsp">Login</a></li>
         </ul>
       </div>
     </div>
