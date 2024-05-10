@@ -634,14 +634,16 @@
 
   #footer {
       background-color: #333;
-      color: #fff;
+      color: black;
       padding: 20px 0;
-      text-align: center;
+
   }
 
   .footer__top {
       display: flex;
       justify-content: center;
+      align-items: end;
+
   }
 
   .footer__top ul {
