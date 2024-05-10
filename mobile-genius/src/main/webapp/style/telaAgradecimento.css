@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.agradecimento{
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.agradecimento h1 {
+    font-size: 4rem;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.agradecimento h3 {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.agradecimento p {
+    font-size: 15px;
+    margin-top: 50px;
+
+}
+
+.footer {
+    margin-top: 198px;
+}
