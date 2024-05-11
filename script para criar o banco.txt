@@ -5,16 +5,21 @@ modelo VARCHAR(255),
 preco VARCHAR(255), 
 quantidade VARCHAR(255), 
 descricao VARCHAR(255),
-image VARCHAR (255);
-
+image VARCHAR (255)
 );
 
 
 CREATE TABLE USERS (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    USERNAME VARCHAR(255),
-    PASSWORD VARCHAR(255),
-    TYPE BOOLEAN
+    username VARCHAR(255),
+    password VARCHAR(255),
+    type BOOLEAN
 );
+
+INSERT INTO USERS (username, password, type)
+VALUES ('admin', '1234', true)
+
+INSERT INTO USERS (username, password, type)
+VALUES ('gabriel', '1234', false)
 
 para adicionar apenas o campo imagem na tabela celular: ALTER TABLE CAR ADD IMAGE VARCHAR (255);

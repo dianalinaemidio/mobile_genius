@@ -78,6 +78,7 @@
                         <input type="text" name="username" placeholder="Usuário">
                         <input type="password" name="password" placeholder="Senha">
                        <button type="submit">Entrar</button>
+                       <button type="submit">Cadastre-se</button>
 
                     </form>
                 </div>

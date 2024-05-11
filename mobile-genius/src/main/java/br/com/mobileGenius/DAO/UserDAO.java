@@ -19,16 +19,17 @@ public class UserDAO {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1,user.getUsername());
+            preparedStatement.setString(1, user.getUsername());
             ResultSet resultSet = preparedStatement.executeQuery();
 
             System.out.println("Sucesso ao selecionar o username");
 
             while (resultSet.next()) {
+                String username = resultSet.getString("username");
                 String password = resultSet.getString("password");
                 boolean type = resultSet.getBoolean("type");
 
-                if (password.equals(user.getPassword())) {
+                if (password.equals(user.getPassword()) && username.equals(user.getUsername())) {
 
                     return new User(type, true);
 

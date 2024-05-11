@@ -20,24 +20,37 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        // Pegando as informacoes da pagina
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         boolean type = false;
 
+        // Passando as informacoes para o objeto user
         User user = new User(username, password, type);
 
-       User isValidUser = new UserDAO().verifyCredentials(user);
+        // Verifica as credenciais do usuario e depois cria ele
+        User isValidUser = new UserDAO().verifyCredentials(user);
 
         if (isValidUser.isLoggedUser()) {
             req.getSession().setAttribute("LoggedUser", username);
             req.getSession().setAttribute("Type", isValidUser.isType());
 
-            resp.sendRedirect("/encontre-todos-celulares");
+            if (isValidUser.isType()) {
 
-        } else {
-            req.setAttribute("message", "Credenciais inválidas");
+                req.setAttribute("message", "Credenciais inválidas");
+                resp.sendRedirect("/encontre-todos-celulares");
+                System.out.println("Usuario e admin");
 
-            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+            } else {
+                req.getRequestDispatcher("/login.jsp").forward(req, resp);
+                req.setAttribute("message", "Credenciais inválidas");
+                System.out.println("Usuario nao e admin");
+            }
+
+
         }
+
+
     }
 }

@@ -14,6 +14,17 @@ public class User {
         this.type = type;
     }
 
+    /*
+    TODO:
+    Desenvolver a logica de verificao do usuario
+    */
+    public User(String username, String password, boolean type, boolean loggedUser) {
+        this.username = username;
+        this.password = password;
+        this.type = type;
+        this.loggedUser = loggedUser;
+    }
+
     public User(boolean type, boolean loggedUser) {
         this.type = type;
         this.loggedUser = loggedUser;
