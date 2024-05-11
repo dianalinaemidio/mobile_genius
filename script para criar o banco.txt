@@ -4,7 +4,9 @@ marca VARCHAR(255),
 modelo VARCHAR(255), 
 preco VARCHAR(255), 
 quantidade VARCHAR(255), 
-descricao VARCHAR(255)
+descricao VARCHAR(255),
+image VARCHAR (255);
+
 );
 
 
@@ -14,3 +16,5 @@ CREATE TABLE USERS (
     PASSWORD VARCHAR(255),
     TYPE BOOLEAN
 );
+
+para adicionar apenas o campo imagem na tabela celular: ALTER TABLE CAR ADD IMAGE VARCHAR (255);

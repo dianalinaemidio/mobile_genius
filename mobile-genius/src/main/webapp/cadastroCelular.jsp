@@ -62,29 +62,39 @@
   <!-- End Header -->
 
 
-    <form action="/create-celular" method="post">
+    <form action="/create-celular" method="post" enctype="multipart/form-data">
         <div class="container-form">
             <h2>Cadastro de Celular</h2>
             <div class="form-group">
                 <label for="marca">Marca</label>
-                <input type="text" id="marca" name="marca" value="${param.marca}">
+                <input type="text" id="marca" name="marca" value="${param.marca}" required>
             </div>
+
             <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo" value="${param.modelo}">
+                <input type="text" id="modelo" name="modelo" value="${param.modelo}" required>
             </div>
+
             <div class="form-group">
                 <label for="preco">Preço</label>
-                <input type="text" id="preco" name="preco" value="${param.preco}">
+                <input type="text" id="preco" name="preco" value="${param.preco}" required>
             </div>
+
             <div class="form-group">
                 <label for="quantidade">Quantidade</label>
-                <input type="text" id="quantidade" name="quantidade" value="${param.quantidade}">
+                <input type="text" id="quantidade" name="quantidade" value="${param.quantidade}" required>
             </div>
+
             <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" name="descricao" value="${param.descricao}">
+                <input type="text" id="descricao" name="descricao" value="${param.descricao}" required>
             </div>
+
+            <div class="form-group">
+                <label for="image">Imagem</label>
+                <input type="file" id="image" name="image" value="${param.image}" required>
+            </div>
+
             <div class="form-group">
                 <input type="hidden" id="id" name="id" value="${param.id}">
             </div>

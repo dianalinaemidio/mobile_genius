@@ -68,7 +68,8 @@
                                <th>Modelo</th>
                                <th>Preco</th>
                                <th>Quantidade</th>
-                               <th>Descricao</th>
+                               <th>Descrição</th>
+                               <th>Imagem</th>
 
                                <c:if test="${sessionScope.LoggedUser != null}">
                                    <th>Ações</th>
@@ -84,6 +85,7 @@
                                    <td>${celular.preco}</td>
                                    <td>${celular.quantidade}</td>
                                    <td>${celular.descricao}</td>
+                                   <td><img src="${celular.image}" alt="Imagem do celular" width="100"></td>
 
                                    <td>
 
@@ -101,6 +103,7 @@
                                                    <input type="hidden" name="preco" value="${celular.preco}">
                                                    <input type="hidden" name="quantidade" value="${celular.quantidade}">
                                                    <input type="hidden" name="descricao" value="${celular.descricao}">
+                                                   <input type="hidden" name="image" value="${celular.image}">
                                                    <button type="submit">Update</button>
                                                </form>
                                            </c:if>

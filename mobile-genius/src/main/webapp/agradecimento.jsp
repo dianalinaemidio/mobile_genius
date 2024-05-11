@@ -1,7 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <%@ page contentType="text/html; charset=UTF-8" %>
+    <meta charset="UTF-8" />
+
+    <title>Mobile Genius</title>
 
     <link rel="stylesheet" href="style/styles.css" />
     <link rel="stylesheet" href="style/telaAgradecimento.css" />
@@ -43,10 +45,12 @@
 </header>
 
 <div class="agradecimento">
-    <h1>Obrigado pela compra!</h1>
+    <h1>Agradecemos sua Compra!</h1>
     <h3>Em breve voce recebera um e-mail com as informacoes do pedido!</h3>
-    <p>Nos da Mobile Genius, agradecemos sua compra e lhe desejamos um otimo uso do seu novo smartphone!</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Agradecemos imensamente por escolher a Mobile Genius para adquirir seu novo smartphone! Sua confiança em nossa empresa é extremamente valorizada.</p>
+    <p> Em breve, você receberá um e-mail contendo todas as informações pertinentes ao seu pedido,
+    incluindo detalhes do pagamento e os próximos passos. Certifique-se de verificar sua caixa de
+    entrada para garantir que todas as informações estejam corretas. </p>
 </div>
 
 <footer id="footer" class="section footer">

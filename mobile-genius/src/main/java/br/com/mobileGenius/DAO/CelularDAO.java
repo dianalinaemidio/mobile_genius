@@ -13,7 +13,7 @@ public class CelularDAO {
 
     // Gravar o celular no banco de dados
     public void createCelular(Celular celular) {
-        String SQL = "INSERT INTO CELULAR (modelo, marca, preco, quantidade, descricao) VALUES (?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO CELULAR (modelo, marca, preco, quantidade, descricao, image) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -28,6 +28,7 @@ public class CelularDAO {
             preparedStatement.setDouble(3, celular.getPreco());
             preparedStatement.setInt(4, celular.getQuantidade());
             preparedStatement.setString(5, celular.getDescricao());
+            preparedStatement.setString(6, celular.getImage());
 
             preparedStatement.executeUpdate();
             System.out.println("Sucesso ao criar no banco");
@@ -37,6 +38,7 @@ public class CelularDAO {
         } catch (Exception e) {
             System.out.println("Erro ao entrar no banco de dados (Create)");
             e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -55,13 +57,14 @@ public class CelularDAO {
 
             while (resultSet.next()) {
                 String id = resultSet.getString("id");
-                String modelo = resultSet.getString("modelo");
                 String marca = resultSet.getString("marca");
+                String modelo = resultSet.getString("modelo");
                 double preco = resultSet.getDouble("preco");
                 int quantidade = resultSet.getInt("quantidade");
                 String descricao = resultSet.getString("descricao");
+                String image = resultSet.getString("image");
 
-                Celular celular = new Celular(marca, id, preco, quantidade, descricao, modelo);
+                Celular celular = new Celular(id, marca, modelo, preco, quantidade, descricao, image);
                 celulares.add(celular);
             }
 
@@ -73,6 +76,8 @@ public class CelularDAO {
         } catch (Exception e) {
             System.out.println("FALHA AO CONECTAR AO BANCO (Select)");
             e.printStackTrace();
+
+            System.out.println("Error: " + e.getMessage());
             return Collections.emptyList();
         }
     }
@@ -100,7 +105,7 @@ public class CelularDAO {
 
     // Atualizando as informações do celular no banco de dados
     public void updateCelular(Celular celular) {
-        String SQL = "UPDATE CELULAR SET modelo = ?, marca = ?, preco = ?, quantidade = ?, descricao = ? WHERE id = ?";
+        String SQL = "UPDATE CELULAR SET marca = ?, modelo = ?, preco = ?, quantidade = ?, descricao = ?, image = ? WHERE id = ?";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -113,7 +118,8 @@ public class CelularDAO {
             preparedStatement.setDouble(3, celular.getPreco());
             preparedStatement.setInt(4, celular.getQuantidade());
             preparedStatement.setString(5, celular.getDescricao());
-            preparedStatement.setString(6, celular.getId());
+            preparedStatement.setString(6, celular.getImage());
+            preparedStatement.setString(7, celular.getId());
 
             preparedStatement.executeUpdate();
             System.out.println("Sucesso em atualizar o celular");
@@ -123,6 +129,7 @@ public class CelularDAO {
         } catch (Exception e) {
             System.out.println("Falha na conexão do banco de dados");
             e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
