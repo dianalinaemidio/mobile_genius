@@ -33,7 +33,7 @@ body {
 }
 
 form {
-    margin-bottom: 100px; 
+    margin-bottom: 35vh;
 }
 
 .container-form {
@@ -108,18 +108,4 @@ form {
 .container-form button:hover {
     background-color: #1D2837;
     color: #fff;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  body {
-    margin: 0;
-    padding-bottom: 100px; /* Altura do footer */
-  }
-section footer {
-    position: relative;
-    top: 10rem;
 }

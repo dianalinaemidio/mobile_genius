@@ -71,8 +71,8 @@ s<!DOCTYPE html>
                     <span>${requestScope.message}</span>
                     <div class="form-container">
                         <h2>LOGIN</h2>
-                        <input type="text" name="username" placeholder="Usuário">
-                        <input type="password" name="password" placeholder="Senha">
+                        <input type="text" name="username" placeholder="Usuário" required>
+                        <input type="password" name="password" placeholder="Senha" required>
                         <button type="submit">Entrar</button>
                     </div>
                 </form>
@@ -87,7 +87,7 @@ s<!DOCTYPE html>
     <!-- Footer -->
       <footer class="footer">
         <div class="container">
-          <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+          <p>&copy; 2024 Mobile Genius.</p>
         </div>
       </footer>
       <!-- End Footer -->

@@ -108,18 +108,12 @@
         </div>
     </form>
 
-<!-- Footer -->
-  <footer id="footer" class="section footer">
-    <div class="container">
-      <div class="footer__top">
-        <ul>
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="#">Loja</a></li>
-          <li><a href="login.jsp">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+  <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      <!-- End Footer -->
 </body>
 </html>

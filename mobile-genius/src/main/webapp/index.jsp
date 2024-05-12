@@ -307,8 +307,6 @@
      <!-- Text Section -->
       <section class="section-text">
         <div class="container">
-          <h2>Aqui estão as melhores opções!</h2>
-          <p>Aqui você pode comprar o celular dos sonhos...</p>
         </div>
       </section>
      <!-- End Text Section -->
@@ -317,7 +315,7 @@
  <!-- Footer -->
    <footer class="footer">
      <div class="container">
-       <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+       <p>&copy; 2024 Mobile Genius.</p>
      </div>
    </footer>
    <!-- End Footer -->

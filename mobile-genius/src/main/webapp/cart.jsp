@@ -18,8 +18,10 @@
 </head>
 
 <body>
-  <header>
-    <span>Carrinho de compras <b>MobileGenius</b></span>
+  <header class="header">
+    <span class="scroll-link">
+        <a href="/"> Mobile Genius </a>
+    </span>
   </header>
   <main>
     <div class="page-title">Seu Carrinho</div>
@@ -136,15 +138,16 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="redirect-message">Parabéns pela sua compra!</div>
-        <div class="redirect-message">Estamos te redirecionando para a página principal...</div>
+        <div class="redirect-message">Estamos te redirecionando...</div>
       </div>
     </div>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Mobile Genius.</p>
     </div>
   </footer>
+
     <script>
         var modal = document.getElementById("myModal");
 
@@ -154,7 +157,7 @@
 
         finalizarCompraBtn.onclick = function() {
           modal.style.display = "block";
-          setTimeout(redirectToIndex, 3000); // Redireciona para página Index em 3s
+          setTimeout(redirectToCongratulations, 3000); // Redireciona para página de agradecimento em 3s
         }
 
         span.onclick = function() {
@@ -167,8 +170,8 @@
           }
         }
 
-        function redirectToIndex() {
-          window.location.href = "/index.jsp";
+        function redirectToCongratulations() {
+          window.location.href = "/agradecimento.jsp";
         }
    </script>
 

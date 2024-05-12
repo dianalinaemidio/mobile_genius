@@ -30,12 +30,7 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  
-  body{
-    overflow-x: hidden;
-  }
-  
-  body,
+
   input {
     font-size: 1.6rem;
     font-weight: 400;
@@ -645,12 +640,27 @@
   ======================
   */
 
-  footer {
-     background-color: #333;
-     color: #fff;
-     padding: 20px 0;
-     width: 100%;
-     text-align: center;
-     margin-top: auto;
-  }
+body {
+   margin: 0; /* Remover margens padrão */
+   padding: 0; /* Remover preenchimento padrão */
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh; /* Definir altura mínima como 100% da altura visível da tela */
+   overflow-x: hidden;
+   font-size: 1.6rem;
+   font-weight: 400;
+   font-family: "Archivo", sans-serif;
+   color: var(--black);
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 10px;
+  text-align: center;
+}
 
