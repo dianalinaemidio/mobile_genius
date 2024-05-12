@@ -113,4 +113,25 @@ public class UserDAO {
             return Collections.emptyList();
         }
     }
+
+    // Deletando os usuarios do banco de dados
+    public void deleteUserId(String userId) {
+        String SQL = "DELETE FROM USERS WHERE id = ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, userId);
+            preparedStatement.executeUpdate();
+
+            System.out.println("success on delete celular with id: " + userId);
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("fail in database connection");
+            e.printStackTrace();
+        }
+    }
 }

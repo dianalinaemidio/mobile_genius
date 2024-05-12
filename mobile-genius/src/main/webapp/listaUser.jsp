@@ -81,7 +81,7 @@
                     <td>
                         <c:if test="${sessionScope.LoggedUser != null}">
                             <c:if test="${sessionScope.Type}">
-                                <form action="/delete-celular" method="post">
+                                <form action="/delete-user" method="post">
                                     <input type="hidden" id="id" name="id" value="${user.id}">
                                     <button type="submit">Deletar</button>
                                 </form>
