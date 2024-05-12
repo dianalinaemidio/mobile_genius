@@ -62,37 +62,18 @@
   <!-- End Header -->
 
 
-    <form action="/create-celular" method="post" enctype="multipart/form-data">
+    <form action="/create-user" method="post">
         <div class="container-form">
-            <h2>Cadastro de Celular</h2>
+
+            <h2>Cadastro do Usuário</h2>
             <div class="form-group">
-                <label for="marca">Marca</label>
-                <input type="text" id="marca" name="marca" value="${param.marca}" required>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="${param.username}" required>
             </div>
 
             <div class="form-group">
-                <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo" value="${param.modelo}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="preco">Preço</label>
-                <input type="text" id="preco" name="preco" value="${param.preco}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="quantidade">Quantidade</label>
-                <input type="text" id="quantidade" name="quantidade" value="${param.quantidade}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" name="descricao" value="${param.descricao}" required>
-            </div>
-
-            <div class="form-group">
-                <label for="image">Imagem</label>
-                <input type="file" id="image" name="image" value="${param.image}" required>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" value="${param.password}" required>
             </div>
 
             <div class="form-group">
@@ -100,9 +81,9 @@
             </div>
 
             <div class="buttons">
-                <button type="submit">Confirmar</button>
 
-                <a href="/encontre-todos-celulares" class="btn">Celulares Cadastrados</a>
+                <button class="btn" type="submit">Enviar</button>
+
             </div>
         </div>
     </form>

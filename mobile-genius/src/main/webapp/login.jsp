@@ -68,17 +68,21 @@
 
     <section class="form">
             <div class="container-form">
-                <h2>LOGIN</h2>
+
                 <div class="form-container">
 
-                <form action = "/login" method="post">
-                <span>${requestScope.message}</span>
-
-                    <form class="login-form">
+                <form action="/login" method="post">
+                    <span>${requestScope.message}</span>
+                    <div class="form-container">
+                        <h2>LOGIN</h2>
                         <input type="text" name="username" placeholder="Usuário">
                         <input type="password" name="password" placeholder="Senha">
-                       <button type="submit">Entrar</button>
-                       <button type="submit">Cadastre-se</button>
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
+                <div class="buttons">
+                    <a href="cadastrarUser.jsp" class="btn">Cadastrar-se</a>
+                </div>
 
                     </form>
                 </div>

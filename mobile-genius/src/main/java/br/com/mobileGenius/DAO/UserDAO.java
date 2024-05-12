@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 
 public class UserDAO {
 
+    // Verificando as credenciais do usuario
     public User verifyCredentials(User user) {
         String SQL = "SELECT * FROM USERS WHERE USERNAME = ?";
 
@@ -44,5 +45,32 @@ public class UserDAO {
             return new User(false, false);
         }
 
+    }
+
+    // Salvando o usuario no banco de dados
+    public void createUser(User user) {
+        String SQL = "INSERT INTO USERS (username, password, type) VALUES (?, ?, ?)";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Sucesso ao entrar no banco de dados");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            // Não inserir o campo "id" aqui, pois é autoincrementado
+
+            preparedStatement.setString(1, user.getUsername());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setBoolean(3, user.getType());
+
+            preparedStatement.executeUpdate();
+            System.out.println("Sucesso ao criar no banco");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Erro ao entrar no banco de dados (Create)");
+            e.printStackTrace();
+        }
     }
 }
