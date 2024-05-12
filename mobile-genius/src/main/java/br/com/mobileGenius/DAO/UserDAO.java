@@ -18,12 +18,10 @@ public class UserDAO {
         String SQL = "SELECT * FROM USERS WHERE USERNAME = ?";
 
         try {
-
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             System.out.println("Sucesso ao entrar no banco de dados");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-
             preparedStatement.setString(1, user.getUsername());
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -35,20 +33,16 @@ public class UserDAO {
                 boolean type = resultSet.getBoolean("type");
 
                 if (password.equals(user.getPassword()) && username.equals(user.getUsername())) {
-
-                    return new User(type, true);
-
+                    return new User(username, password, type, true);
                 }
             }
 
             connection.close();
-            return new User(false, false);
-
+            return null; // Retorna null se não encontrar o usuário
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
-            return new User(false, false);
+            return null;
         }
-
     }
 
     // Salvando o usuario no banco de dados
