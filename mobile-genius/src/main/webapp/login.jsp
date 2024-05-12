@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -52,7 +52,7 @@
               <img src="/img/icone-user.png" alt="User">
             </a>
 
-            <a href="#" class="icon__item" id="cart-btn">
+            <a href="/cart.jsp" class="icon__item" id="cart-btn" class="a-btn">
               <img src="/img/cart-icon.png" alt="Cart">
             </a>
           </div>
@@ -84,19 +84,11 @@
                 </div>
             </div>
         </section>
-
- <!-- Footer -->
-   <footer id="footer" class="section footer">
-     <div class="container">
-       <div class="footer__top">
-         <ul>
-           <li><a href="index.jsp">Home</a></li>
-           <li><a href="#">Loja</a></li>
-           <li><a href="login.jsp">Login</a></li>
-         </ul>
-       </div>
-     </div>
-   </footer>
-   <!-- End Footer -->
-</body>
+    <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      <!-- End Footer -->
 </html>

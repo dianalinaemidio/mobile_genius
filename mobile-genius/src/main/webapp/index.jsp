@@ -50,7 +50,7 @@
               <a href="/login.jsp" class="icon__item" id="login-btn">
                   <img src="/img/icone-user.png" alt="User">
               </a>
-              <a href="#" class="icon__item" id="cart-btn">
+              <a href="/cart.jsp" class="icon__item" id="cart-btn">
                   <img src="/img/cart-icon.png" alt="Cart">
               </a>
           </div>
@@ -80,10 +80,6 @@
               </div>
             </li>
           </ul>
-        </div>
-        <div class="glide__bullets" data-glide-el="controls[nav]">
-          <button class="glide__bullet" data-glide-dir="=0"></button>
-          <button class="glide__bullet" data-glide-dir="=1"></button>
         </div>
       </div>
     </div>
@@ -304,30 +300,27 @@
               <i class="uil uil-angle-right-b"></i>
             </button>
           </div>
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0"></button>
-            <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-          </div>
         </div>
       </div>
     </section>
+
+     <!-- Text Section -->
+      <section class="section-text">
+        <div class="container">
+          <h2>Aqui estão as melhores opções!</h2>
+          <p>Aqui você pode comprar o celular dos sonhos...</p>
+        </div>
+      </section>
+     <!-- End Text Section -->
   </main>
 
-  <!-- Footer -->
-  <footer id="footer" class="section footer">
-    <div class="container">
-      <div class="footer__top">
-        <ul>
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="#">Loja</a></li>
-          <li><a href="login.jsp">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
-
+ <!-- Footer -->
+   <footer class="footer">
+     <div class="container">
+       <p>&copy; 2024 Mobile Genius. Todos os direitos reservados.</p>
+     </div>
+   </footer>
+   <!-- End Footer -->
 </body>
 
 </html>

@@ -442,7 +442,13 @@
   .section__title.active .primary__title {
     opacity: 1;
   }
-  
+
+  .section-text {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
   .product {
     position: relative;
     text-align: center;
@@ -539,7 +545,14 @@
     border-right: 3px solid var(--black);
     opacity: 1;
   }
-  
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
   .product {
     display: flex;
     flex-direction: column;
@@ -632,38 +645,12 @@
   ======================
   */
 
-  #footer {
-      background-color: #333;
-      color: black;
-      padding: 20px 0;
-
+  footer {
+     background-color: #333;
+     color: #fff;
+     padding: 20px 0;
+     width: 100%;
+     text-align: center;
+     margin-top: auto;
   }
 
-  .footer__top {
-      display: flex;
-      justify-content: center;
-      align-items: end;
-
-  }
-
-  .footer__top ul {
-      list-style-type: none;
-      padding: 0;
-  }
-
-  .footer__top ul li {
-      display: inline-block;
-      margin: 0 10px;
-  }
-
-  .footer__top ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-  }
-
-  .footer__top ul li a:hover {
-      color: #ccc;
-  }
-  
-  
