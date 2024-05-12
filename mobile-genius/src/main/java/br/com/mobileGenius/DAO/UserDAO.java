@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class UserDAO {
 
@@ -71,6 +74,43 @@ public class UserDAO {
         } catch (Exception e) {
             System.out.println("Erro ao entrar no banco de dados (Create)");
             e.printStackTrace();
+        }
+    }
+
+    // Listar usuarios
+    public List<User> findUser() {
+        String SQL = "SELECT * FROM USERS";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("SUCESSO AO ACESSAR O BANCO DE DADOS (select)");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<User> users = new ArrayList<>();
+
+            while (resultSet.next()) {
+                String id = resultSet.getString("id");
+                String username = resultSet.getString("username");
+                String password = resultSet.getString("password");
+                boolean type = resultSet.getBoolean("type");
+
+                User user = new User(id, username, password, type);
+                users.add(user);
+            }
+
+            System.out.println("SUCESSO AO SELECIONAR OS CELULARES");
+            connection.close();
+
+            return users;
+
+        } catch (Exception e) {
+            System.out.println("FALHA AO CONECTAR AO BANCO (Select)");
+            e.printStackTrace();
+
+            System.out.println("Error: " + e.getMessage());
+            return Collections.emptyList();
         }
     }
 }

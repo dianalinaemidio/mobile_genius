@@ -56,6 +56,7 @@
        <span class="logged-user-links">${sessionScope.loggedUser}</span>
        <a href="/logout" class="logged-user-links">Logout</a>
        <a href="/cadastroCelular.jsp" class="logged-user-links">Cadastrar celular</a>
+       <a href="/find-all-user" class="logged-user-links" >Lista de usuários</a>
    </c:if>
 
        <div class="modal-content">

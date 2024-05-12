@@ -51,6 +51,7 @@
             <a href="/login.jsp" class="icon__item" id="login-btn">
                 <img src="/img/icone-user.png" alt="User">
             </a>
+
             <a href="#" class="icon__item" id="cart-btn">
                 <img src="/img/cart-icon.png" alt="Cart">
             </a>

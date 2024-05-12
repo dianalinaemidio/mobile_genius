@@ -8,7 +8,6 @@ descricao VARCHAR(255),
 image VARCHAR (255)
 );
 
-
 CREATE TABLE USERS (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255),
@@ -17,9 +16,9 @@ CREATE TABLE USERS (
 );
 
 INSERT INTO USERS (username, password, type)
-VALUES ('admin', '1234', true)
+VALUES ('admin', '1234', true);
 
 INSERT INTO USERS (username, password, type)
-VALUES ('gabriel', '1234', false)
+VALUES ('gabriel', '1234', false);
 
 para adicionar apenas o campo imagem na tabela celular: ALTER TABLE CAR ADD IMAGE VARCHAR (255);

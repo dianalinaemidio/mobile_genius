@@ -35,6 +35,7 @@ public class CreateUserServlet extends HttpServlet {
 
         request.getRequestDispatcher("index.jsp").forward(request, response);
 
+
         //else {
 
         //celularDao.updateCelular(celular);
