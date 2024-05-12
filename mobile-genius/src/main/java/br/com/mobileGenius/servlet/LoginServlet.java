@@ -20,37 +20,40 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        // Pegando as informacoes da pagina
+        // Pegando as informações da página
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         boolean type = false;
 
-        // Passando as informacoes para o objeto user
+        // Passando as informações para o objeto user
         User user = new User(username, password, type);
 
-        // Verifica as credenciais do usuario e depois cria ele
+        // Verifica as credenciais do usuário e depois cria ele
         User isValidUser = new UserDAO().verifyCredentials(user);
 
-        if (isValidUser.isLoggedUser()) {
+        if (isValidUser != null && isValidUser.isLoggedUser()) {
             req.getSession().setAttribute("LoggedUser", username);
             req.getSession().setAttribute("Type", isValidUser.isType());
 
             if (isValidUser.isType()) {
 
-                req.setAttribute("message", "Credenciais inválidas");
+                // Caso usuario seja admin - enviado para area de administrador
                 resp.sendRedirect("/encontre-todos-celulares");
                 System.out.println("Usuario e admin");
 
             } else {
-                req.getRequestDispatcher("/login.jsp").forward(req, resp);
-                req.setAttribute("message", "Credenciais inválidas");
-                System.out.println("Usuario nao e admin");
+
+                // Caso usuario nao seja admin
+                req.getRequestDispatcher("/areaCliente.jsp").forward(req, resp);
+                System.out.println("Usuario não é admin");
             }
 
+        } else {
 
+            // Usuário não encontrado no banco de dados
+            req.setAttribute("message", "Usuário ou senha estão incorretos!");
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+            System.out.println("Usuário não encontrado no banco de dados");
         }
-
-
     }
 }
