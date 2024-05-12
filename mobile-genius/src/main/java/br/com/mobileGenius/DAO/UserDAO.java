@@ -1,5 +1,6 @@
 package br.com.mobileGenius.DAO;
 
+import br.com.mobileGenius.model.Celular;
 import br.com.mobileGenius.model.User;
 
 import java.sql.Connection;
@@ -132,6 +133,33 @@ public class UserDAO {
         } catch (Exception e) {
             System.out.println("fail in database connection");
             e.printStackTrace();
+        }
+    }
+
+    // Atualizando as informações do usuario no banco de dados
+    public void updateUser(User user) {
+        String SQL = "UPDATE USERS SET username = ?, password = ?, type = ? WHERE id = ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Sucesso ao conectar no banco de dados e fazer o update");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, user.getUsername());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setBoolean(3, user.getType());
+            preparedStatement.setString(4, user.getId());
+
+            preparedStatement.executeUpdate();
+            System.out.println("Sucesso em atualizar o usuario");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Falha na conexão do banco de dados");
+            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

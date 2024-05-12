@@ -1,6 +1,5 @@
 package br.com.mobileGenius.servlet;
 
-
 import br.com.mobileGenius.DAO.CelularDAO;
 import br.com.mobileGenius.model.Celular;
 
@@ -11,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
-
 
 @WebServlet({"/encontre-todos-celulares", "/admin/encontre-todos-celulares"})
 

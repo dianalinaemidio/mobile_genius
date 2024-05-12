@@ -1,5 +1,6 @@
 
 package br.com.mobileGenius.servlet;
+
 import br.com.mobileGenius.DAO.UserDAO;
 import br.com.mobileGenius.model.User;
 
@@ -20,7 +21,6 @@ public class CreateUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-
         // Pegando as informações da requisicao do metodo post
         String id = request.getParameter("id");
         String username = request.getParameter("username");
@@ -35,15 +35,19 @@ public class CreateUserServlet extends HttpServlet {
 
         request.getRequestDispatcher("index.jsp").forward(request, response);
 
+        if (id.isBlank()) {
+            userDao.createUser(user);
 
-        //else {
+        } else {
 
-        //celularDao.updateCelular(celular);
+            userDao.updateUser(user);
+
+        }
+
 
     } // Fim do doPost
 
     //System.out.println("celular gravado no banco");
-
 
 
 } // Fim da classe createUserServelet

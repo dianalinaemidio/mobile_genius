@@ -86,7 +86,7 @@
                                     <button type="submit">Deletar</button>
                                 </form>
                                 <span> | </span>
-                                <form action="/encontre-todos-usuarios" method="post">
+                                <form action="/cadastrarUser.jsp" method="post">
                                     <input type="hidden" name="id" value="${user.id}">
                                     <input type="hidden" name="username" value="${user.username}">
                                     <input type="hidden" name="password" value="${user.password}">
