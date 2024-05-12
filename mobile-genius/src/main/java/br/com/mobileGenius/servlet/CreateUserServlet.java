@@ -1,4 +1,3 @@
-
 package br.com.mobileGenius.servlet;
 
 import br.com.mobileGenius.DAO.UserDAO;
@@ -31,24 +30,19 @@ public class CreateUserServlet extends HttpServlet {
 
         UserDAO userDao = new UserDAO();
 
-        userDao.createUser(user);
-
-        request.getRequestDispatcher("index.jsp").forward(request, response);
 
         if (id.isBlank()) {
             userDao.createUser(user);
+            response.sendRedirect("/index.jsp");
 
         } else {
 
             userDao.updateUser(user);
+            response.sendRedirect("/find-all-user"); // Pagina que lista os usuarios
 
         }
 
-
     } // Fim do doPost
-
-    //System.out.println("celular gravado no banco");
-
 
 } // Fim da classe createUserServelet
 
