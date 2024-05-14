@@ -66,19 +66,54 @@
         <div class="container-form">
 
             <h2>Cadastro do Usuário</h2>
+
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" value="${param.username}" required>
+                <label for="nome">Nome/label>
+                <input type="text" id="nome" name="nome" value="${param.nome}" required>
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password" value="${param.password}" required>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" name="sobrenome" value="${param.sobrenome}" required>
             </div>
+
+           <div class="form-group">
+                           <label for="cpf">CPF</label>
+                           <input type="text" id="cpf" name="cpf" value="${param.cpf}" required>
+           </div>
+
+           <div class="form-group">
+                           <label for="datanascimento">Data de Nascimento</label>
+                           <input type="text" id="datanascimento" name="datanascimento" value="${param.datanascimento}" required>
+           </div>
+
+           <div class="form-group">
+                           <label for="endereco">Endereço</label>
+                           <input type="text" id="endereco" name="endereco" value="${param.endereco}" required>
+           </div>
+
+           <div class="form-group">
+                           <label for="email">Email</label>
+                           <input type="text" id="email" name="email" value="${param.email}" required>
+           </div>
+
+           <div class="form-group">
+                           <label for="numerocelular">Numero de Celular</label>
+                           <input type="text" id="numerocelular" name="numerocelular" value="${param.numerocelular}" required>
+           </div>
+
+           <div class="form-group">
+                           <label for="senha">Senha</label>
+                           <input type="text" id="senha" name="senha" value="${param.senha}" required>
+           </div>
+
+
+
 
             <div class="form-group">
                 <input type="hidden" id="id" name="id" value="${param.id}">
             </div>
+
 
             <div class="buttons">
 

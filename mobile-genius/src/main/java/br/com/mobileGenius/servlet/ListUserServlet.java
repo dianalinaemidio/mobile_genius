@@ -1,7 +1,8 @@
 package br.com.mobileGenius.servlet;
 
-import br.com.mobileGenius.DAO.UserDAO;
-import br.com.mobileGenius.model.User;
+import br.com.mobileGenius.DAO.UsuarioDAO;
+import br.com.mobileGenius.model.Usuario;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +18,7 @@ public class ListUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<User> users = new UserDAO().findUser();
+        List<Usuario> users = new UsuarioDAO().listarUsuarios();
 
         req.setAttribute("users", users);
 

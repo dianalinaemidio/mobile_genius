@@ -1,24 +1,28 @@
-CREATE TABLE CELULAR(
-ID INT PRIMARY KEY AUTO_INCREMENT,
-marca VARCHAR(255), 
-modelo VARCHAR(255), 
-preco VARCHAR(255), 
-quantidade VARCHAR(255), 
-descricao VARCHAR(255),
-image VARCHAR (255)
-);
-
-CREATE TABLE USERS (
+Usuario
+ 
+CREATE TABLE usuarios (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255),
-    password VARCHAR(255),
-    type BOOLEAN
+    nome VARCHAR(100),
+    sobrenome VARCHAR(100),
+    cpf VARCHAR(14),
+    senha VARCHAR(100),
+    dataNascimento DATE,
+    endereco VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    numeroCelular VARCHAR(20),
+    administrador BOOLEAN,
+    loggedUser BOOLEAN
 );
 
-INSERT INTO USERS (username, password, type)
-VALUES ('admin', '1234', true);
+celular
 
-INSERT INTO USERS (username, password, type)
-VALUES ('gabriel', '1234', false);
 
-para adicionar apenas o campo imagem na tabela celular: ALTER TABLE CAR ADD IMAGE VARCHAR (255);
+CREATE TABLE celular (
+    id VARCHAR(50) PRIMARY KEY,
+    marca VARCHAR(100),
+    modelo VARCHAR(100),
+    preco DECIMAL(10, 2),
+    quantidade INT,
+    descricao TEXT,
+    imagem VARCHAR(255)
+);

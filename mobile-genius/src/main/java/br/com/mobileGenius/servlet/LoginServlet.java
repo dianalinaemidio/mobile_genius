@@ -1,7 +1,7 @@
 package br.com.mobileGenius.servlet;
 
-import br.com.mobileGenius.DAO.UserDAO;
-import br.com.mobileGenius.model.User;
+import br.com.mobileGenius.DAO.UsuarioDAO;
+import br.com.mobileGenius.model.Usuario;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,21 +21,20 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Pegando as informações da página
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        boolean type = false;
+        String nome = req.getParameter("nome");
+        String senha = req.getParameter("senha");
 
-        // Passando as informações para o objeto user
-        User user = new User(username, password, type);
 
-        // Verifica as credenciais do usuário e depois cria ele
-        User isValidUser = new UserDAO().verifyCredentials(user);
+        UsuarioDAO usuarioDao = new UsuarioDAO();
 
-        if (isValidUser != null && isValidUser.isLoggedUser()) {
-            req.getSession().setAttribute("LoggedUser", username);
-            req.getSession().setAttribute("Type", isValidUser.isType());
+        Usuario usuario = usuarioDao.getUsuariosPorNome(nome,senha);
 
-            if (isValidUser.isType()) {
+        if (usuario != null && usuario.isLoggedUser()) {
+
+            req.getSession().setAttribute("LoggedUser", nome);
+            req.getSession().setAttribute("administrador", usuario.isAdministrador());
+
+            if (usuario.isAdministrador()) {
 
                 // Caso usuario seja admin - enviado para area de administrador
                 resp.sendRedirect("/encontre-todos-celulares");
@@ -53,7 +52,7 @@ public class LoginServlet extends HttpServlet {
             // Usuário não encontrado no banco de dados
             req.setAttribute("message", "Usuário ou senha estão incorretos!");
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
-            System.out.println("Usuário não encontrado no banco de dados");
+            System.out.println("Usuário não encontrado no banco de dados- login servlet");
         }
     }
 }

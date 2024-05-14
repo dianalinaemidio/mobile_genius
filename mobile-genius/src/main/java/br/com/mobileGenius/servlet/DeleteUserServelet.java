@@ -1,7 +1,7 @@
 package br.com.mobileGenius.servlet;
 
 import br.com.mobileGenius.DAO.CelularDAO;
-import br.com.mobileGenius.DAO.UserDAO;
+import br.com.mobileGenius.DAO.UsuarioDAO;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +19,7 @@ public class DeleteUserServelet extends HttpServlet {
 
         String userId = req.getParameter("id");
 
-        new UserDAO().deleteUserId(userId);
+        new UsuarioDAO().deletarUsuario(userId);
 
         resp.sendRedirect("/find-all-user");
 

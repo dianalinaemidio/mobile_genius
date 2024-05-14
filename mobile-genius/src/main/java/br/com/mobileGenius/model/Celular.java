@@ -65,8 +65,6 @@ public class Celular {
     }
 
 
-
-
     public void setId(String id) {
         this.id = id;
     }
@@ -90,4 +88,5 @@ public class Celular {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
 }
