@@ -44,6 +44,22 @@ import java.text.SimpleDateFormat;
                     usuarioDao.atualizarUsuario(usuario);
                     response.sendRedirect("/find-all-user");
                 }
+
+                // Validação de formato para CPF
+                if (!cpf.matches("\\d{3}.\\d{3}.\\d{3}-\\d{2}")) {
+                    throw new IllegalArgumentException("Formato inválido para o CPF.");
+                }
+
+                // Validação de formato para o email (se necessário)
+                // Aqui você pode usar uma expressão regular para verificar o formato do email
+                if (!email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
+                    throw new IllegalArgumentException("Formato inválido para o email.");
+                }
+
+                // Validação de formato para o número de celular (se necessário)
+                if (!numeroCelular.matches("\\(\\d{2}\\)\\s\\d{4,5}-\\d{4}")) {
+                    throw new IllegalArgumentException("Formato inválido para o número de celular.");
+                }
+
             }
     }
-

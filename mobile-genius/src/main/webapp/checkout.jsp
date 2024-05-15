@@ -103,16 +103,12 @@
     </section>
 </main>
 
-<footer id="footer" class="section footer">
-    <div class="container">
-        <div class="footer__top">
-            <ul>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="#">Loja</a></li>
-                <li><a href="login.jsp">Login</a></li>
-            </ul>
+  <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2024 Mobile Genius.</p>
         </div>
-    </div>
-</footer>
+      </footer>
+  <!-- End Footer -->
 </body>
 </html>

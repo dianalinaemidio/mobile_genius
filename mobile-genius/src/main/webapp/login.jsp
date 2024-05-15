@@ -79,11 +79,11 @@ s<!DOCTYPE html>
        </div>
    </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <p>&copy; 2024 Mobile Genius.</p>
         </div>
       </footer>
-      <!-- End Footer -->
+  <!-- End Footer -->
 </html>

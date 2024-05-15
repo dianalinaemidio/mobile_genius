@@ -68,7 +68,7 @@
             <h2>Cadastro do Usuário</h2>
 
             <div class="form-group">
-                <label for="nome">Nome/label>
+                <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" value="${param.nome}" required>
             </div>
 
@@ -79,7 +79,7 @@
 
            <div class="form-group">
                            <label for="cpf">CPF</label>
-                           <input type="text" id="cpf" name="cpf" value="${param.cpf}" required>
+                           <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido (ex: 123.456.789-01)" value="${param.cpf}" required>
            </div>
 
            <div class="form-group">
@@ -99,7 +99,7 @@
 
            <div class="form-group">
                            <label for="numerocelular">Numero de Celular</label>
-                           <input type="text" id="numerocelular" name="numerocelular" value="${param.numerocelular}" required>
+                           <input type="text" id="numerocelular" name="numerocelular" pattern="[0-9]{10,11}" title="Digite um número de celular válido" value="${param.numerocelular}" required>
            </div>
 
            <div class="form-group">
@@ -118,6 +118,7 @@
             <div class="buttons">
 
                 <button class="btn" type="submit">Enviar</button>
+                <a href="/index.jsp" class="btn">Voltar</a>
 
             </div>
         </div>
