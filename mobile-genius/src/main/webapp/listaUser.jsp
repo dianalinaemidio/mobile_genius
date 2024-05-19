@@ -64,8 +64,21 @@
             <tr>
                 <th>ID</th>
                 <th>Username</th>
+<<<<<<< HEAD
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Endereço</th>
+                <th>Email</th>
+                <th>Número Celular</th>
+                <th>Senha</th>
+                <th>Admin</th>
+                <th>Logged User</th>
+=======
                 <th>Senha</th>
                 <th>Type</th>
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                 <c:if test="${sessionScope.LoggedUser != null}">
                     <th>Ações</th>
                 </c:if>
@@ -75,12 +88,29 @@
                 <tr>
                     <td>${user.id}</td>
                     <td>${user.username}</td>
+<<<<<<< HEAD
+                    <td>${user.nome}</td>
+                    <td>${user.sobrenome}</td>
+                    <td>${user.cpf}</td>
+                    <td>${user.dataNascimento}</td>
+                    <td>${user.endereco}</td>
+                    <td>${user.email}</td>
+                    <td>${user.numeroCelular}</td>
+                    <td>${user.password}</td>
+                    <td>${user.admin}</td>
+                    <td>${user.loggedUser}</td>
+
+                    <td>
+                        <c:if test="${sessionScope.LoggedUser != null}">
+                            <c:if test="${sessionScope.admin}">
+=======
                     <td>${user.password}</td>
                     <td>${user.type}</td>
 
                     <td>
                         <c:if test="${sessionScope.LoggedUser != null}">
                             <c:if test="${sessionScope.Type}">
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                                 <form action="/delete-user" method="post">
                                     <input type="hidden" id="id" name="id" value="${user.id}">
                                     <button type="submit">Deletar</button>
@@ -89,10 +119,25 @@
                                 <form action="/cadastrarUser.jsp" method="post">
                                     <input type="hidden" name="id" value="${user.id}">
                                     <input type="hidden" name="username" value="${user.username}">
+<<<<<<< HEAD
+                                    <input type="hidden" name="nome" value="${user.nome}">
+                                    <input type="hidden" name="sobrenome" value="${user.sobrenome}">
+                                    <input type="hidden" name="cpf" value="${user.cpf}">
+                                    <input type="hidden" name="datanascimento" value="${user.dataNascimento}">
+                                    <input type="hidden" name="endereco" value="${user.endereco}">
+                                    <input type="hidden" name="email" value="${user.email}">
+                                    <input type="hidden" name="numerocelular" value="${user.numeroCelular}">
+                                    <input type="hidden" name="password" value="${user.password}">
+                                    <input type="hidden" name="admin" value="${user.admin}">
+                                    <input type="hidden" name="loggedUser" value="${user.loggedUser}">
+
+                                    <button type="submit">Atualizar</button>
+=======
                                     <input type="hidden" name="password" value="${user.password}">
                                     <input type="hidden" name="type" value="${user.type}">
 
                                     <button type="submit">Update</button>
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                                 </form>
                             </c:if>
                         </c:if>
@@ -101,6 +146,24 @@
             </c:forEach>
         </table>
 
+<<<<<<< HEAD
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer__top">
+                <ul>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="#">Loja</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+=======
     </div>
 
   <!-- Footer -->
@@ -110,5 +173,6 @@
         </div>
       </footer>
   <!-- End Footer -->
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </body>
 </html>

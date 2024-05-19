@@ -3,8 +3,11 @@ package br.com.mobileGenius.filter;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+<<<<<<< HEAD
+=======
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 import java.io.IOException;
 
 @WebFilter("/admin/*")
@@ -16,6 +19,18 @@ public class AuthenticationFilter implements Filter {
     }
 
     @Override
+<<<<<<< HEAD
+    public void doFilter(ServletRequest servletRequest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+
+        if (isUserLoggedOn(httpServletRequest)) {
+            chain.doFilter(servletRequest, response);
+        } else {
+            servletRequest.setAttribute("message", "Usuário não autorizado");
+            servletRequest.getRequestDispatcher("/login.jsp").forward(httpServletRequest, response);
+        }
+
+=======
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
@@ -36,6 +51,7 @@ public class AuthenticationFilter implements Filter {
             // Se o usuário não estiver logado e estiver tentando acessar a área de administração, redireciona para a página de login
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
     }
 
     @Override

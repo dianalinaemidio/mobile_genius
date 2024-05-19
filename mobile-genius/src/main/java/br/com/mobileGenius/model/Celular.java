@@ -65,6 +65,11 @@ public class Celular {
     }
 
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
     public void setId(String id) {
         this.id = id;
     }
@@ -88,5 +93,8 @@ public class Celular {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 }

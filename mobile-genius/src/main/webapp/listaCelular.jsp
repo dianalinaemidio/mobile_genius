@@ -121,12 +121,27 @@
 
 
     
+<<<<<<< HEAD
+<!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer__top">
+        <ul>
+          <li><a href="index.jsp">Home</a></li>
+          <li><a href="#">Loja</a></li>
+          <li><a href="login.jsp">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+=======
   <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <p>&copy; 2024 Mobile Genius.</p>
         </div>
       </footer>
+>>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
   <!-- End Footer -->
     </body>
     </html>
