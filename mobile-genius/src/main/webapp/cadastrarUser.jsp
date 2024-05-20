@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-<<<<<<< HEAD
     <%@ page contentType="text/html; charset=UTF-8" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="style/styles.css" />
 
     <title>Mobile Genius</title>
-=======
   <%@ page contentType="text/html; charset=UTF-8" %>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,12 +42,10 @@
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </head>
 
 <body>
 
-<<<<<<< HEAD
     <!-- Header -->
     <header id="header" class="header">
         <div class="navigation">
@@ -280,5 +276,4 @@
       </footer>
   <!-- End Footer -->
 </body>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </html>

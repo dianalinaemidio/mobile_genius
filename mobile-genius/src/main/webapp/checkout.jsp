@@ -103,7 +103,6 @@
     </section>
 </main>
 
-<<<<<<< HEAD
 <footer id="footer" class="section footer">
     <div class="container">
         <div class="footer__top">
@@ -115,7 +114,6 @@
         </div>
     </div>
 </footer>
-=======
   <!-- Footer -->
       <footer class="footer">
         <div class="container">
@@ -123,6 +121,5 @@
         </div>
       </footer>
   <!-- End Footer -->
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </body>
 </html>

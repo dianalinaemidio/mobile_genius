@@ -61,8 +61,7 @@ public class CreateCelularServlet extends HttpServlet {
 
         }
 
-<<<<<<< HEAD
-=======
+
         try {
             // Validação de formato para o preço;
             if (preco <= 0) {
@@ -85,7 +84,6 @@ public class CreateCelularServlet extends HttpServlet {
         if (descricao.length() > 1000) {
             throw new IllegalArgumentException("A descrição excede o comprimento máximo permitido.");
         }
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 
         System.out.println("celular gravado no banco");
 

@@ -64,7 +64,6 @@
             <tr>
                 <th>ID</th>
                 <th>Username</th>
-<<<<<<< HEAD
                 <th>Nome</th>
                 <th>Sobrenome</th>
                 <th>CPF</th>
@@ -75,10 +74,8 @@
                 <th>Senha</th>
                 <th>Admin</th>
                 <th>Logged User</th>
-=======
                 <th>Senha</th>
                 <th>Type</th>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                 <c:if test="${sessionScope.LoggedUser != null}">
                     <th>Ações</th>
                 </c:if>
@@ -88,7 +85,6 @@
                 <tr>
                     <td>${user.id}</td>
                     <td>${user.username}</td>
-<<<<<<< HEAD
                     <td>${user.nome}</td>
                     <td>${user.sobrenome}</td>
                     <td>${user.cpf}</td>
@@ -103,14 +99,12 @@
                     <td>
                         <c:if test="${sessionScope.LoggedUser != null}">
                             <c:if test="${sessionScope.admin}">
-=======
                     <td>${user.password}</td>
                     <td>${user.type}</td>
 
                     <td>
                         <c:if test="${sessionScope.LoggedUser != null}">
                             <c:if test="${sessionScope.Type}">
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                                 <form action="/delete-user" method="post">
                                     <input type="hidden" id="id" name="id" value="${user.id}">
                                     <button type="submit">Deletar</button>
@@ -119,7 +113,6 @@
                                 <form action="/cadastrarUser.jsp" method="post">
                                     <input type="hidden" name="id" value="${user.id}">
                                     <input type="hidden" name="username" value="${user.username}">
-<<<<<<< HEAD
                                     <input type="hidden" name="nome" value="${user.nome}">
                                     <input type="hidden" name="sobrenome" value="${user.sobrenome}">
                                     <input type="hidden" name="cpf" value="${user.cpf}">
@@ -132,12 +125,10 @@
                                     <input type="hidden" name="loggedUser" value="${user.loggedUser}">
 
                                     <button type="submit">Atualizar</button>
-=======
                                     <input type="hidden" name="password" value="${user.password}">
                                     <input type="hidden" name="type" value="${user.type}">
 
                                     <button type="submit">Update</button>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
                                 </form>
                             </c:if>
                         </c:if>
@@ -145,8 +136,6 @@
                 </tr>
             </c:forEach>
         </table>
-
-<<<<<<< HEAD
 
     </div>
 
@@ -163,7 +152,6 @@
         </div>
     </footer>
     <!-- End Footer -->
-=======
     </div>
 
   <!-- Footer -->
@@ -173,6 +161,5 @@
         </div>
       </footer>
   <!-- End Footer -->
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </body>
 </html>

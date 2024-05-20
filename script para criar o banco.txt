@@ -1,18 +1,3 @@
--- Tabela usuario
-CREATE TABLE usuarios (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    sobrenome VARCHAR(100),
-    cpf VARCHAR(14),
-    senha VARCHAR(100),
-    dataNascimento DATE,
-    endereco VARCHAR(255),
-    email VARCHAR(255) UNIQUE,
-    numeroCelular VARCHAR(20),
-    administrador BOOLEAN,
-    loggedUser BOOLEAN
-);
-
 -- Tabela celular
 CREATE TABLE celular (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,37 +9,51 @@ CREATE TABLE celular (
     image VARCHAR(255)
 );
 
+-- Tabela usuario
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) UNIQUE NOT NULL,
+    dataNascimento VARCHAR(10) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    numeroCelular VARCHAR(20),
+    password VARCHAR(100)NOT NULL,
+    admin BOOLEAN DEFAULT FALSE,
+    loggedUser BOOLEAN DEFAULT FALSE
+);
+
 -- Tabela vendas
 CREATE TABLE vendas (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT,
-    data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(ID)
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    dataVenda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- Tabela itens_vendas
 CREATE TABLE itens_vendas (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     venda_id INT,
-    celular_id VARCHAR(50),
+    celular_id INT,
     quantidade INT,
     precoUnitario DECIMAL(10, 2),
-    FOREIGN KEY (venda_id) REFERENCES vendas(ID),
+    FOREIGN KEY (venda_id) REFERENCES vendas(id),
     FOREIGN KEY (celular_id) REFERENCES celular(id)
 );
 
-
 -- Inserir usuários
-INSERT INTO usuarios (nome, sobrenome, cpf, senha, dataNascimento, endereco, email, numeroCelular, administrador, loggedUser) VALUES
-		    ('Admin', 'Admin', '123.456.789-10', '123', '1990-01-01', 'Endereço do Administrador', 'admin@admin', '9999-9999', TRUE, FALSE),
-		    ('Camila', 'Silva', '111.111.111-11', 'senha1', '1990-01-01', 'Endereço 1', 'usuario1@email.com', '1111-1111', FALSE, FALSE),
-		    ('Vanessa', 'Nobre', '222.222.222-22', 'senha2', '1995-02-02', 'Endereço 2', 'usuario2@email.com', '2222-2222', FALSE, FALSE),
-		    ('Carlos', 'Antonio', '333.333.333-33', 'senha3', '2000-03-03', 'Endereço 3', 'usuario3@email.com', '3333-3333', FALSE, FALSE);
+INSERT INTO users (username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, admin, loggedUser) VALUES
+		    ('Admin', 'Admin', '123.456.789-10', '1990-01-01', 'Endereço do Administrador', 'admin@admin', '9999-9999', '123',TRUE, FALSE),
+		    ('Camila', 'Silva', '111.111.111-11', '1990-01-01', 'Endereço 1', 'usuario1@email.com', '1111-1111', 'senha1', FALSE, FALSE),
+		    ('Vanessa', 'Nobre', '222.222.222-22', '1995-02-02', 'Endereço 2', 'usuario2@email.com', '2222-2222', 'senha2', FALSE, FALSE),
+		    ('Carlos', 'Antonio', '333.333.333-33', '2000-03-03', 'Endereço 3', 'usuario3@email.com', '3333-3333', 'senha3', FALSE, FALSE);
 
 -- Inserir celulares
-INSERT INTO celular (id, marca, modelo, preco, quantidade, descricao, imagem) VALUES
-		    ('1', 'Apple', 'Iphone 15', 2000.00, 5, 'Descrição do Iphone', 'imagem_iphone15.jpg'),
-		    ('2', 'Xiaomi', 'Mi 11', 1500.00, 5, 'Descrição do Xiaomi Mi 11', 'imagem_xiaomiMi.jpg'),
-		    ('3', 'Samsung', 'Galaxy S21', 1800.00, 5, 'Descrição do Samsung Galaxy S21', 'imagem_samsungS21.jpg'),
-		    ('4', 'Motorola', 'Moto G', 1000.00, 5, 'Descrição do Motorola Moto G', 'imagem_motorolaMotoG.jpg'),
-		    ('5', 'Asus', 'Zenfone', 1200.00, 5, 'Descrição do Asus Zenfone', 'imagem_asusZenfone.jpg');
+INSERT INTO celular (marca, modelo, preco, quantidade, descricao, image) VALUES
+		    ('Apple', 'Iphone 15', 2000.00, 5, 'Descrição do Iphone', 'img/imagem_iphone15.jpg'),
+		    ('Xiaomi', 'Mi 11', 1500.00, 5, 'Descrição do Xiaomi Mi 11', 'img/imagem_xiaomiMi.jpg'),
+		    ('Samsung', 'Galaxy S21', 1800.00, 5, 'Descrição do Samsung Galaxy S21', 'img/imagem_samsungS21.jpg'),
+		    ('Motorola', 'Moto G', 1000.00, 5, 'Descrição do Motorola Moto G', 'img/imagem_motorolaMotoG.jpg'),
+		    ('Asus', 'Zenfone', 1200.00, 5, 'Descrição do Asus Zenfone', 'img/imagem_asusZenfone.jpg');

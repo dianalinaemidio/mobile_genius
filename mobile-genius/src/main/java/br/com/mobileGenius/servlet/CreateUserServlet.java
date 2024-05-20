@@ -1,13 +1,8 @@
 package br.com.mobileGenius.servlet;
 
-<<<<<<< HEAD
+
 import br.com.mobileGenius.DAO.UserDAO;
 import br.com.mobileGenius.model.User;
-=======
-import br.com.mobileGenius.DAO.UsuarioDAO;
-import br.com.mobileGenius.model.Usuario;
-
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-<<<<<<< HEAD
 import java.util.regex.Pattern;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -25,18 +19,22 @@ import java.text.SimpleDateFormat;
 public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String id = request.getParameter("id");
-        String nome = request.getParameter("nome");
+        String username = request.getParameter("username");
         String sobrenome = request.getParameter("sobrenome");
         String cpf = request.getParameter("cpf");
-        String senha = request.getParameter("senha");
-        String dataNascimentoString = request.getParameter("datanascimento");
+        String dataNascimento = request.getParameter("dataNascimento");
         String endereco = request.getParameter("endereco");
         String email = request.getParameter("email");
-        String numeroCelular = request.getParameter("numerocelular");
-        String username = request.getParameter("username");
+        String numeroCelular = request.getParameter("numeroCelular");
+        String password = request.getParameter("password");
 
+        User user = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, false, false);
         UserDAO usuarioDao = new UserDAO();
+
+        // Convertendo a String diretamente para java.sql.Date
+        java.sql.Date dataNascimentoDate = java.sql.Date.valueOf(dataNascimento);
 
 
         if (usuarioDao.usernameExiste(username)) {
@@ -45,7 +43,7 @@ public class CreateUserServlet extends HttpServlet {
             return;
         }
 
-        if (!dataValida(dataNascimentoString)) {
+        if (!dataValida(dataNascimento)) {
             request.setAttribute("dataNascimentoError", "Data inválida , o formato correto é 20-12-2004");
         }
 
@@ -68,15 +66,16 @@ public class CreateUserServlet extends HttpServlet {
             request.setAttribute("celularError", "Número de celular inválido. O formato correto é 1234567890");
         }
 
-        if (dataValida(dataNascimentoString) && cpfValido(cpf) && emailValido(email) && numeroValido(numeroCelular)) {
+        if (dataValida(dataNascimento) && cpfValido(cpf) && emailValido(email) && numeroValido(numeroCelular)) {
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             java.util.Date dataUtil = null;
 
             try {
-                dataUtil = sdf.parse(dataNascimentoString);
+                dataUtil = sdf.parse(dataNascimento);
 
-                User usuario = new User(id, username, senha, false, nome, sobrenome, cpf, new java.sql.Date(dataUtil.getTime()), endereco, email, numeroCelular);
+                User usuario = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, false, false);
+
 
                 if (id.isBlank()) {
                     usuarioDao.createUser(usuario);
@@ -93,11 +92,12 @@ public class CreateUserServlet extends HttpServlet {
             } catch (ParseException e) {
                 return;
             }
-        } else{
+        } else {
             request.getRequestDispatcher("/cadastrarUser.jsp").forward(request, response);
         }
 
     }
+
     private boolean cpfValido(String cpf) {
         return cpf != null && Pattern.matches("\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}", cpf);
     }
@@ -126,58 +126,3 @@ public class CreateUserServlet extends HttpServlet {
         }
     }
 }
-
-=======
-import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
-// Para onde o formulario html faz a requisicao
-
-    @WebServlet("/create-user")
-    public class CreateUserServlet extends HttpServlet {
-            @Override
-            protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-                String id = request.getParameter("id");
-                String nome = request.getParameter("nome");
-                String sobrenome = request.getParameter("sobrenome");
-                String cpf = request.getParameter("cpf");
-                String senha = request.getParameter("senha");
-                String dataNascimentoString = request.getParameter("datanascimento");
-                String endereco = request.getParameter("endereco");
-                String email = request.getParameter("email");
-                String numeroCelular = request.getParameter("numerocelular");
-
-                // Convertendo a String diretamente para java.sql.Date
-                java.sql.Date dataNascimentoDate = java.sql.Date.valueOf(dataNascimentoString);
-
-                Usuario usuario = new Usuario(id, nome, sobrenome, cpf, senha, dataNascimentoDate, endereco, email, numeroCelular, false);
-                UsuarioDAO usuarioDao = new UsuarioDAO();
-
-                if (id.isBlank()) {
-                    usuarioDao.criarUsuario(usuario);
-                    response.sendRedirect("/index.jsp");
-                } else {
-                    usuarioDao.atualizarUsuario(usuario);
-                    response.sendRedirect("/find-all-user");
-                }
-
-                // Validação de formato para CPF
-                if (!cpf.matches("\\d{3}.\\d{3}.\\d{3}-\\d{2}")) {
-                    throw new IllegalArgumentException("Formato inválido para o CPF.");
-                }
-
-                // Validação de formato para o email (se necessário)
-                // Aqui você pode usar uma expressão regular para verificar o formato do email
-                if (!email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
-                    throw new IllegalArgumentException("Formato inválido para o email.");
-                }
-
-                // Validação de formato para o número de celular (se necessário)
-                if (!numeroCelular.matches("\\(\\d{2}\\)\\s\\d{4,5}-\\d{4}")) {
-                    throw new IllegalArgumentException("Formato inválido para o número de celular.");
-                }
-
-            }
-    }
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a

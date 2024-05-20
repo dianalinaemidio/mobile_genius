@@ -16,6 +16,23 @@ public class Celular {
     }
 
     public Celular(String id, String marca, String modelo, double preco, int quantidade, String descricao, String image) {
+
+        if (marca == null || marca.isEmpty()) {
+            throw new IllegalArgumentException("Campo vazio! Insira algo...");
+        }
+        if (modelo == null || modelo.isEmpty()) {
+            throw new IllegalArgumentException("Campo vazio! Insira algo...");
+        }
+        if (preco <= 0) {
+            throw new IllegalArgumentException("Campo vazio! Insira algo...");
+        }
+        if (quantidade < 0) {
+            throw new IllegalArgumentException("Campo vazio! Insira algo...");
+        }
+        if (descricao == null || descricao.isEmpty()) {
+            throw new IllegalArgumentException("Campo vazio! Insira algo...");
+        }
+
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -25,76 +42,30 @@ public class Celular {
         this.image = image;
     }
 
-    public Celular(String id, String marca, String modelo, double preco, int quantidade, String descricao) {
-        this.id = id;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.preco = preco;
-        this.quantidade = quantidade;
-        this.descricao = descricao;
-    }
+    public String getId() {return id;}
 
-    // Metodos
+    public void setId(String id) {this.id = id;}
 
-    public String getId() {
-        return id;
-    }
+    public String getMarca() {return marca;}
 
-    public String getMarca() {
-        return marca;
-    }
+    public void setMarca(String marca) {this.marca = marca;}
 
-    public String getModelo() {
-        return modelo;
-    }
+    public String getModelo() {return modelo;}
+    public void setModelo(String modelo) {this.modelo = modelo;}
 
-    public double getPreco() {
-        return preco;
-    }
+    public double getPreco() {return preco;}
 
-    public int getQuantidade() {
-        return quantidade;
-    }
+    public void setPreco(double preco) {this.preco = preco;}
 
-    public String getDescricao() {
-        return descricao;
-    }
+    public int getQuantidade() {return quantidade;}
 
-    public String getImage() {
-        return image;
-    }
+    public void setQuantidade(int quantidade) {this.quantidade = quantidade;}
 
+    public String getDescricao() {return descricao;}
 
-<<<<<<< HEAD
+    public void setDescricao(String descricao) {this.descricao = descricao;}
 
+    public String getImage() {return image;}
 
-=======
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-<<<<<<< HEAD
-=======
-
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
+    public void setImage(String image) {this.image = image;}
 }

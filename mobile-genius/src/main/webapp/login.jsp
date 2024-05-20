@@ -1,4 +1,4 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -62,31 +62,6 @@ s<!DOCTYPE html>
     </header>
   <!-- End Header -->
 
-<<<<<<< HEAD
-    <section class="form">
-            <div class="container-form">
-
-                <div class="form-container">
-
-                <form action="/login" method="post">
-                    <span>${requestScope.message}</span>
-                    <div class="form-container">
-                        <h2>LOGIN</h2>
-                        <input type="text" name="username" placeholder="Usuário" required>
-                        <input type="password" name="password" placeholder="Senha" required>
-                        <button type="submit">Entrar</button>
-                    </div>
-                </form>
-                <div class="buttons">
-                    <a href="cadastrarUser.jsp" class="btn">Cadastrar-se</a>
-                </div>
-
-                    </form>
-                </div>
-            </div>
-        </section>
-    <!-- Footer -->
-=======
    <section class="form">
        <div class="container-form">
            <div class="form-container">
@@ -105,15 +80,10 @@ s<!DOCTYPE html>
    </section>
 
   <!-- Footer -->
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
       <footer class="footer">
         <div class="container">
           <p>&copy; 2024 Mobile Genius.</p>
         </div>
       </footer>
-<<<<<<< HEAD
-      <!-- End Footer -->
-=======
   <!-- End Footer -->
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
 </html>

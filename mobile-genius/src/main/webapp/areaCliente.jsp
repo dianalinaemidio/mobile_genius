@@ -64,7 +64,6 @@
     <section class="cliente-info">
         <div class="container">
             <div class="info">
-<<<<<<< HEAD
                 <h3>Informações do Cliente</h3>
                 <p>Nome de Usuário: ${user.username}</p>
                 <p>Nome: ${user.nome}</p>
@@ -106,18 +105,14 @@
                     </c:if>
                 </c:if>
                 <!-- Fim das Ações -->
-=======
                 <h3>Informações</h3>
                 <p>Nome: Diana Lina Emidio</p>
                 <p>E-mail: dianalinafacul@gmail.com</p>
                 <p>Telefone: (11)99999-9999</p>
                 <button type="button" class="excluir-btn">Deseja excluir sua conta?</button>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
             </div>
         </div>
     </section>
-
-<<<<<<< HEAD
 
 
 <!-- Footer -->
@@ -132,14 +127,12 @@
       </div>
     </div>
   </footer>
-=======
   <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <p>&copy; 2024 Mobile Genius.</p>
         </div>
       </footer>
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
   <!-- End Footer -->
 </body>
 </html>
