@@ -74,7 +74,7 @@ public class CreateUserServlet extends HttpServlet {
             try {
                 dataUtil = sdf.parse(dataNascimento);
 
-                User usuario = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, false, false);
+                User usuario = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password,  false, false);
 
 
                 if (id.isBlank()) {

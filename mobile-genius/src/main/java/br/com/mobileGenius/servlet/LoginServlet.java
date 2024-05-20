@@ -23,7 +23,6 @@ public class LoginServlet extends HttpServlet {
         // Pegando as informações da página
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        boolean admin = false;
 
         // Verifica as credenciais do usuário
         UserDAO userDAO = new UserDAO();

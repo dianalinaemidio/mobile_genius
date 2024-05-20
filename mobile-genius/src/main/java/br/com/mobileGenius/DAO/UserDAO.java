@@ -30,7 +30,6 @@ public class UserDAO {
             while (resultSet.next()) {
                 String username = resultSet.getString("username");
                 String password = resultSet.getString("password");
-                boolean admin = resultSet.getBoolean("admin");
 
                 if (password.equals(user.getPassword()) && username.equals(user.getUsername())) {
                     return new User(username, password);
