@@ -16,15 +16,25 @@ public class AuthenticationFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-        HttpServletResponse httpServletResponseResponse = (HttpServletResponse) response;
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        if (isUserLoggedOn(httpServletRequest)) {
-            chain.doFilter(servletRequest, response);
+        // Obtém a sessão atual, se existir
+        HttpSession session = request.getSession(false);
+
+        // Verifica se há um usuário logado na sessão
+        boolean isLoggedIn = (session != null && session.getAttribute("LoggedUser") != null);
+
+        // Verifica se a requisição é para uma área protegida
+        boolean isTryingToAccessAdminArea = request.getRequestURI().startsWith(request.getContextPath() + "/admin/");
+
+        if (isLoggedIn || !isTryingToAccessAdminArea) {
+            // Se o usuário estiver logado ou não estiver tentando acessar a área de administração, continua a cadeia de filtros
+            filterChain.doFilter(request, response);
         } else {
-            servletRequest.setAttribute("message", "Usuário não autorizado");
-            servletRequest.getRequestDispatcher("/login.jsp").forward(httpServletRequest, response);
+            // Se o usuário não estiver logado e estiver tentando acessar a área de administração, redireciona para a página de login
+            response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
     }
 
@@ -33,8 +43,7 @@ public class AuthenticationFilter implements Filter {
 
     }
 
-    private boolean isUserLoggedOn(HttpServletRequest httpServletRequest) {
-        HttpSession session = httpServletRequest.getSession(false);
-        return session != null && session.getAttribute("LoggedUser") != null;
+    private boolean isUserLoggedOn(HttpServletRequest request) {
+        return request.getSession().getAttribute("LoggedUser") != null;
     }
 }

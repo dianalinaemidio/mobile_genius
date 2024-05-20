@@ -40,7 +40,6 @@ public class CreateCelularServlet extends HttpServlet {
         String image = parameters.get("image");
 
 
-
         // Inicializando a Classe Celular e setando os valores
 
         Celular celular = new Celular(id, marca, modelo, preco, quantidade, descricao, image);
@@ -59,30 +58,6 @@ public class CreateCelularServlet extends HttpServlet {
 
             celularDao.updateCelular(celular);
 
-        }
-
-
-        try {
-            // Validação de formato para o preço;
-            if (preco <= 0) {
-                throw new IllegalArgumentException("O preço deve ser um número positivo.");
-            }
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Formato inválido para o preço.");
-        }
-
-        try {
-            // Validação de formato para a quantidade
-            if (quantidade < 0) {
-                throw new IllegalArgumentException("A quantidade deve ser um número positivo.");
-            }
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Formato inválido para a quantidade.");
-        }
-
-        // Validação de comprimento máximo para a descrição
-        if (descricao.length() > 1000) {
-            throw new IllegalArgumentException("A descrição excede o comprimento máximo permitido.");
         }
 
         System.out.println("celular gravado no banco");

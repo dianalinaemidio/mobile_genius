@@ -59,31 +59,33 @@
         </nav>
       </div>
     </div>
-    </header>
+  </header>
   <!-- End Header -->
 
-   <section class="form">
-       <div class="container-form">
-           <div class="form-container">
-               <form action="/login" method="post">
-                   <span>${requestScope.message}</span>
-                   <h2>LOGIN</h2>
-                   <input type="text" name="nome" placeholder="Usuário" required>
-                   <input type="password" name="senha" placeholder="Senha" required>
-                   <button type="submit">Entrar</button>
-               </form>
-               <div class="buttons">
-                   <a href="cadastrarUser.jsp" class="btn">Cadastrar-se</a>
-               </div>
-           </div>
-       </div>
-   </section>
+  <section class="form">
+    <div class="container-form">
+      <div class="form-container">
+        <form action="/login" method="post">
+          <span>${requestScope.message}</span>
+          <h2>LOGIN</h2>
+          <input type="text" name="username" placeholder="Usuário" required>
+          <input type="password" name="password" placeholder="Senha" required>
+          <button type="submit">Entrar</button>
+        </form>
+        <div class="buttons">
+          <a href="cadastrarUser.jsp" class="btn">Cadastrar-se</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <p>&copy; 2024 Mobile Genius.</p>
-        </div>
-      </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Mobile Genius.</p>
+    </div>
+  </footer>
   <!-- End Footer -->
+</body>
+
 </html>

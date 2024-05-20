@@ -2,6 +2,7 @@ package br.com.mobileGenius.servlet;
 
 import br.com.mobileGenius.DAO.UserDAO;
 
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,11 +18,11 @@ public class DeleteUserServelet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         String userId = req.getParameter("id");
-        String userUsername = req.getParameter("username");
+        String userCliente = req.getParameter("cliente");
 
         new UserDAO().deleteUserId(userId);
 
-        if(userUsername != null) {
+        if(userCliente != null) {
 
             resp.sendRedirect("/login");
 
@@ -29,10 +30,6 @@ public class DeleteUserServelet extends HttpServlet {
 
             resp.sendRedirect("/find-all-user");
         }
-
-        new UserDAO().deleteUserId(userId);
-
-        resp.sendRedirect("/find-all-user");
 
     }
 

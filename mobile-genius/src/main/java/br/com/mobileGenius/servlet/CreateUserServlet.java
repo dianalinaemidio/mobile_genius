@@ -1,6 +1,5 @@
 package br.com.mobileGenius.servlet;
 
-
 import br.com.mobileGenius.DAO.UserDAO;
 import br.com.mobileGenius.model.User;
 
@@ -11,71 +10,69 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.regex.Pattern;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.regex.Pattern;
 
 @WebServlet("/create-user")
 public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String id = request.getParameter("id");
-        String username = request.getParameter("username");
+        String nome = request.getParameter("nome");
         String sobrenome = request.getParameter("sobrenome");
         String cpf = request.getParameter("cpf");
-        String dataNascimento = request.getParameter("dataNascimento");
+        String senha = request.getParameter("senha");
+        String dataNascimentoString = request.getParameter("datanascimento");
         String endereco = request.getParameter("endereco");
         String email = request.getParameter("email");
-        String numeroCelular = request.getParameter("numeroCelular");
-        String password = request.getParameter("password");
+        String numeroCelular = request.getParameter("numerocelular");
+        String username = request.getParameter("username");
 
-        User user = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, false, false);
         UserDAO usuarioDao = new UserDAO();
+        boolean atualizar = !id.isBlank();
 
-        // Convertendo a String diretamente para java.sql.Date
-        java.sql.Date dataNascimentoDate = java.sql.Date.valueOf(dataNascimento);
-
-
-        if (usuarioDao.usernameExiste(username)) {
-            request.setAttribute("error", "Nome de usuário já existe. Escolha outro.");
+        if (usuarioDao.cpfExiste(cpf) && (!atualizar || !usuarioDao.encontrarUsuarioPorId(id).getCpf().equals(cpf))) {
+            request.setAttribute("message", "CPF já cadastrado. Tente outro.");
             request.getRequestDispatcher("/cadastrarUser.jsp").forward(request, response);
             return;
         }
 
-        if (!dataValida(dataNascimento)) {
-            request.setAttribute("dataNascimentoError", "Data inválida , o formato correto é 20-12-2004");
+        if (usuarioDao.usernameExiste(username) && (!atualizar || !usuarioDao.encontrarUsuarioPorId(id).getUsername().equals(username))) {
+            request.setAttribute("message", "Nome de usuário já existe. Escolha outro.");
+            request.getRequestDispatcher("/cadastrarUser.jsp").forward(request, response);
+            return;
         }
 
+
+        // Validação do CPF
         if (!cpfValido(cpf)) {
-            request.setAttribute("cpfError", "CPF inválido. O formato correto é 123.456.789-01.");
-        }
-
-        if (usuarioDao.cpfExiste(cpf)) {
-            request.setAttribute("error", "CPF já cadastrado. Tente outro.");
+            request.setAttribute("message", "CPF inválido. O formato correto é 123.456.789-01.");
             request.getRequestDispatcher("/cadastrarUser.jsp").forward(request, response);
             return;
         }
 
+        if (!dataValida(dataNascimentoString)) {
+            request.setAttribute("message", "Data inválida, o formato correto é 20-12-2004");
+        }
 
         if (!emailValido(email)) {
-            request.setAttribute("emailError", "E-mail inválido. O formato correto é exemplo@dominio.com.");
+            request.setAttribute("message", "E-mail inválido. O formato correto é exemplo@dominio.com.");
         }
 
         if (!numeroValido(numeroCelular)) {
-            request.setAttribute("celularError", "Número de celular inválido. O formato correto é 1234567890");
+            request.setAttribute("message", "Número de celular inválido. O formato correto é 1234567890");
         }
 
-        if (dataValida(dataNascimento) && cpfValido(cpf) && emailValido(email) && numeroValido(numeroCelular)) {
+        if (dataValida(dataNascimentoString) && emailValido(email) && numeroValido(numeroCelular)) {
 
             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             java.util.Date dataUtil = null;
 
             try {
-                dataUtil = sdf.parse(dataNascimento);
+                dataUtil = sdf.parse(dataNascimentoString);
 
-                User usuario = new User(id, username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password,  false, false);
-
+                User usuario = new User(id, username, senha, false, nome, sobrenome, cpf, new java.sql.Date(dataUtil.getTime()), endereco, email, numeroCelular);
 
                 if (id.isBlank()) {
                     usuarioDao.createUser(usuario);
@@ -94,8 +91,8 @@ public class CreateUserServlet extends HttpServlet {
             }
         } else {
             request.getRequestDispatcher("/cadastrarUser.jsp").forward(request, response);
+            return;
         }
-
     }
 
     private boolean cpfValido(String cpf) {
@@ -107,7 +104,14 @@ public class CreateUserServlet extends HttpServlet {
     }
 
     private boolean numeroValido(String numeroCelular) {
-        return numeroCelular != null && Pattern.matches("\\d{10,11}", numeroCelular);
+
+        if (numeroCelular != null && numeroCelular.matches("\\d+")) {
+
+            String numeroLimpo = numeroCelular.replaceAll("\\D", "");
+
+            return numeroLimpo.length() >= 10 && numeroLimpo.length() <= 15;
+        }
+        return false;
     }
 
     private boolean dataValida(String data) {

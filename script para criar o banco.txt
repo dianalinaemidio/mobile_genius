@@ -1,59 +1,36 @@
--- Tabela celular
-CREATE TABLE celular (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(100),
-    modelo VARCHAR(100),
-    preco DECIMAL(10, 2),
-    quantidade INT,
-    descricao TEXT,
-    image VARCHAR(255)
-);
-
--- Tabela usuario
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(100) NOT NULL,
-    sobrenome VARCHAR(100) NOT NULL,
-    cpf VARCHAR(14) UNIQUE NOT NULL,
-    dataNascimento VARCHAR(10) NOT NULL,
-    endereco VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    numeroCelular VARCHAR(20),
-    password VARCHAR(100)NOT NULL,
-    admin BOOLEAN DEFAULT FALSE,
-    loggedUser BOOLEAN DEFAULT FALSE
+    ID SERIAL PRIMARY KEY,
+    USERNAME VARCHAR(50) UNIQUE NOT NULL,
+    NOME VARCHAR(100) NOT NULL,
+    SOBRENOME VARCHAR(100) NOT NULL,
+    CPF VARCHAR(14) UNIQUE NOT NULL,
+    DATANASCIMENTO DATE NOT NULL,
+    ENDERECO VARCHAR(255),
+    EMAIL VARCHAR(100) UNIQUE NOT NULL,
+    NUMEROCELULAR VARCHAR(20),
+    PASSWORD VARCHAR(255) NOT NULL,
+    ADMIN BOOLEAN NOT NULL,
+    LOGGEDUSER BOOLEAN NOT NULL
 );
 
--- Tabela vendas
-CREATE TABLE vendas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    dataVenda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+-- Adicionar usuários normais, incluindo o admin
+INSERT INTO users (USERNAME, NOME, SOBRENOME, CPF, DATANASCIMENTO, ENDERECO, EMAIL, NUMEROCELULAR, PASSWORD, ADMIN, LOGGEDUSER)
+VALUES 
+('admin', 'Administrador', 'Jr', '111.222.333-10', '2004-12-20', 'Rua Administrativa, 123', 'admin@gmail.com', '11222222222', 'admin', TRUE, FALSE),
+('vitor', 'Vitor', 'Santos', '444.555.666-20', '1995-03-10', 'Av. Principal, 456', 'vitor@example.com', '11223344556', 'vitor123', FALSE, FALSE),
+('gabriel', 'Gabriel', 'Silva', '777.888.999-30', '1988-07-15', 'Rua das Flores, 789', 'gabriel@example.com', '11234567890', 'gabriel123', FALSE, FALSE),
+('luiz', 'Luiz', 'Oliveira', '222.333.444-50', '2000-05-25', 'Av. Central, 321', 'luiz@example.com', '11987654321', 'luiz123', FALSE, FALSE);
+
+
+CREATE TABLE celulares (
+    ID SERIAL PRIMARY KEY,
+    MARCA VARCHAR(100) NOT NULL,
+    MODELO VARCHAR(100) NOT NULL,
+    PRECO DECIMAL(10, 2) NOT NULL,
+    QUANTIDADE INT NOT NULL,
+    DESCRICAO TEXT,
+    IMAGE VARCHAR(255)
 );
 
--- Tabela itens_vendas
-CREATE TABLE itens_vendas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    venda_id INT,
-    celular_id INT,
-    quantidade INT,
-    precoUnitario DECIMAL(10, 2),
-    FOREIGN KEY (venda_id) REFERENCES vendas(id),
-    FOREIGN KEY (celular_id) REFERENCES celular(id)
-);
 
--- Inserir usuários
-INSERT INTO users (username, sobrenome, cpf, dataNascimento, endereco, email, numeroCelular, password, admin, loggedUser) VALUES
-		    ('Admin', 'Admin', '123.456.789-10', '1990-01-01', 'Endereço do Administrador', 'admin@admin', '9999-9999', '123',TRUE, FALSE),
-		    ('Camila', 'Silva', '111.111.111-11', '1990-01-01', 'Endereço 1', 'usuario1@email.com', '1111-1111', 'senha1', FALSE, FALSE),
-		    ('Vanessa', 'Nobre', '222.222.222-22', '1995-02-02', 'Endereço 2', 'usuario2@email.com', '2222-2222', 'senha2', FALSE, FALSE),
-		    ('Carlos', 'Antonio', '333.333.333-33', '2000-03-03', 'Endereço 3', 'usuario3@email.com', '3333-3333', 'senha3', FALSE, FALSE);
 
--- Inserir celulares
-INSERT INTO celular (marca, modelo, preco, quantidade, descricao, image) VALUES
-		    ('Apple', 'Iphone 15', 2000.00, 5, 'Descrição do Iphone', 'img/imagem_iphone15.jpg'),
-		    ('Xiaomi', 'Mi 11', 1500.00, 5, 'Descrição do Xiaomi Mi 11', 'img/imagem_xiaomiMi.jpg'),
-		    ('Samsung', 'Galaxy S21', 1800.00, 5, 'Descrição do Samsung Galaxy S21', 'img/imagem_samsungS21.jpg'),
-		    ('Motorola', 'Moto G', 1000.00, 5, 'Descrição do Motorola Moto G', 'img/imagem_motorolaMotoG.jpg'),
-		    ('Asus', 'Zenfone', 1200.00, 5, 'Descrição do Asus Zenfone', 'img/imagem_asusZenfone.jpg');

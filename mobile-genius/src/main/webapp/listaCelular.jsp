@@ -119,6 +119,8 @@
        </div>
 
 
+
+
 <!-- Footer -->
   <footer id="footer" class="section footer">
     <div class="container">
@@ -131,12 +133,6 @@
       </div>
     </div>
   </footer>
-  <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <p>&copy; 2024 Mobile Genius.</p>
-        </div>
-      </footer>
   <!-- End Footer -->
     </body>
     </html>

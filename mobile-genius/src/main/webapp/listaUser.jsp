@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style/listaCelular.css">
     <link rel="stylesheet" href="style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Mobile Genius</title>
 </head>
 
 <body>
@@ -60,82 +59,60 @@
     <div class="modal-content">
         <h3>LISTA DE USUÁRIOS CADASTRADOS</h3>
 
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>CPF</th>
-                <th>Data de Nascimento</th>
-                <th>Endereço</th>
-                <th>Email</th>
-                <th>Número Celular</th>
-                <th>Senha</th>
-                <th>Admin</th>
-                <th>Logged User</th>
-                <th>Senha</th>
-                <th>Type</th>
-                <c:if test="${sessionScope.LoggedUser != null}">
-                    <th>Ações</th>
-                </c:if>
-            </tr>
+       <table>
+           <tr>
+               <th>ID</th>
+               <th>Username</th>
+               <th>Nome</th>
+               <th>Sobrenome</th>
+               <th>CPF</th>
+               <th>Data de Nascimento</th>
+               <th>Endereço</th>
+               <th>Email</th>
+               <th>Número de Celular</th>
+               <c:if test="${sessionScope.LoggedUser != null}">
+                   <th>Ações</th>
+               </c:if>
+           </tr>
 
-            <c:forEach var="user" items="${users}">
-                <tr>
-                    <td>${user.id}</td>
-                    <td>${user.username}</td>
-                    <td>${user.nome}</td>
-                    <td>${user.sobrenome}</td>
-                    <td>${user.cpf}</td>
-                    <td>${user.dataNascimento}</td>
-                    <td>${user.endereco}</td>
-                    <td>${user.email}</td>
-                    <td>${user.numeroCelular}</td>
-                    <td>${user.password}</td>
-                    <td>${user.admin}</td>
-                    <td>${user.loggedUser}</td>
+           <c:forEach var="user" items="${users}">
+               <tr>
+                   <td>${user.id}</td>
+                   <td>${user.username}</td>
+                   <td>${user.nome}</td>
+                   <td>${user.sobrenome}</td>
+                   <td>${user.cpf}</td>
+                   <td>${user.dataNascimento}</td>
+                   <td>${user.endereco}</td>
+                   <td>${user.email}</td>
+                   <td>${user.numeroCelular}</td>
 
-                    <td>
-                        <c:if test="${sessionScope.LoggedUser != null}">
-                            <c:if test="${sessionScope.admin}">
-                    <td>${user.password}</td>
-                    <td>${user.type}</td>
+                   <c:if test="${sessionScope.LoggedUser != null}">
+                       <td>
+                           <form action="/delete-user" method="post">
+                               <input type="hidden" name="id" value="${user.id}">
+                               <button type="submit">Deletar</button>
+                           </form>
+                           <form action="cadastrarUser.jsp" method="post">
+                               <input type="hidden" name="id" value="${user.id}">
+                               <input type="hidden" name="username" value="${user.username}">
+                               <input type="hidden" name="nome" value="${user.nome}">
+                               <input type="hidden" name="sobrenome" value="${user.sobrenome}">
+                               <input type="hidden" name="cpf" value="${user.cpf}">
+                               <input type="hidden" name="datanascimento" value="${user.dataNascimento}">
+                               <input type="hidden" name="endereco" value="${user.endereco}">
+                               <input type="hidden" name="email" value="${user.email}">
+                               <input type="hidden" name="numerocelular" value="${user.numeroCelular}">
+                               <input type="hidden" name="senha" value="${user.password}">
+                               <button type="submit" name="action" value="update">Update</button>
+                           </form>
+                       </td>
+                   </c:if>
+               </tr>
+           </c:forEach>
+       </table>
 
-                    <td>
-                        <c:if test="${sessionScope.LoggedUser != null}">
-                            <c:if test="${sessionScope.Type}">
-                                <form action="/delete-user" method="post">
-                                    <input type="hidden" id="id" name="id" value="${user.id}">
-                                    <button type="submit">Deletar</button>
-                                </form>
-                                <span> | </span>
-                                <form action="/cadastrarUser.jsp" method="post">
-                                    <input type="hidden" name="id" value="${user.id}">
-                                    <input type="hidden" name="username" value="${user.username}">
-                                    <input type="hidden" name="nome" value="${user.nome}">
-                                    <input type="hidden" name="sobrenome" value="${user.sobrenome}">
-                                    <input type="hidden" name="cpf" value="${user.cpf}">
-                                    <input type="hidden" name="datanascimento" value="${user.dataNascimento}">
-                                    <input type="hidden" name="endereco" value="${user.endereco}">
-                                    <input type="hidden" name="email" value="${user.email}">
-                                    <input type="hidden" name="numerocelular" value="${user.numeroCelular}">
-                                    <input type="hidden" name="password" value="${user.password}">
-                                    <input type="hidden" name="admin" value="${user.admin}">
-                                    <input type="hidden" name="loggedUser" value="${user.loggedUser}">
 
-                                    <button type="submit">Atualizar</button>
-                                    <input type="hidden" name="password" value="${user.password}">
-                                    <input type="hidden" name="type" value="${user.type}">
-
-                                    <button type="submit">Update</button>
-                                </form>
-                            </c:if>
-                        </c:if>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
 
     </div>
 
@@ -152,14 +129,5 @@
         </div>
     </footer>
     <!-- End Footer -->
-    </div>
-
-  <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <p>&copy; 2024 Mobile Genius.</p>
-        </div>
-      </footer>
-  <!-- End Footer -->
 </body>
 </html>

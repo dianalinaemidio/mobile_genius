@@ -48,51 +48,34 @@
           </div>
 
           <div class="nav__icons">
-              <a href="/login.jsp" class="icon__item" id="login-btn">
-                  <img src="/img/icone-user.png" alt="User">
-              </a>
-              <a href="#" class="icon__item" id="cart-btn">
-                  <img src="/img/cart-icon.png" alt="Cart">
-              </a>
+            <a href="/login.jsp" class="icon__item" id="login-btn">
+              <img src="/img/icone-user.png" alt="User">
+            </a>
+            <a href="#" class="icon__item" id="cart-btn">
+              <img src="/img/cart-icon.png" alt="Cart">
+            </a>
           </div>
 
         </nav>
       </div>
     </div>
-    </header>
+  </header>
   <!-- End Header -->
-  
 
-<body>
-    <div class="container">
-        <h1>Estamos em Manutenção</h1>
-        <p>Lamentamos o transtorno, mas estamos trabalhando para melhorar nossos serviços.</p>
-        <p>Voltaremos em breve!</p>
-        <a href="index.jsp" class="btn-home">Voltar para Home</a>
-    </div>
-</body>
+  <div class="container">
+    <h1>Estamos em Manutenção</h1>
+    <p>Lamentamos o transtorno, mas estamos trabalhando para melhorar nossos serviços.</p>
+    <p>Voltaremos em breve!</p>
+    <a href="index.jsp" class="btn-home">Voltar para Home</a>
+  </div>
 
   <!-- Footer -->
-<<<<<<< HEAD
-    <footer id="footer" class="section footer">
-      <div class="container">
-        <div class="footer__top">
-          <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="#">Loja</a></li>
-            <li><a href="login.jsp">Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-=======
-      <footer class="footer">
-        <div class="container">
-          <p>&copy; 2024 Mobile Genius.</p>
-        </div>
-      </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Mobile Genius.</p>
+    </div>
+  </footer>
   <!-- End Footer -->
->>>>>>> 018eaef7f96b23aae0b486a02260a10e83b0b17a
-</html>
+</body>
 
+</html>

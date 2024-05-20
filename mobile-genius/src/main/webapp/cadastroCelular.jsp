@@ -63,7 +63,8 @@
   <!-- End Header -->
 
 
-    <form action="/create-celular" method="post" enctype="multipart/form-data">
+    <form action="/create-celular" method="post">
+
         <div class="container-form">
             <h2>Cadastro de Celular</h2>
             <div class="form-group">
@@ -95,6 +96,7 @@
                 <label for="image">Imagem</label>
                 <input type="file" id="image" name="image" value="${param.image}" required>
             </div>
+
 
             <div class="form-group">
                 <input type="hidden" id="id" name="id" value="${param.id}">

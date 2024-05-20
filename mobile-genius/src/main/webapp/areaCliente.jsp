@@ -35,7 +35,7 @@
           </div>
 
           <div class="nav__logo">
-            <a href="/" class="scroll-link"> Mobile Genius </a>
+            <a href="/" class="scroll-link">Mobile Genius</a>
           </div>
 
           <div class="nav__menu">
@@ -48,91 +48,73 @@
           </div>
 
           <div class="nav__icons">
-              <a href="/login.jsp" class="icon__item" id="login-btn">
-                  <img src="/img/icone-user.png" alt="User">
-              </a>
-              <a href="#" class="icon__item" id="cart-btn">
-                  <img src="/img/cart-icon.png" alt="Cart">
-              </a>
+            <a href="/login.jsp" class="icon__item" id="login-btn">
+              <img src="/img/icone-user.png" alt="User">
+            </a>
+            <a href="#" class="icon__item" id="cart-btn">
+              <img src="/img/cart-icon.png" alt="Cart">
+            </a>
           </div>
 
         </nav>
       </div>
     </div>
-    </header>
+  </header>
 
-    <section class="cliente-info">
-        <div class="container">
-            <div class="info">
-                <h3>Informações do Cliente</h3>
-                <p>Nome de Usuário: ${user.username}</p>
-                <p>Nome: ${user.nome}</p>
-                <p>Sobrenome: ${user.sobrenome}</p>
-                <p>CPF: ${user.cpf}</p>
-                <p>Data de Nascimento: ${dataNascimentoFormatada}</p>
-                <p>Endereço: ${user.endereco}</p>
-                <p>E-mail: ${user.email}</p>
-                <p>Telefone: ${user.numeroCelular}</p>
-                <p>Password: ${user.password}</p>
-
-                <!-- Ações -->
-                <c:if test="${sessionScope.LoggedUser != null}">
-                    <c:if test="${sessionScope.admin}">
-
-                        <form action="/cadastrarUser.jsp" method="post">
-                            <input type="hidden" name="id" value="${user.id}">
-                            <input type="hidden" name="username" value="${user.username}">
-                            <input type="hidden" name="nome" value="${user.nome}">
-                            <input type="hidden" name="sobrenome" value="${user.sobrenome}">
-                            <input type="hidden" name="cpf" value="${user.cpf}">
-                            <input type="hidden" name="datanascimento" value="${dataNascimentoFormatada}">
-                            <input type="hidden" name="endereco" value="${user.endereco}">
-                            <input type="hidden" name="email" value="${user.email}">
-                            <input type="hidden" name="numerocelular" value="${user.numeroCelular}">
-                            <input type="hidden" name="senha" value="${user.password}">
-                            <input type="hidden" name="admin" value="${user.admin}">
-                            <input type="hidden" name="loggedUser" value="${user.loggedUser}">
-                            <button type="submit" class="button excluir-btn">Editar</button>
-                        </form>
-
-                        <form action="/delete-user" method="post">
-                                                    <input type="hidden" name="id" value="${user.id}">
-                                                    <input type="hidden" name="cliente" value="true">
-                                                    <button type="submit" class="button excluir-btn">Deletar</button>
-                        </form>
-
-
-                    </c:if>
-                </c:if>
-                <!-- Fim das Ações -->
-                <h3>Informações</h3>
-                <p>Nome: Diana Lina Emidio</p>
-                <p>E-mail: dianalinafacul@gmail.com</p>
-                <p>Telefone: (11)99999-9999</p>
-                <button type="button" class="excluir-btn">Deseja excluir sua conta?</button>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Footer -->
-  <footer id="footer" class="section footer">
+  <!-- Cliente Info Section -->
+  <section class="cliente-info">
     <div class="container">
-      <div class="footer__top">
-        <ul>
-          <li><a href="index.jsp">Home</a></li>
-          <li><a href="#">Loja</a></li>
-          <li><a href="login.jsp">Login</a></li>
-        </ul>
+      <div class="info">
+
+        <h3>Informações do Cliente</h3>
+
+        <p>Nome de Usuário: ${user.username}</p>
+        <p>Nome: ${user.nome}</p>
+        <p>Sobrenome: ${user.sobrenome}</p>
+        <p>CPF: ${user.cpf}</p>
+        <p>Data de Nascimento: ${dataNascimentoFormatada}</p>
+        <p>Endereço: ${user.endereco}</p>
+        <p>E-mail: ${user.email}</p>
+        <p>Telefone: ${user.numeroCelular}</p>
+        <p>Password: ${user.password}</p>
+
+        <!-- Ações -->
+        <c:if test="${sessionScope.LoggedUser != null}">
+          <c:if test="${sessionScope.admin}">
+            <form action="/cadastrarUser.jsp" method="post">
+              <input type="hidden" name="id" value="${user.id}">
+              <input type="hidden" name="username" value="${user.username}">
+              <input type="hidden" name="nome" value="${user.nome}">
+              <input type="hidden" name="sobrenome" value="${user.sobrenome}">
+              <input type="hidden" name="cpf" value="${user.cpf}">
+              <input type="hidden" name="datanascimento" value="${dataNascimento}">
+              <input type="hidden" name="endereco" value="${user.endereco}">
+              <input type="hidden" name="email" value="${user.email}">
+              <input type="hidden" name="numerocelular" value="${user.numeroCelular}">
+              <input type="hidden" name="senha" value="${user.password}">
+              <input type="hidden" name="admin" value="${user.admin}">
+              <input type="hidden" name="loggedUser" value="${user.loggedUser}">
+              <button type="submit" class="button excluir-btn">Editar</button>
+            </form>
+
+            <form action="/delete-user" method="post">
+              <input type="hidden" name="id" value="${user.id}">
+              <input type="hidden" name="cliente" value="true">
+              <button type="submit" class="button excluir-btn">Deletar</button>
+            </form>
+          </c:if>
+        </c:if>
       </div>
     </div>
-  </footer>
+  </section>
+
   <!-- Footer -->
-      <footer class="footer">
-        <div class="container">
-          <p>&copy; 2024 Mobile Genius.</p>
-        </div>
-      </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Mobile Genius.</p>
+    </div>
+  </footer>
   <!-- End Footer -->
 </body>
+
 </html>
