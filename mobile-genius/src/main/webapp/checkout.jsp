@@ -7,8 +7,9 @@
     <title>Mobile Genius</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-REPLACE_WITH_YOUR_SHA384" crossorigin="anonymous">
+     <link rel="stylesheet" href="style/checkout.css" />
     <link rel="stylesheet" href="style/styles.css" />
-    <link rel="stylesheet" href="style/checkout.css" />
+
 </head>
 
 <body>

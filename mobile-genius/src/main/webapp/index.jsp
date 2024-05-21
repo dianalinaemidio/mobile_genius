@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="style/index.css" />
   <link rel="stylesheet" href="style/styles.css" />
 
   <title>Mobile Genius</title>
@@ -70,7 +71,7 @@
                   <span class="">Nova Inspiração 2024</span>
                   <h1 class="">SMARTPHONES FEITOS PARA VOCÊ!</h1>
                   <p>Em alta na coleção de estilos para celular e fone de ouvido</p>
-                  <a href="#"><button class="hero__btn">COMPRE AGORA</button></a>
+                  <a href="cart.jsp"><button class="hero__btn">COMPRE AGORA</button></a>
                 </div>
                 <div class="hero__right">
                   <div class="hero__img-container">
@@ -86,232 +87,114 @@
   </header>
   <!-- End Header -->
 
-  <main>
-    <section class="section latest__products" id="latest">
-      <div class="title__container">
-        <div class="section__title active" data-id="Latest Products">
-          <span class="dot"></span>
-          <h1 class="primary__title">Novidades</h1>
-        </div>
-      </div>
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
-        <div class="glide glide--ltr glide--carousel glide--swipeable" id="glide_2">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides latest-center" style="transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 4733px; transform: translate3d(-1116px, 0px, 0px);">
-              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-right: 5px;">
-                <div class="product">
-              </li>
-              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/images/samsung2.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Samsung Galaxy</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$300</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/iphone1.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Sony WH-CH510</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$250</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/products/headphone/headphone1.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Sony WH-CH510</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$250</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide glide__slide--clone" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/iphone2.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Apple iPhone XR</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$550</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide glide__slide--active" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/iphone5.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Apple iPhone 11</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$750</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/samsung5.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Samsung Galaxy</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$900</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="glide__slide" style="width: 269px; margin-left: 5px; margin-right: 5px;">
-                <div class="product">
-                  <div class="product__header">
-                    <img src="/img/iphone6.jpeg" alt="product">
-                  </div>
-                  <div class="product__footer">
-                    <h3>Apple iPhone 12</h3>
-                    <div class="rating">
-                    </div>
-                    <div class="product__price">
-                      <h4>$950</h4>
-                    </div>
-                    <a href="#"><button type="submit" class="product__btn">Adicionar ao carrinho</button></a>
-                  </div>
-                  <ul>
-                    <li>
-                      <a data-tip="Quick View" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Wishlist" data-place="left" href="#"></a>
-                    </li>
-                    <li>
-                      <a data-tip="Add To Compare" data-place="left" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-              <i class="uil uil-angle-left-b"></i>
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-              <i class="uil uil-angle-right-b"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+<br> <br>
 
-     <!-- Text Section -->
-      <section class="section-text">
-        <div class="container">
-        </div>
-      </section>
-     <!-- End Text Section -->
+  <main>
+
+     <!-- Seção de Produtos em Destaque -->
+     <section class="featured-products">
+       <div class="container">
+         <h2>Produtos em Destaque</h2>
+         <div class="product-list">
+           <!-- Produto em Destaque 1 -->
+           <div class="product">
+             <img src="/img/iphone3.jpeg" alt="iPhone 11">
+             <h3>iPhone 11</h3>
+             <p>O iPhone 11 é um dos smartphones mais populares da Apple, conhecido por sua câmera de alta qualidade, desempenho rápido e design elegante.</p>
+           </div>
+           <!-- Produto em Destaque 2 -->
+           <div class="product">
+             <img src="/img/galaxy-s21.jpg" alt="Samsung Galaxy S21">
+             <h3>Samsung Galaxy S21</h3>
+             <p>O Samsung Galaxy S21 é um dos melhores smartphones Android do mercado, com uma tela incrível, câmera poderosa e recursos inovadores.</p>
+           </div>
+           <!-- Produto em Destaque 3 -->
+           <div class="product">
+             <img src="/img/xiomi.jpg" alt="Xiaomi Redmi Note 10">
+             <h3>Xiaomi Redmi Note 10</h3>
+             <p>O Xiaomi Redmi Note 10 oferece um excelente custo-benefício, com uma tela AMOLED de alta resolução, bateria de longa duração e desempenho confiável.</p>
+           </div>
+           <!-- Adicione mais produtos em destaque conforme necessário -->
+         </div>
+       </div>
+     </section>
+
+     <!-- Seção de Sobre Nós -->
+     <section class="about-us">
+       <div class="container">
+         <h2>Sobre Nós</h2>
+         <div class="about-content">
+           <div class="about-text">
+             <p>Somos o Mobile Genius, um e-commerce fundado em 2024, dedicado a fornecer os melhores produtos e serviços para nossos clientes. Nossa missão é oferecer uma experiência de compra excepcional, proporcionando produtos de alta qualidade e um atendimento ao cliente de excelência.</p>
+             <p>Desde nossa fundação, nos comprometemos em ser uma referência no mercado, oferecendo uma ampla variedade de smartphones, acessórios e serviços relacionados. Nosso objetivo é satisfazer as necessidades dos nossos clientes, proporcionando produtos inovadores e soluções tecnológicas que melhorem suas vidas.</p>
+             <p>Nossa equipe é composta por profissionais apaixonados e experientes que trabalham duro para garantir a satisfação do cliente. Estamos sempre atualizados com as últimas tendências e tecnologias do mercado, para oferecer aos nossos clientes as melhores opções disponíveis.</p>
+             <p>Seja qual for sua necessidade em relação a dispositivos móveis, acessórios ou serviços, estamos aqui para ajudar. Entre em contato conosco hoje mesmo para saber mais sobre como podemos atendê-lo.</p>
+           </div>
+         </div>
+       </div>
+     </section>
+
+
+   <!-- Carrossel de Depoimentos de Clientes -->
+   <div class="glide" id="glide_2">
+     <div class="glide__track" data-glide-el="track">
+       <ul class="glide__slides">
+         <li class="glide__slide">
+           <div class="testimonial">
+             <p>"O produto superou minhas expectativas! O suporte ao cliente também foi excelente."</p>
+             <span class="author">- Maria Silva</span>
+           </div>
+         </li>
+         <li class="glide__slide">
+           <div class="testimonial">
+             <p>"Estou muito satisfeito com a rapidez da entrega e a qualidade do produto. Recomendo!"</p>
+             <span class="author">- João Santos</span>
+           </div>
+         </li>
+         <li class="glide__slide">
+           <div class="testimonial">
+             <p>"Ótimo atendimento! Comprei várias vezes e nunca me decepcionei."</p>
+             <span class="author">- Ana Oliveira</span>
+           </div>
+         </li>
+         <!-- Adicione mais depoimentos conforme necessário -->
+       </ul>
+     </div>
+
+      <!-- Indicadores de navegação -->
+       <div class="glide__bullets" data-glide-el="controls[nav]">
+         <button class="glide__bullet" data-glide-dir="=0"></button>
+         <button class="glide__bullet" data-glide-dir="=1"></button>
+         <button class="glide__bullet" data-glide-dir="=2"></button>
+       </div>
+     </div>
+   <!-- End Carrossel de Depoimentos de Clientes -->
+
+   <!-- Seção de FAQ -->
+   <section class="faq">
+     <div class="container">
+       <h2>Perguntas Frequentes</h2>
+       <div class="faq-items">
+         <div class="faq-item">
+           <h3 class="faq-question">Como faço para fazer um pedido?</h3>
+           <p class="faq-answer">Para fazer um pedido, basta navegar pelo nosso catálogo de produtos, selecionar o item desejado e adicionar ao carrinho de compras. Depois, siga as instruções para finalizar o pedido e escolher o método de pagamento.</p>
+         </div>
+         <div class="faq-item">
+           <h3 class="faq-question">Quais são as opções de pagamento disponíveis?</h3>
+           <p class="faq-answer">Aceitamos várias formas de pagamento, incluindo cartão de crédito, débito, PayPal e transferência bancária. Você pode escolher a opção que melhor se adapta às suas necessidades durante o processo de checkout.</p>
+         </div>
+         <div class="faq-item">
+           <h3 class="faq-question">Qual é a política de devolução da Mobile Genius?</h3>
+           <p class="faq-answer">Nossa política de devolução permite que você devolva produtos dentro de 30 dias a partir da data da compra, desde que estejam em condições de novo e na embalagem original. Para mais detalhes, consulte nossa página de políticas de devolução.</p>
+         </div>
+       </div>
+     </div>
+   </section>
+
+
   </main>
 
+<br> <br> <br> <br> <br>
  <!-- Footer -->
    <footer class="footer">
      <div class="container">
@@ -319,6 +202,46 @@
      </div>
    </footer>
    <!-- End Footer -->
+
+
+   <!-- Scripts -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+     <script>
+       new Glide('#glide_1', {
+         type: 'carousel',
+         startAt: 0,
+         perView: 1
+       }).mount();
+
+       new Glide('#glide_2', {
+         type: 'carousel',
+         startAt: 0,
+         perView: 3,
+         breakpoints: {
+           800: {
+             perView: 2
+           },
+           480: {
+             perView: 1
+           }
+         }
+       }).mount();
+     </script>
+
+     <script>
+       document.addEventListener("DOMContentLoaded", function() {
+         const faqItems = document.querySelectorAll(".faq-item");
+
+         faqItems.forEach(function(item) {
+           item.addEventListener("click", function() {
+             faqItems.forEach(function(item) {
+               item.classList.remove("active");
+             });
+             this.classList.add("active");
+           });
+         });
+       });
+     </script>
 </body>
 
 </html>

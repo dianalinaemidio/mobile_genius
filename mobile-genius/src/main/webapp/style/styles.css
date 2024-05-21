@@ -658,9 +658,12 @@ main {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 30px 10px;
-  text-align: center;
+     background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
 }
 

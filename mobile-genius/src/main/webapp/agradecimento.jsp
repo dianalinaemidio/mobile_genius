@@ -6,7 +6,7 @@
     <title>Mobile Genius</title>
 
     <link rel="stylesheet" href="style/styles.css" />
-    <link rel="stylesheet" href="style/telaAgradecimento.css" />
+    <link rel="stylesheet" href="style/agradecimento.css" />
 </head>
 <body>
 <header id="header" class="header">
