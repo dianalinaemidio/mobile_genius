@@ -3,13 +3,13 @@
 
 <head>
     <%@ page contentType="text/html; charset=UTF-8" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <meta charset="UTF-8" />
-    <title>Mobile Genius</title>
+    <title>Descrição do Produto - Mobile Genius</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-REPLACE_WITH_YOUR_SHA384" crossorigin="anonymous">
-     <link rel="stylesheet" href="style/checkout.css" />
+    <link rel="stylesheet" href="style/checkout.css" />
     <link rel="stylesheet" href="style/styles.css" />
-
 </head>
 
 <body>
@@ -53,48 +53,29 @@
                 <div class="left-side">
                     <div class="items">
                         <div class="select-image">
-                            <img src="/img/iphone2.jpeg">
-                        </div>
-
-                        <div class="thumbnails">
-                            <div class="thumbnail">
-                                <img src="/img/iphone2.jpeg">
-                            </div>
-
-                            <div class="thumbnail">
-                                <img src="/img/iphone6.jpeg">
-                            </div>
-
-                            <div class="thumbnail">
-                                <img src="/img/iphone2.jpeg">
-                            </div>
-
-                            <div class="thumbnail">
-                                <img src="/img/iphone6.jpeg">
-                            </div>
+                            <img src="${celular.image}" alt="${celular.marca} ${celular.modelo}">
                         </div>
                     </div>
                 </div>
                 <div class="right-side">
                     <div class="content">
-                        <h6>IPHONE 13 PRO</h6>
-                        <h1>asdjaksjdasd</h1>
-                        <p>Esse é o Iphone 13, um ótimo smartphone da Apple, com câmera e tela maravilhosos!</p>
+                        <h6>${celular.marca}</h6>
+                        <h1>${celular.modelo}</h1>
+                        <p>${celular.descricao}</p>
                         <div class="prices">
-                            <span class="price">$150.00</span>
-                            <span class="off">$230.00</span>
+                            <span class="price">R$ ${celular.preco}</span>
                         </div>
                         <div class="options">
                             <div class="amount">
                                 <div class="minus">
                                     <button><i class="fa-solid fa-minus"></i></button>
                                 </div>
-                                <span>0</span>
+                                <span>${celular.quantidade}</span>
                                 <div class="plus">
                                     <button><i class="fa-solid fa-plus"></i></button>
                                 </div>
                             </div>
-                            <a href="" class="button"><i class="fa-solid fa-cart-shopping"></i> Add to cart</a>
+                            <a href="/carrinho?add=${celular.id}" class="button"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</a>
                         </div>
                     </div>
                 </div>

@@ -119,9 +119,13 @@
                                </c:otherwise>
                            </c:choose>
 
-                           <a href="descricao?id=${celular.id}" class="button">Ver Descrição</a>
+                           <form action="descricao" method="get">
+                               <input type="hidden" name="id" value="${celular.id}">
+                               <input type="submit" class="button" value="Ver Descrição">
+                           </form>
                        </div>
                    </c:forEach>
+
 
                </div>
            </div>
