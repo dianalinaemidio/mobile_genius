@@ -35,7 +35,7 @@
           </div>
 
           <div class="nav__logo">
-            <a href="/" class="scroll-link"> Mobile Genius </a>
+            <a href="/index" class="scroll-link"> Mobile Genius </a>
           </div>
 
           <div class="nav__menu">
@@ -52,7 +52,7 @@
                 <img src="/img/icone-user.png" alt="User">
             </a>
 
-            <a href="#" class="icon__item" id="cart-btn">
+            <a href="/carrinho" class="icon__item" id="cart-btn">
                 <img src="/img/cart-icon.png" alt="Cart">
             </a>
         </div>
@@ -63,8 +63,7 @@
   <!-- End Header -->
 
 
-    <form action="/create-celular" method="post">
-
+    <form action="/create-celular" method="post" enctype="multipart/form-data">
         <div class="container-form">
             <h2>Cadastro de Celular</h2>
             <div class="form-group">
@@ -96,7 +95,6 @@
                 <label for="image">Imagem</label>
                 <input type="file" id="image" name="image" value="${param.image}" required>
             </div>
-
 
             <div class="form-group">
                 <input type="hidden" id="id" name="id" value="${param.id}">

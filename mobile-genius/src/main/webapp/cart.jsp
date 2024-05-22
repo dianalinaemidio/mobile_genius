@@ -3,6 +3,7 @@
 
 <head>
   <%@ page contentType="text/html; charset=UTF-8" %>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -20,118 +21,76 @@
 <body>
   <header class="header">
     <span class="scroll-link">
-        <a href="/"> Mobile Genius </a>
+        <a href="/index"> Mobile Genius </a>
     </span>
   </header>
-  <main>
-    <div class="page-title">Seu Carrinho</div>
-    <div class="content">
-      <section>
-        <table>
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Preço</th>
-              <th>Quantidade</th>
-              <th>Total</th>
-              <th>-</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="product">
-                  <img src="https://picsum.photos/100/120" alt="" />
-                  <div class="info">
-                    <div class="name">Nome do produto</div>
-                    <div class="category">Categoria</div>
-                  </div>
-                </div>
-              </td>
-              <td>R$ 120</td>
-              <td>
-                <div class="qty">
-                  <button><i class="bx bx-minus"></i></button>
-                  <span>2</span>
-                  <button><i class="bx bx-plus"></i></button>
-                </div>
-              </td>
-              <td>R$ 240</td>
-              <td>
-                <button class="remove"><i class="bx bx-x"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-                  <img src="https://picsum.photos/100/120" alt="" />
-                  <div class="info">
-                    <div class="name">Nome do produto</div>
-                    <div class="category">Categoria</div>
-                  </div>
-                </div>
-              </td>
-              <td>R$ 120</td>
-              <td>
-                <div class="qty">
-                  <button><i class="bx bx-minus"></i></button>
-                  <span>2</span>
-                  <button><i class="bx bx-plus"></i></button>
-                </div>
-              </td>
-              <td>R$ 240</td>
-              <td>
-                <button class="remove"><i class="bx bx-x"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-                  <img src="https://picsum.photos/100/120" alt="" />
-                  <div class="info">
-                    <div class="name">Nome do produto</div>
-                    <div class="category">Categoria</div>
-                  </div>
-                </div>
-              </td>
-              <td>R$ 120</td>
-              <td>
-                <div class="qty">
-                  <button><i class="bx bx-minus"></i></button>
-                  <span>2</span>
-                  <button><i class="bx bx-plus"></i></button>
-                </div>
-              </td>
-              <td>R$ 240</td>
-              <td>
-                <button class="remove"><i class="bx bx-x"></i></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <aside>
-        <div class="box">
-          <header>Resumo da compra</header>
-          <div class="info">
-            <div><span>Sub-total</span><span>R$ 418</span></div>
-            <div><span>Frete</span><span>Gratuito</span></div>
-            <div>
-              <button>
-                Adicionar cupom de desconto
-                <i class="bx bx-right-arrow-alt"></i>
-              </button>
-            </div>
-          </div>
-          <footer>
-            <span>Total</span>
-            <span>R$ 418</span>
-          </footer>
-        </div>
-        <button id="finalizar-compra-btn">Finalizar Compra</button>
-      </aside>
-    </div>
-  </main>
+ <main>
+     <div class="page-title">Seu Carrinho</div>
+     <div class="content">
+         <section>
+             <table>
+                 <thead>
+                     <tr>
+                         <th>Produto</th>
+                         <th>Preço</th>
+                         <th>Quantidade</th>
+                         <th>Total</th>
+                         <th>-</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <%-- Loop sobre os celulares no carrinho --%>
+                     <c:forEach var="celular" items="${celulares}">
+                         <tr>
+                             <td>
+                                 <div class="product">
+                                     <img src="${celular.image}" alt="" />
+                                     <div class="info">
+                                         <div class="name">${celular.modelo}</div>
+                                         <div class="category">${celular.marca}</div>
+                                     </div>
+                                 </div>
+                             </td>
+                             <td>R$ ${celular.preco}</td> <%-- Exibe o preço do celular --%>
+                             <td>1</td>
+                             <td>R$ ${celular.preco}</td> <%-- Exibe o total para este celular --%>
+                             <td>
+                                 <form action="${pageContext.request.contextPath}/carrinho" method="post">
+                                   <input type="hidden" name="carrinhoId" value="${carrinhoId}" />
+                                   <input type="hidden" name="celularId" value="${celular.id}" />
+                                   <button type="submit" class="remove" onclick="return confirm('Tem certeza que deseja remover este item do carrinho?');">
+                                      <i class="bx bx-x">Deletar</i>
+                                   </button>
+                                 </form>
+                             </td>
+                         </tr>
+                     </c:forEach>
+                 </tbody>
+             </table>
+         </section>
+         <aside>
+             <div class="box">
+                 <header>Resumo da compra</header>
+                 <div class="info">
+                     <div><span>Sub-total</span><span>R$ ${totalCarrinho}</span></div> <%-- Exibe o sub-total do carrinho --%>
+                     <div><span>Frete</span><span>Gratuito</span></div>
+                     <div>
+                         <button>
+                             Adicionar cupom de desconto
+                             <i class="bx bx-right-arrow-alt"></i>
+                         </button>
+                     </div>
+                 </div>
+                 <footer>
+                     <span>Total</span>
+                     <span>R$ ${totalCarrinho}</span>
+                 </footer>
+             </div>
+             <button id="finalizar-compra-btn">Finalizar Compra</button>
+         </aside>
+     </div>
+ </main>
+ </main>
 
     <!-- Modal -->
     <div id="myModal" class="modal">

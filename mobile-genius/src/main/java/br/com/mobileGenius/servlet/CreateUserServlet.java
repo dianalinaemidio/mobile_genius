@@ -1,6 +1,8 @@
 package br.com.mobileGenius.servlet;
 
+import br.com.mobileGenius.DAO.CarrinhoDAO;
 import br.com.mobileGenius.DAO.UserDAO;
+import br.com.mobileGenius.model.Carrinho;
 import br.com.mobileGenius.model.User;
 
 import javax.servlet.ServletException;
@@ -30,6 +32,7 @@ public class CreateUserServlet extends HttpServlet {
         String username = request.getParameter("username");
 
         UserDAO usuarioDao = new UserDAO();
+        CarrinhoDAO carrinhoDao = new CarrinhoDAO();
         boolean atualizar = !id.isBlank();
 
         if (usuarioDao.cpfExiste(cpf) && (!atualizar || !usuarioDao.encontrarUsuarioPorId(id).getCpf().equals(cpf))) {
@@ -73,9 +76,12 @@ public class CreateUserServlet extends HttpServlet {
                 dataUtil = sdf.parse(dataNascimentoString);
 
                 User usuario = new User(id, username, senha, false, nome, sobrenome, cpf, new java.sql.Date(dataUtil.getTime()), endereco, email, numeroCelular);
+                Carrinho carrinho = new Carrinho(usuario.getId());
 
                 if (id.isBlank()) {
                     usuarioDao.createUser(usuario);
+                    carrinhoDao.createCarrinho(carrinho);
+
                     response.sendRedirect("/index.jsp");
                 } else {
                     usuarioDao.updateUser(usuario);

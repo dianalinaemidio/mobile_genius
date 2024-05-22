@@ -40,6 +40,7 @@ public class CreateCelularServlet extends HttpServlet {
         String image = parameters.get("image");
 
 
+
         // Inicializando a Classe Celular e setando os valores
 
         Celular celular = new Celular(id, marca, modelo, preco, quantidade, descricao, image);
@@ -59,6 +60,7 @@ public class CreateCelularServlet extends HttpServlet {
             celularDao.updateCelular(celular);
 
         }
+
 
         System.out.println("celular gravado no banco");
 

@@ -35,6 +35,9 @@ public class LoginServlet extends HttpServlet {
             // Inicia a sessão
             HttpSession session = req.getSession();
 
+            // Define o atributo de sessão para o ID do usuário
+            session.setAttribute("LoggedUserId", isValidUser.getId());
+
             // Define o atributo de sessão para o nome de usuário
             session.setAttribute("LoggedUser", username);
 

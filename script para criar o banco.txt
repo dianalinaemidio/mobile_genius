@@ -1,36 +1,59 @@
-CREATE TABLE users (
-    ID SERIAL PRIMARY KEY,
-    USERNAME VARCHAR(50) UNIQUE NOT NULL,
-    NOME VARCHAR(100) NOT NULL,
-    SOBRENOME VARCHAR(100) NOT NULL,
-    CPF VARCHAR(14) UNIQUE NOT NULL,
-    DATANASCIMENTO DATE NOT NULL,
-    ENDERECO VARCHAR(255),
-    EMAIL VARCHAR(100) UNIQUE NOT NULL,
-    NUMEROCELULAR VARCHAR(20),
-    PASSWORD VARCHAR(255) NOT NULL,
-    ADMIN BOOLEAN NOT NULL,
-    LOGGEDUSER BOOLEAN NOT NULL
+CREATE TABLE CARRINHO (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    CLIENTE_ID INT NOT NULL,
+    TOTAL DECIMAL(10, 2) DEFAULT 0.0
 );
 
--- Adicionar usuários normais, incluindo o admin
-INSERT INTO users (USERNAME, NOME, SOBRENOME, CPF, DATANASCIMENTO, ENDERECO, EMAIL, NUMEROCELULAR, PASSWORD, ADMIN, LOGGEDUSER)
+CREATE TABLE CARRINHO_CELULAR (
+    CARRINHO_ID INT NOT NULL,
+    CELULAR_ID INT NOT NULL
+);
+
+CREATE TABLE CELULAR (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    MARCA VARCHAR(255),
+    MODELO VARCHAR(255),
+    PRECO DECIMAL(10, 2),
+    QUANTIDADE INT,
+    DESCRICAO VARCHAR(1000),
+    IMAGE VARCHAR(255)
+);
+
+CREATE TABLE USERS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    USERNAME VARCHAR(255),
+    NOME VARCHAR(255),
+    SOBRENOME VARCHAR(255),
+    CPF VARCHAR(14),
+    DATANASCIMENTO DATE,
+    ENDERECO VARCHAR(255),
+    EMAIL VARCHAR(255),
+    NUMEROCELULAR VARCHAR(15),
+    PASSWORD VARCHAR(255),
+    ADMIN BOOLEAN,
+    LOGGEDUSER BOOLEAN
+);
+
+
+INSERT INTO users (username, nome, sobrenome, cpf, datanascimento, endereco, email, numerocelular, password, admin, loggeduser)
 VALUES 
-('admin', 'Administrador', 'Jr', '111.222.333-10', '2004-12-20', 'Rua Administrativa, 123', 'admin@gmail.com', '11222222222', 'admin', TRUE, FALSE),
+('admin', 'Administrador', 'Jr', '111.222.333-10', '2004-12-20', 'Rua Administrativa, 123', 'admin@gmail.com', '11222222222', 'admin123', TRUE, FALSE),
 ('vitor', 'Vitor', 'Santos', '444.555.666-20', '1995-03-10', 'Av. Principal, 456', 'vitor@example.com', '11223344556', 'vitor123', FALSE, FALSE),
 ('gabriel', 'Gabriel', 'Silva', '777.888.999-30', '1988-07-15', 'Rua das Flores, 789', 'gabriel@example.com', '11234567890', 'gabriel123', FALSE, FALSE),
 ('luiz', 'Luiz', 'Oliveira', '222.333.444-50', '2000-05-25', 'Av. Central, 321', 'luiz@example.com', '11987654321', 'luiz123', FALSE, FALSE);
 
-
-CREATE TABLE celulares (
-    ID SERIAL PRIMARY KEY,
-    MARCA VARCHAR(100) NOT NULL,
-    MODELO VARCHAR(100) NOT NULL,
-    PRECO DECIMAL(10, 2) NOT NULL,
-    QUANTIDADE INT NOT NULL,
-    DESCRICAO TEXT,
-    IMAGE VARCHAR(255)
-);
+-- Inserir carrinhos para cada usuário
+INSERT INTO carrinho (cliente_id, total)
+VALUES 
+(1, 0.00), 
+(2, 0.00),     
+(3, 0.00),     
+(4, 0.00);    
 
 
-
+INSERT INTO celular (marca, modelo, preco, quantidade, descricao, image)
+VALUES 
+('Celular2', 'X1', 1500.00, 10, 'Um ótimo celular', 'img/1716330088438-1715453362681-images.jpg'),
+('pocofone', 'samsung', 1000.00, 10, 'Ótimo custo benefício', 'img/1716334293378-1715458919282-iphone4.jpeg'),
+('Samsung', 'Galaxy S20', 2000.00, 8, 'Um dos melhores smartphones do mercado', 'img/1715470008989-iphone5.jpeg');
+ 

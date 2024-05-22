@@ -132,4 +132,42 @@ public class CelularDAO {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
+    public Celular findCelularById(String celularId) {
+        String SQL = "SELECT * FROM CELULAR WHERE id = ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Sucesso ao conectar no banco de dados");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, celularId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            Celular celular = null;
+
+            if (resultSet.next()) {
+                String id = resultSet.getString("id");
+                String marca = resultSet.getString("marca");
+                String modelo = resultSet.getString("modelo");
+                double preco = resultSet.getDouble("preco");
+                int quantidade = resultSet.getInt("quantidade");
+                String descricao = resultSet.getString("descricao");
+                String image = resultSet.getString("image");
+
+                celular = new Celular(id, marca, modelo, preco, quantidade, descricao, image);
+            }
+
+            System.out.println("Sucesso ao encontrar o celular pelo ID");
+            connection.close();
+
+            return celular;
+
+        } catch (Exception e) {
+            System.out.println("Falha na conexão do banco de dados (findCelularById)");
+            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
+            return null;
+        }
+    }
 }

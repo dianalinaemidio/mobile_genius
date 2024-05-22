@@ -91,6 +91,27 @@
   color: #666;
 }
 
+/* CSS para botões "Adicionar ao Carrinho" e "Ver Descrição" */
+.featured-products .product .button,
+.featured-products .product a.button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 15px; /* Reduzindo o preenchimento para tornar os botões menores */
+    font-size: 14px; /* Reduzindo o tamanho da fonte para tornar os botões menores */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Distribui o espaço disponível igualmente entre os botões */
+}
+
+.featured-products .product .button:hover,
+.featured-products .product a.button:hover {
+    background-color: #1D2837;
+    color: #fff;
+}
+
+
 
 
 /*-------------------------------------------------------------------------*/

@@ -3,6 +3,7 @@
 
 <head>
   <%@ page contentType="text/html; charset=UTF-8" %>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -35,7 +36,7 @@
           </div>
 
           <div class="nav__logo">
-            <a href="/" class="scroll-link"> Mobile Genius </a>
+            <a href="/index" class="scroll-link"> Mobile Genius </a>
           </div>
 
           <div class="nav__menu">
@@ -51,7 +52,7 @@
               <a href="/login.jsp" class="icon__item" id="login-btn">
                   <img src="/img/icone-user.png" alt="User">
               </a>
-              <a href="/cart.jsp" class="icon__item" id="cart-btn">
+              <a href="/carrinho" class="icon__item" id="cart-btn">
                   <img src="/img/cart-icon.png" alt="Cart">
               </a>
           </div>
@@ -91,33 +92,41 @@
 
   <main>
 
-     <!-- Seção de Produtos em Destaque -->
-     <section class="featured-products">
-       <div class="container">
-         <h2>Produtos em Destaque</h2>
-         <div class="product-list">
-           <!-- Produto em Destaque 1 -->
-           <div class="product">
-             <img src="/img/iphone3.jpeg" alt="iPhone 11">
-             <h3>iPhone 11</h3>
-             <p>O iPhone 11 é um dos smartphones mais populares da Apple, conhecido por sua câmera de alta qualidade, desempenho rápido e design elegante.</p>
+       <!-- Seção de Produtos em Destaque -->
+       <section class="featured-products">
+           <div class="container">
+               <h2>Produtos em Destaque</h2>
+               <div class="product-list">
+
+                   <c:forEach var="celular" items="${celulares}">
+                       <div class="product">
+                           <img src="${celular.image}" alt="${celular.marca} ${celular.modelo}">
+                           <h3>${celular.marca} ${celular.modelo}</h3>
+                           <p>${celular.descricao}</p>
+                           <p>Preço: R$ ${celular.preco}</p>
+
+                           <c:choose>
+                               <c:when test="${sessionScope.LoggedUser != null}">
+                                   <form action="index" method="post">
+                                       <input type="hidden" name="action" value="addCarrinho">
+                                       <input type="hidden" name="celularId" value="${celular.id}">
+                                       <input type="submit" class="button" value="Adicionar ao Carrinho">
+                                   </form>
+                               </c:when>
+                               <c:otherwise>
+                                   <p>Por favor, faça login para adicionar produtos ao carrinho.</p>
+                                   <a href="login.jsp" class="button">Ir para a página de login</a>
+                               </c:otherwise>
+                           </c:choose>
+
+                           <a href="descricao?id=${celular.id}" class="button">Ver Descrição</a>
+                       </div>
+                   </c:forEach>
+
+               </div>
            </div>
-           <!-- Produto em Destaque 2 -->
-           <div class="product">
-             <img src="/img/galaxy-s21.jpg" alt="Samsung Galaxy S21">
-             <h3>Samsung Galaxy S21</h3>
-             <p>O Samsung Galaxy S21 é um dos melhores smartphones Android do mercado, com uma tela incrível, câmera poderosa e recursos inovadores.</p>
-           </div>
-           <!-- Produto em Destaque 3 -->
-           <div class="product">
-             <img src="/img/xiomi.jpg" alt="Xiaomi Redmi Note 10">
-             <h3>Xiaomi Redmi Note 10</h3>
-             <p>O Xiaomi Redmi Note 10 oferece um excelente custo-benefício, com uma tela AMOLED de alta resolução, bateria de longa duração e desempenho confiável.</p>
-           </div>
-           <!-- Adicione mais produtos em destaque conforme necessário -->
-         </div>
-       </div>
-     </section>
+       </section>
+
 
      <!-- Seção de Sobre Nós -->
      <section class="about-us">

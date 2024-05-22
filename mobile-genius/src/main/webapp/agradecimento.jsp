@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="nav__logo">
-                    <a href="/" class="scroll-link"> Mobile Genius </a>
+                    <a href="/index" class="scroll-link"> Mobile Genius </a>
                 </div>
 
                 <div class="nav__menu">
@@ -35,7 +35,7 @@
                         <img src="/img/icone-user.png" alt="User">
                     </a>
 
-                    <a href="#" class="icon__item" id="cart-btn">
+                    <a href="/carrinho" class="icon__item" id="cart-btn">
                         <img src="/img/cart-icon.png" alt="Cart">
                     </a>
                 </div>
