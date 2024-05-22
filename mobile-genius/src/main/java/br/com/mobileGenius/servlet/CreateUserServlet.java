@@ -76,11 +76,13 @@ public class CreateUserServlet extends HttpServlet {
                 dataUtil = sdf.parse(dataNascimentoString);
 
                 User usuario = new User(id, username, senha, false, nome, sobrenome, cpf, new java.sql.Date(dataUtil.getTime()), endereco, email, numeroCelular);
-                Carrinho carrinho = new Carrinho(usuario.getId());
 
                 if (id.isBlank()) {
-                    usuarioDao.createUser(usuario);
-                    carrinhoDao.createCarrinho(carrinho);
+                     usuarioDao.createUser(usuario);
+                     User u = usuarioDao.encontrarUsuarioPorUsername(username);
+                     Carrinho carrinho = new Carrinho(u.getId());
+                     carrinhoDao.createCarrinho(carrinho);
+
 
                     response.sendRedirect("/index.jsp");
                 } else {

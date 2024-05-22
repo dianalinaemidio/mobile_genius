@@ -1,6 +1,8 @@
 package br.com.mobileGenius.servlet;
 
+import br.com.mobileGenius.DAO.CarrinhoDAO;
 import br.com.mobileGenius.DAO.UserDAO;
+import br.com.mobileGenius.model.Carrinho;
 
 
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +22,12 @@ public class DeleteUserServelet extends HttpServlet {
         String userId = req.getParameter("id");
         String userCliente = req.getParameter("cliente");
 
+        CarrinhoDAO carrinhoDao = new CarrinhoDAO();
+        Carrinho carrinho = carrinhoDao.findCarrinhoByUserId(userId);
+        carrinhoDao.deleteCarrinho(carrinho);
+
         new UserDAO().deleteUserId(userId);
+
 
         if(userCliente != null) {
 

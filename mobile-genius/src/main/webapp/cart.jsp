@@ -26,6 +26,18 @@
   </header>
  <main>
      <div class="page-title">Seu Carrinho</div>
+
+
+     <% String error = request.getParameter("error"); %>
+     <% String produto = request.getParameter("produto"); %>
+     <% if (error != null && !error.isEmpty()) { %>
+         <div class="error-message">
+             <% if (error.equals("ProdutoEsgotado")) { %>
+                  <p>Celular <%= produto %> esgotado.</p>
+             <% } %>
+         </div>
+     <% } %>
+
      <div class="content">
          <section>
              <table>
@@ -86,20 +98,16 @@
                      <span>R$ ${totalCarrinho}</span>
                  </footer>
              </div>
-             <button id="finalizar-compra-btn">Finalizar Compra</button>
+             <form action="${pageContext.request.contextPath}/finalizar-compra" method="post">
+                 <input type="hidden" name="carrinhoId" value="${carrinhoId}" />
+                 <button type="submit" id="finalizar-compra-btn">Finalizar Compra</button>
+             </form>
+
          </aside>
      </div>
  </main>
  </main>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="redirect-message">Parabéns pela sua compra!</div>
-        <div class="redirect-message">Estamos te redirecionando...</div>
-      </div>
-    </div>
 
   <footer class="footer">
     <div class="container">
@@ -133,6 +141,8 @@
           window.location.href = "/agradecimento.jsp";
         }
    </script>
+
+
 
 </body>
 

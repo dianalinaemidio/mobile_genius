@@ -8,16 +8,13 @@ public class Venda {
     private User cliente;
     private Date dataVenda;
     private double total;
-    private String formaPagamento;
     private Carrinho carrinho;
 
-    public Venda(String id, User cliente, Date dataVenda, String formaPagamento, Carrinho carrinho) {
+    public Venda(User cliente, Date dataVenda, Carrinho carrinho) {
 
-        this.id = id;
         this.cliente = cliente;
         this.dataVenda = dataVenda;
         this.total = carrinho.getTotal();
-        this.formaPagamento = formaPagamento;
         this.carrinho = carrinho;
 
     }
@@ -54,19 +51,14 @@ public class Venda {
         this.total = total;
     }
 
-    public String getFormaPagamento() {
-        return formaPagamento;
-    }
-
-    public void setFormaPagamento(String formaPagamento) {
-        this.formaPagamento = formaPagamento;
-    }
-
     public Carrinho getCarrinho() {
         return carrinho;
     }
 
     public void setCarrinho(Carrinho carrinho) {
         this.carrinho = carrinho;
+    }
+
+    public void setData(Date date) {
     }
 }

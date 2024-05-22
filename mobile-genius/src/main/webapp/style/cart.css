@@ -236,7 +236,7 @@ aside .box footer {
           justify-content: space-between;
 }
 
-aside > button {
+aside > button .finalizar-compra-btn{
   border: 0;
   padding: 15px 0;
   color: white;

@@ -70,7 +70,7 @@
                                 <div class="minus">
                                     <button><i class="fa-solid fa-minus"></i></button>
                                 </div>
-                                <span>${celular.quantidade}</span>
+                                <span>1</span>
                                 <div class="plus">
                                     <button><i class="fa-solid fa-plus"></i></button>
                                 </div>

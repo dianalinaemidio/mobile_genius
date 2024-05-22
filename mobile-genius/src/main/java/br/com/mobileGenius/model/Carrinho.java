@@ -64,6 +64,11 @@ public class Carrinho {
         this.celulares = celulares;
     }
 
+    public void limparCarrinho() {
+
+        this.total = 0.0;
+        this.celulares = new ArrayList<>();
+    }
 
 
 }

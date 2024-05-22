@@ -14,13 +14,13 @@ import java.util.List;
 public class CarrinhoDAO {
 
     public void createCarrinho(Carrinho carrinho) {
-        String SQL = "INSERT INTO carrinho (cliente_id, total) VALUES (?, ?)";
+        String SQL = "INSERT INTO CARRINHO (CLIENTE_ID, TOTAL) VALUES (?, ?)";
 
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa")) {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL, PreparedStatement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, carrinho.getIdCliente());
-            preparedStatement.setDouble(2, carrinho.getTotal());
+            preparedStatement.setString(2, String.valueOf(carrinho.getTotal()));
             preparedStatement.executeUpdate();
 
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
@@ -30,10 +30,9 @@ public class CarrinhoDAO {
                 carrinho.setId(carrinhoId);
             }
 
-
             if (carrinhoId != null) {
                 for (Celular celular : carrinho.getCelulares()) {
-                    String celularClienteSQL = "INSERT INTO celular_clientes (carrinho_id, celular_id) VALUES (?, ?)";
+                    String celularClienteSQL = "INSERT INTO CARRINHO_CELULAR (CARRINHO_ID, CELULAR_ID) VALUES (?, ?)";
                     PreparedStatement celularClienteStatement = connection.prepareStatement(celularClienteSQL);
                     celularClienteStatement.setString(1, carrinhoId);
                     celularClienteStatement.setString(2, celular.getId());
@@ -46,6 +45,7 @@ public class CarrinhoDAO {
             e.printStackTrace();
         }
     }
+
 
     public Carrinho getCarrinhoById(String carrinhoId) {
         String SQL = "SELECT * FROM carrinho WHERE id = ?";
